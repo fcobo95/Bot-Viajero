@@ -1,4 +1,4 @@
-import socket
+import networkx as nx
 
 from flask import Flask
 
@@ -10,7 +10,5 @@ def index():
     return '<h1>Index Page</h1>'
 
 
-host_name = socket.gethostname()
-ipNumber = socket.gethostbyname(host_name)
 if __name__ == '__main__':
-    app.run(debug=True, port=5000, host=ipNumber)
+    app.run(debug=True, port=5000, host="0.0.0.0")
