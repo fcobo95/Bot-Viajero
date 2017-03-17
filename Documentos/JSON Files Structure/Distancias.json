@@ -1,0 +1,15 @@
+{
+  "Nodo 1": {
+    "Nodo 2": "DistanciaEnValorNumerico",
+    "Nodo 3": "DistanciaEnValorNumerico"
+  },
+
+  "Nodo 2": {
+    "Nodo 12": "DistanciaEnValorNumerico",
+    "Nodo 13": "DistanciaEnValorNumerico"
+  },
+
+  "Nodo n": {
+    "Nodo x": "DistanciaEnValorNumerico"
+  }
+}

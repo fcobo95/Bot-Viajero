@@ -1,0 +1,47 @@
+{
+  "Avion": {
+    "NombreAerolinea": "Nombre",
+    "RutaDisponible": {
+      "Ruta": "Ruta",
+      "Destino": "Destino"
+    },
+    "CantidadPasejeros": "Cantidad",
+    "Schedule/Horario": "Horario"
+  },
+
+  "Taxi": {
+    "Disponibilidad": "TRUE/FALSE",
+    "NombreCompañia": "Nombre",
+    "PlacaTaxi": "Placa",
+    "Conductor": {
+      "Id": "Id",
+      "Nombre": "Nombre",
+      "Apellido": "Apellido"
+    },
+    "PrecioKM": "PrecioKM",
+    "Ruta": {
+      "Origen": "Origen",
+      "Destino": "Destino"
+    }
+  },
+
+  "Bus": {
+    "NombreCompañia": "Nombre",
+    "ConductorAsignado": "Conductor",
+    "Ruta": {
+      "Origen": "Origen",
+      "Destiono": "Destino"
+    },
+    "Capacida": "Capacidad",
+    "AsignacionPlazas": "NumeroAsiento"
+  },
+
+  "Tren": {
+    "NombreCompañia": "Nombre",
+    "Ruta": {
+      "Origen": "Origen",
+      "Destino": "Destino",
+      "Schedule/Horario": "Horario"
+    }
+  }
+}
