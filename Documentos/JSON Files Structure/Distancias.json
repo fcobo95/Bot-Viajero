@@ -1,15 +1,40 @@
 {
   "Nodo 1": {
-    "Nodo 2": "DistanciaEnValorNumerico",
-    "Nodo 3": "DistanciaEnValorNumerico"
+    "Conecta con": {
+      "Nodo 2": "DistanciaEnValorNumerico",
+      "Nodo 3": "DistanciaEnValorNumerico"
+    },
+    "Ofrece": {
+      "Avion": "TRUE/FALSE",
+      "Taxi": "TRUE/FALSE",
+      "Bus": "TRUE/FALSE",
+      "Tren": "TRUE/FALSE"
+    }
   },
 
   "Nodo 2": {
-    "Nodo 12": "DistanciaEnValorNumerico",
-    "Nodo 13": "DistanciaEnValorNumerico"
+    "Conecta con": {
+      "Nodo 2": "DistanciaEnValorNumerico",
+      "Nodo 3": "DistanciaEnValorNumerico"
+    },
+    "Ofrece": {
+      "Avion": "TRUE/FALSE",
+      "Taxi": "TRUE/FALSE",
+      "Bus": "TRUE/FALSE",
+      "Tren": "TRUE/FALSE"
+    }
   },
 
   "Nodo n": {
-    "Nodo x": "DistanciaEnValorNumerico"
+    "Conecta con": {
+      "Nodo X": "DistanciaEnValorNumerico",
+      "Nodo Y": "DistanciaEnValorNumerico"
+    },
+    "Ofrece": {
+      "Avion": "TRUE/FALSE",
+      "Taxi": "TRUE/FALSE",
+      "Bus": "TRUE/FALSE",
+      "Tren": "TRUE/FALSE"
+    }
   }
 }
