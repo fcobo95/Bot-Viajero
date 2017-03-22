@@ -72,12 +72,12 @@ def node_mapping():
             (20, 9, {'weight': 2.15})
         ]
     )
-    nodes = printNodes()
-    edges = printEdges()
+    # nodes = printNodes()
+    # edges = printEdges()
     drawGraph()
-    resp = json.dumps(edges)
+    #resp = json.dumps(edges)
 
-    return Response(resp, status=200)
+    return ""#Response(resp, status=200)
 
 
 def printNodes():
