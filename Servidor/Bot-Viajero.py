@@ -30,6 +30,28 @@ def node_mapping():
     # Vamos a quitar esto de aqui luego, para agregar logica.
     # Esto es solo para tener la lista de relaciones de unos
     # nodos con los otros.
+
+    """
+    Mi idea es la siguiente, Joshua.
+
+    Mira, digamos que pasamos las relaciones a formato JSON.
+
+    Entonces,
+
+    nodex = request.json['nodex']
+    nodey = request.json['nodey']
+    peso = request.json['weight']
+
+    entonces
+
+    for each node in JSONDictionary:
+        graph.add_edges_from(nodex, nodey, weight)
+
+    return blablabla
+
+
+    No se algo asi digo yo hahaha.
+    """
     graph.add_edges_from(
         [
             (1, 3, {'weight': 1.10}),
