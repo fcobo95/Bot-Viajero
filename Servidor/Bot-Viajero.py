@@ -93,7 +93,7 @@ def printEdges():
 
 
 def drawGraph():
-    nx.draw_random(graph)
+    nx.draw(graph)
     plt.savefig("C:\\Users\\Erick Fernando Cobo\\Pictures\\graph.png")
     return plt.show()
 
