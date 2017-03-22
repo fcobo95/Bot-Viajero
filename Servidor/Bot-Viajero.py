@@ -100,9 +100,9 @@ def node_mapping():
     # edges = printEdges()
     degree = printNodeDegree()
     drawGraph()
-    #resp = json.dumps(edges)
+    # resp = json.dumps(edges)
 
-    return str(degree) #Response(resp, status=200)
+    return str(degree)  # Response(resp, status=200)
 
 
 def printNodes():
