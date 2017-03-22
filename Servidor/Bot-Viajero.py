@@ -51,6 +51,8 @@ def node_mapping():
 
 
     No se algo asi digo yo hahaha.
+
+    Al metodo de printNodeDegree le puse como parametro node=1, para que por default tenga un valor de algun nodo.
     """
     graph.add_edges_from(
         [
@@ -96,10 +98,11 @@ def node_mapping():
     )
     # nodes = printNodes()
     # edges = printEdges()
+    degree = printNodeDegree()
     drawGraph()
     #resp = json.dumps(edges)
 
-    return ""#Response(resp, status=200)
+    return str(degree) #Response(resp, status=200)
 
 
 def printNodes():
@@ -112,6 +115,12 @@ def printEdges():
     edges = graph.edges()
 
     return edges
+
+
+def printNodeDegree(node=1):
+    degree = graph.degree(node)
+
+    return degree
 
 
 def drawGraph():
