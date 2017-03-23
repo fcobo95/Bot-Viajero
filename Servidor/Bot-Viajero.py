@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 graph = nx.Graph()
 from pymongo import MongoClient
-from flask import Flask, json, Response, jsonify
+from flask import Flask, json, Response, jsonify, render_template
 
 app = Flask(__name__)
 
@@ -102,7 +102,7 @@ def node_mapping():
     drawGraph()
     # resp = json.dumps(edges)
 
-    return str(degree)  # Response(resp, status=200)
+    return render_template('../HTML/mainpage.html')  # Response(resp, status=200)
 
 
 def printNodes():
