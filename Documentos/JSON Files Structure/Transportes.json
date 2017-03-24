@@ -1,20 +1,20 @@
 {
-  "N1":{
-    "N3":{
-      "Distancia":"1.10",
-      "Transporte":{
-        "Taxi":{
+  "N1": {
+    "N3": {
+      "Distancia": "1.10",
+      "Transporte": {
+        "Taxi": {
           "NombreCompañia": "Nombre",
           "PlacaTaxi": "Placa",
           "Conductor": {
-              "Id": "Id",
-              "Nombre": "Nombre",
-              "Apellido": "Apellido"
+            "Id": "Id",
+            "Nombre": "Nombre",
+            "Apellido": "Apellido"
           },
           "PrecioKM": "PrecioKM",
           "Ruta": {
-              "Origen": "Origen",
-              "Destino": "Destino"
+            "Origen": "Origen",
+            "Destino": "Destino"
           }
         },
         "Bus": {
@@ -29,21 +29,21 @@
         }
       }
     },
-    "N7":{
-      "Distancia":"3.50",
-      "Transporte":{
-        "Taxi":{
+    "N7": {
+      "Distancia": "3.50",
+      "Transporte": {
+        "Taxi": {
           "NombreCompañia": "Nombre",
           "PlacaTaxi": "Placa",
           "Conductor": {
-              "Id": "Id",
-              "Nombre": "Nombre",
-              "Apellido": "Apellido"
+            "Id": "Id",
+            "Nombre": "Nombre",
+            "Apellido": "Apellido"
           },
           "PrecioKM": "PrecioKM",
           "Ruta": {
-              "Origen": "Origen",
-              "Destino": "Destino"
+            "Origen": "Origen",
+            "Destino": "Destino"
           }
         },
         "Bus": {
@@ -58,21 +58,21 @@
         }
       }
     },
-    "N9":{
-      "Distancia":"4.50",
-      "Transporte":{
-        "Taxi":{
+    "N9": {
+      "Distancia": "4.50",
+      "Transporte": {
+        "Taxi": {
           "NombreCompañia": "Nombre",
           "PlacaTaxi": "Placa",
           "Conductor": {
-              "Id": "Id",
-              "Nombre": "Nombre",
-              "Apellido": "Apellido"
+            "Id": "Id",
+            "Nombre": "Nombre",
+            "Apellido": "Apellido"
           },
           "PrecioKM": "PrecioKM",
           "Ruta": {
-              "Origen": "Origen",
-              "Destino": "Destino"
+            "Origen": "Origen",
+            "Destino": "Destino"
           }
         },
         "Bus": {
@@ -87,21 +87,21 @@
         }
       }
     },
-    "N16":{
-      "Distancia":"2.10",
-      "Transporte":{
-        "Taxi":{
+    "N16": {
+      "Distancia": "2.10",
+      "Transporte": {
+        "Taxi": {
           "NombreCompañia": "Nombre",
           "PlacaTaxi": "Placa",
           "Conductor": {
-              "Id": "Id",
-              "Nombre": "Nombre",
-              "Apellido": "Apellido"
+            "Id": "Id",
+            "Nombre": "Nombre",
+            "Apellido": "Apellido"
           },
           "PrecioKM": "PrecioKM",
           "Ruta": {
-              "Origen": "Origen",
-              "Destino": "Destino"
+            "Origen": "Origen",
+            "Destino": "Destino"
           }
         },
         "Bus": {
@@ -116,21 +116,21 @@
         }
       }
     },
-    "N22":{
-      "Distancia":"3.10",
-      "Transporte":{
-        "Taxi":{
+    "N22": {
+      "Distancia": "3.10",
+      "Transporte": {
+        "Taxi": {
           "NombreCompañia": "Nombre",
           "PlacaTaxi": "Placa",
           "Conductor": {
-              "Id": "Id",
-              "Nombre": "Nombre",
-              "Apellido": "Apellido"
+            "Id": "Id",
+            "Nombre": "Nombre",
+            "Apellido": "Apellido"
           },
           "PrecioKM": "PrecioKM",
           "Ruta": {
-              "Origen": "Origen",
-              "Destino": "Destino"
+            "Origen": "Origen",
+            "Destino": "Destino"
           }
         },
         "Bus": {
@@ -146,22 +146,22 @@
       }
     }
   },
-  "N2":{
-    "N13":{
-      "Distancia":"2.40",
-      "Transporte":{
-        "Taxi":{
+  "N2": {
+    "N13": {
+      "Distancia": "2.40",
+      "Transporte": {
+        "Taxi": {
           "NombreCompañia": "Nombre",
           "PlacaTaxi": "Placa",
           "Conductor": {
-              "Id": "Id",
-              "Nombre": "Nombre",
-              "Apellido": "Apellido"
+            "Id": "Id",
+            "Nombre": "Nombre",
+            "Apellido": "Apellido"
           },
           "PrecioKM": "PrecioKM",
           "Ruta": {
-              "Origen": "Origen",
-              "Destino": "Destino"
+            "Origen": "Origen",
+            "Destino": "Destino"
           }
         },
         "Bus": {
@@ -176,21 +176,21 @@
         }
       }
     },
-    "N14":{
-      "Distancia":"2.90",
-      "Transporte":{
-        "Taxi":{
+    "N14": {
+      "Distancia": "2.90",
+      "Transporte": {
+        "Taxi": {
           "NombreCompañia": "Nombre",
           "PlacaTaxi": "Placa",
           "Conductor": {
-              "Id": "Id",
-              "Nombre": "Nombre",
-              "Apellido": "Apellido"
+            "Id": "Id",
+            "Nombre": "Nombre",
+            "Apellido": "Apellido"
           },
           "PrecioKM": "PrecioKM",
           "Ruta": {
-              "Origen": "Origen",
-              "Destino": "Destino"
+            "Origen": "Origen",
+            "Destino": "Destino"
           }
         },
         "Bus": {
@@ -205,9 +205,9 @@
         }
       }
     },
-    "N24":{
-      "Distancia":"9.20",
-      "Transporte":{
+    "N24": {
+      "Distancia": "9.20",
+      "Transporte": {
         "Bus": {
           "NombreCompañia": "Nombre",
           "ConductorAsignado": "Conductor",
@@ -219,72 +219,91 @@
           "AsignacionPlazas": "NumeroAsiento"
         },
         "Tren": {
-		  "NombreCompañia": "Nombre",
-		  "Ruta": {
-			"Origen": "Origen",
-			"Destino": "Destino",
-			"Schedule/Horario": "Horario"
-		  }
-		}
+          "NombreCompañia": "Nombre",
+          "Ruta": {
+            "Origen": "Origen",
+            "Destino": "Destino",
+            "Schedule/Horario": "Horario"
+          }
+        }
       }
     }
   },
-  "N3":{
-    "N16":{
-      "Distancia":"2.60",
-      "Transporte":{
-        "Taxi":{
+  "N3": {
+    "N1": {
+      "Distancia": "1.10",
+      "Transporte": {
+        "Taxi": {
           "NombreCompañia": "Nombre",
           "PlacaTaxi": "Placa",
           "Conductor": {
-              "Id": "Id",
-              "Nombre": "Nombre",
-              "Apellido": "Apellido"
+            "Id": "Id",
+            "Nombre": "Nombre",
+            "Apellido": "Apellido"
           },
           "PrecioKM": "PrecioKM",
           "Ruta": {
-              "Origen": "Origen",
-              "Destino": "Destino"
+            "Origen": "Origen",
+            "Destino": "Destino"
           }
         },
-        "Bus": {
-          "NombreCompañia": "Nombre",
-          "ConductorAsignado": "Conductor",
-          "Ruta": {
-            "Origen": "Origen",
-            "Destiono": "Destino"
-          },
-          "Capacida": "Capacidad",
-          "AsignacionPlazas": "NumeroAsiento"
-        }
-      }
-    },
-    "N24":{
-      "Distancia":"3.45",
-      "Transporte":{
-        "Taxi":{
-          "NombreCompañia": "Nombre",
-          "PlacaTaxi": "Placa",
-          "Conductor": {
-              "Id": "Id",
-              "Nombre": "Nombre",
-              "Apellido": "Apellido"
-          },
-          "PrecioKM": "PrecioKM",
-          "Ruta": {
-              "Origen": "Origen",
-              "Destino": "Destino"
+        "N16": {
+          "Distancia": "2.60",
+          "Transporte": {
+            "Taxi": {
+              "NombreCompañia": "Nombre",
+              "PlacaTaxi": "Placa",
+              "Conductor": {
+                "Id": "Id",
+                "Nombre": "Nombre",
+                "Apellido": "Apellido"
+              },
+              "PrecioKM": "PrecioKM",
+              "Ruta": {
+                "Origen": "Origen",
+                "Destino": "Destino"
+              }
+            },
+            "Bus": {
+              "NombreCompañia": "Nombre",
+              "ConductorAsignado": "Conductor",
+              "Ruta": {
+                "Origen": "Origen",
+                "Destiono": "Destino"
+              },
+              "Capacida": "Capacidad",
+              "AsignacionPlazas": "NumeroAsiento"
+            }
           }
         },
-        "Bus": {
-          "NombreCompañia": "Nombre",
-          "ConductorAsignado": "Conductor",
-          "Ruta": {
-            "Origen": "Origen",
-            "Destiono": "Destino"
-          },
-          "Capacida": "Capacidad",
-          "AsignacionPlazas": "NumeroAsiento"
+        "N24": {
+          "Distancia": "3.45",
+          "Transporte": {
+            "Taxi": {
+              "NombreCompañia": "Nombre",
+              "PlacaTaxi": "Placa",
+              "Conductor": {
+                "Id": "Id",
+                "Nombre": "Nombre",
+                "Apellido": "Apellido"
+              },
+              "PrecioKM": "PrecioKM",
+              "Ruta": {
+                "Origen": "Origen",
+                "Destino": "Destino"
+              }
+            },
+            "Bus": {
+              "NombreCompañia": "Nombre",
+              "ConductorAsignado": "Conductor",
+              "Ruta": {
+                "Origen": "Origen",
+                "Destiono": "Destino"
+              },
+              "Capacida": "Capacidad",
+              "AsignacionPlazas": "NumeroAsiento"
+            }
+          }
         }
       }
     }

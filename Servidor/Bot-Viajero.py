@@ -2,10 +2,10 @@
 import datetime
 import networkx as nx
 import matplotlib.pyplot as plt
-
-graph = nx.Graph()
 from pymongo import MongoClient
 from flask import Flask, json, Response, jsonify, render_template
+
+graph = nx.Graph()
 
 app = Flask(__name__)
 
@@ -99,7 +99,7 @@ def node_mapping():
     # nodes = printNodes()
     # edges = printEdges()
     degree = printNodeDegree()
-    drawGraph()
+    drawGraph("fcobo")
     # resp = json.dumps(edges)
 
     return render_template('../HTML/mainpage.html')  # Response(resp, status=200)
@@ -123,9 +123,9 @@ def printNodeDegree(node=1):
     return degree
 
 
-def drawGraph():
+def drawGraph(user=""):
     nx.draw(graph)
-    plt.savefig("C:\\Users\\Erick Fernando Cobo\\Pictures\\graph.png")
+    plt.savefig("C:\\Users\\" + user + "\\Pictures\\graph.png")
     return plt.show()
 
 
