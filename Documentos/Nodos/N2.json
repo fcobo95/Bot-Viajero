@@ -3,28 +3,29 @@
     "Distancia": 2.40,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompania": "Taxis Hazard",
+        "PlacaTaxi": "HZD-666",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "6-5666-6666",
+          "Nombre": "Virgil",
+          "Apellido": "Sparda"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.30,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N2",
+          "Destino": "N13"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompania": "Buses Loghos",
+        "ConductorAsignado": "Virgilio Socratino",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N2",
+          "Destino": "N13"
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Capacida": 150,
+        "AsignacionPlazas": 125,
+        "Tarifa": 350
       }
     }
   },
@@ -32,28 +33,29 @@
     "Distancia": 2.90,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompania": "Taxis Miramar",
+        "PlacaTaxi": "MRM-777",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "7-7777-7766",
+          "Nombre": "Jesus Cristian",
+          "Apellido": "Avelino"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.77,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N2",
+          "Destino": "N14"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompania": "Buses Loghos",
+        "ConductorAsignado": "Socrates Lepiro",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N2",
+          "Destino": "N14"
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Capacida": 150,
+        "AsignacionPlazas": 125,
+        "Tarifa": 350
       }
     }
   },
@@ -61,21 +63,30 @@
     "Distancia": 9.20,
     "Transporte": {
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompania": "Buses Loghos",
+        "ConductorAsignado": "Herodes Cicuta",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N2",
+          "Destino": "N13"
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Capacida": 150,
+        "AsignacionPlazas": 125,
+        "Tarifa": 350
       },
       "Tren": {
-        "NombreCompañia": "Nombre",
+        "NombreCompania": "Trenes Transtico",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino",
-          "Schedule/Horario": "Horario"
+          "Origen": "N2",
+          "Destino": "N24",
+          "Schedule/Horario": {
+            "Lunes": "6 AM - 7 PM",
+            "Martes": "6 AM - 7 PM",
+            "Miercoles": "6 AM - 7 PM",
+            "Jueves": "6 AM - 7 PM",
+            "Viernes": "6 AM - 7 PM",
+            "Sabado": "10 AM - 5 PM",
+            "Domingo": "10 AM - 5 PM"
+          }
         }
       }
     }
