@@ -94,7 +94,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
+        "NombreCompania": "Nombre",
         "ConductorAsignado": "Conductor",
         "Ruta": {
           "Origen": "Origen",
