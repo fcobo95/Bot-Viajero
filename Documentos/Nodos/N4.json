@@ -3,57 +3,68 @@
     "Distancia": 3.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Don Omar",
+        "PlacaTaxi": "BGP-001",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-1526-1234",
+          "Nombre": "Ramiro",
+          "Apellido": "Batres"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.80,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N4",
+          "Destino": "N9"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Don Omar",
+        "ConductorAsignado": "Mario Segnon",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N4",
+          "Destiono": "N9"
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Capacidad": 60,
+        "AsignacionPlazas": 59
       }
     }
   },
   "N21": {
     "Distancia": 14.20,
     "Transporte": {
-      "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
-        "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
-        },
-        "PrecioKM": "PrecioKM",
+      "Tren": {
+        "NombreCompania": "Trenes Volio",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
-        }
+          "Origen": "N3",
+          "Destino": "N16",
+          "Schedule/Horario": {
+            "Lunes": "4 AM - 10 PM",
+            "Martes": "4 AM - 10 PM",
+            "Miercoles": "4 AM - 10 PM",
+            "Jueves": "4 AM - 10 PM",
+            "Viernes": "4 AM - 10 PM",
+            "Sabado": "8 AM - 5 PM",
+            "Domingo": "8 AM - 5 PM"
+          }
+        },
+        "Tarifa": 3650
       },
-      "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+      "Avion": {
+        "NombreCompañia": "Alfa",
+        "ConductorAsignado": "Herbert Dong",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N4",
+          "Destiono": "N21"
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Cantidad Pasajeros": 450,
+        "Horario": {
+          "Lunes": "2 AM - 12 PM",
+          "Martes": "2 AM - 12 PM",
+          "Miercoles": "2 AM - 12 PM",
+          "Jueves": "2 AM - 12 PM",
+          "Viernes": "2 AM - 12 PM",
+          "Sabado": "2 AM - 12 PM",
+          "Domingo": "2 AM - 12 PM"
+        }
       }
     }
   },
@@ -61,17 +72,17 @@
     "Distancia": 3.95,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis de los Ultimos Dias",
+        "PlacaTaxi": "LUD-656",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "4-8975-3651",
+          "Nombre": "Juanito",
+          "Apellido": "Mora"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.35,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N4",
+          "Destino": "N22"
         }
       },
       "Bus": {
@@ -81,8 +92,9 @@
           "Origen": "Origen",
           "Destiono": "Destino"
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Capacidad": "Capacidadd",
+        "AsignacionPlazas": "NumeroAsiento",
+        "Tarifa": 250
       }
     }
   },
@@ -90,28 +102,35 @@
     "Distancia": 5.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Matrix",
+        "PlacaTaxi": "MAT-758",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-1010-0010",
+          "Nombre": "Neo",
+          "Apellido": "Blue"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.85,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N4",
+          "Destino": "N23"
         }
       },
-      "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+      "Tren": {
+        "NombreCompania": "Trenes Volio",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N4",
+          "Destino": "N23",
+          "Schedule/Horario": {
+            "Lunes": "4 AM - 10 PM",
+            "Martes": "4 AM - 10 PM",
+            "Miercoles": "4 AM - 10 PM",
+            "Jueves": "4 AM - 10 PM",
+            "Viernes": "4 AM - 10 PM",
+            "Sabado": "8 AM - 5 PM",
+            "Domingo": "8 AM - 5 PM"
+          }
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Tarifa": 3650
       }
     }
   }

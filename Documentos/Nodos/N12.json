@@ -15,6 +15,17 @@
           "Origen": "Origen",
           "Destino": "Destino"
         }
+      },
+      "Bus": {
+        "NombreCompañia": "Nombre",
+        "ConductorAsignado": "Conductor",
+        "Ruta": {
+          "Origen": "Origen",
+          "Destiono": "Destino"
+        },
+        "Capacidad": "Capacidadd",
+        "AsignacionPlazas": "NumeroAsiento",
+        "Tarifa": "Tarifa"
       }
     }
   },
@@ -42,8 +53,9 @@
           "Origen": "Origen",
           "Destiono": "Destino"
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Capacidad": "Capacidadd",
+        "AsignacionPlazas": "NumeroAsiento",
+        "Tarifa": "Tarifa"
       }
     }
   },
@@ -71,8 +83,9 @@
           "Origen": "Origen",
           "Destiono": "Destino"
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Capacidad": "Capacidadd",
+        "AsignacionPlazas": "NumeroAsiento",
+        "Tarifa": "Tarifa"
       }
     }
   },
@@ -100,8 +113,9 @@
           "Origen": "Origen",
           "Destiono": "Destino"
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Capacidad": "Capacidadd",
+        "AsignacionPlazas": "NumeroAsiento",
+        "Tarifa": "Tarifa"
       }
     }
   }

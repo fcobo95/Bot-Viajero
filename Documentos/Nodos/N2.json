@@ -87,7 +87,8 @@
             "Sabado": "10 AM - 5 PM",
             "Domingo": "10 AM - 5 PM"
           }
-        }
+        },
+        "Tarifa": 1500
       }
     }
   }

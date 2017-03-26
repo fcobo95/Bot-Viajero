@@ -3,18 +3,28 @@
     "Distancia": 1.10,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis del Oeste",
+        "PlacaTaxi": "PGB-568",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "6-4589-1256",
+          "Nombre": "Juan",
+          "Apellido": "Hernandez"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.25,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N3",
+          "Destino": "N1"
         }
+      },
+      "Bus": {
+        "NombreCompañia": "Buses Hipster",
+        "ConductorAsignado": "Gino Manzoni",
+        "Ruta": {
+          "Origen": "N3",
+          "Destiono": "N1"
+        },
+        "Capacidad": 60,
+        "AsignacionPlazas": 16
       }
     }
   },
@@ -22,28 +32,35 @@
     "Distancia": 10,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Radicales",
+        "PlacaTaxi": "RAD-777",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-7777-5623",
+          "Nombre": "Martin",
+          "Apellido": "Pereira"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 2.30,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N3",
+          "Destino": "N16"
         }
       },
-      "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+      "Tren": {
+        "NombreCompania": "Trenes Volio",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N3",
+          "Destino": "N16",
+          "Schedule/Horario": {
+            "Lunes": "4 AM - 10 PM",
+            "Martes": "4 AM - 10 PM",
+            "Miercoles": "4 AM - 10 PM",
+            "Jueves": "4 AM - 10 PM",
+            "Viernes": "4 AM - 10 PM",
+            "Sabado": "8 AM - 5 PM",
+            "Domingo": "8 AM - 5 PM"
+          }
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Tarifa": 3650
       }
     }
   },
@@ -51,28 +68,28 @@
     "Distancia": 3.45,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Radicales",
+        "PlacaTaxi": "RAD-666",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-8000-8989",
+          "Nombre": "Mercedes",
+          "Apellido": "Boniche"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 2.30,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N3",
+          "Destino": "N24"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Volados",
+        "ConductorAsignado": "Manuel Cabrera",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N3",
+          "Destiono": "N24"
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Capacidad": 75,
+        "AsignacionPlazas": 75
       }
     }
   }
