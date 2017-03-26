@@ -70,12 +70,12 @@ def node_mapping():
         ]
     )
     # nodes = printNodes()
-    # edges = printEdges()
+    edges = printEdges()
     degree = printNodeDegree()
-    drawGraph("fcobo")
-    # resp = json.dumps(edges)
+    drawGraph("Erick Fernando Cobo")
+    resp = json.dumps(edges)
 
-    return render_template('../HTML/mainpage.html')  # Response(resp, status=200)
+    return Response(resp, status=200)
 
 
 def printNodes():

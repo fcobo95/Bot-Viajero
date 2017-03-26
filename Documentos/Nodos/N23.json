@@ -1,6 +1,6 @@
 {
-  "N3": {
-    "Distancia": 1.10,
+  "N4": {
+    "Distancia": "1.10",
     "Transporte": {
       "Taxi": {
         "NombreCompañia": "Nombre",
@@ -15,21 +15,11 @@
           "Origen": "Origen",
           "Destino": "Destino"
         }
-      },
-      "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
-        "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
-        },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
       }
     }
   },
   "N7": {
-    "Distancia": 3.50,
+    "Distancia": "2.60",
     "Transporte": {
       "Taxi": {
         "NombreCompañia": "Nombre",
@@ -58,7 +48,7 @@
     }
   },
   "N9": {
-    "Distancia": 4.50,
+    "Distancia": "3.45",
     "Transporte": {
       "Taxi": {
         "NombreCompañia": "Nombre",
@@ -86,8 +76,8 @@
       }
     }
   },
-  "N16": {
-    "Distancia": 2.10,
+  "N12": {
+    "Distancia": "3.45",
     "Transporte": {
       "Taxi": {
         "NombreCompañia": "Nombre",
@@ -115,8 +105,8 @@
       }
     }
   },
-  "N22": {
-    "Distancia": 3.10,
+  "N15": {
+    "Distancia": "3.45",
     "Transporte": {
       "Taxi": {
         "NombreCompañia": "Nombre",
