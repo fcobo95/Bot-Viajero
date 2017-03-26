@@ -1,6 +1,6 @@
 {
   "N8": {
-    "Distancia": "1.10",
+    "Distancia": 2,
     "Transporte": {
       "Taxi": {
         "NombreCompañia": "Nombre",
@@ -19,7 +19,7 @@
     }
   },
   "N11": {
-    "Distancia": "2.60",
+    "Distancia": 2.60,
     "Transporte": {
       "Taxi": {
         "NombreCompañia": "Nombre",
@@ -48,7 +48,7 @@
     }
   },
   "N19": {
-    "Distancia": "3.45",
+    "Distancia": 2.70,
     "Transporte": {
       "Taxi": {
         "NombreCompañia": "Nombre",

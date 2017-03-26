@@ -29,7 +29,7 @@
     }
   },
   "N14": {
-    "Distancia": "2.90",
+    "Distancia": 2.90,
     "Transporte": {
       "Taxi": {
         "NombreCompañia": "Nombre",
@@ -58,7 +58,7 @@
     }
   },
   "N24": {
-    "Distancia": "9.20",
+    "Distancia": 9.20,
     "Transporte": {
       "Bus": {
         "NombreCompañia": "Nombre",
