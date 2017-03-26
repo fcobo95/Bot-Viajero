@@ -3,29 +3,29 @@
     "Distancia": 3.50,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompania": "Taxis Don Omar",
+        "PlacaTaxi": "BGP-785",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "2-5295-7854",
+          "Nombre": "Marco",
+          "Apellido": "Jalargo"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.80,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N7",
+          "Destino": "N1"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompania": "Buses Don Omar",
+        "ConductorAsignado": "Gonzalo Galarza",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N7",
+          "Destino": "N1"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 80,
+        "AsignacionPlazas": 17,
+        "Tarifa": 230
       }
     }
   },
@@ -33,29 +33,29 @@
     "Distancia": 2.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Coopetaxi",
+        "PlacaTaxi": "CPT-556",
         "Conductor": {
           "Id": "Id",
           "Nombre": "Nombre",
           "Apellido": "Apellido"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.30,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N7",
+          "Destino": "N9"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Loghos",
+        "ConductorAsignado": "Heracles Eudaimonio",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N7",
+          "Destino": "N9"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 150,
+        "AsignacionPlazas": 130,
+        "Tarifa": 350
       }
     }
   },
@@ -63,8 +63,8 @@
     "Distancia": 1.70,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Coopetaxi",
+        "PlacaTaxi": "CPT-455",
         "Conductor": {
           "Id": "Id",
           "Nombre": "Nombre",
@@ -72,16 +72,16 @@
         },
         "PrecioKM": "PrecioKM",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N7",
+          "Destino": "N23"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Volio",
+        "ConductorAsignado": "Mauricio Pineda",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N7",
+          "Destino": "N23"
         },
         "Capacidad": "Capacidadd",
         "AsignacionPlazas": "NumeroAsiento",
