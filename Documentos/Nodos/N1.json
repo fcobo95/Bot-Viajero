@@ -23,8 +23,8 @@
           "Origen": "N1",
           "Destino": "N3"
         },
-        "Capacidad": "50",
-        "AsignacionPlazas": "18",
+        "Capacidad": 50,
+        "AsignacionPlazas": 18,
         "Tarifa": 180
       }
     }
@@ -53,8 +53,8 @@
           "Origen": "N1",
           "Destino": "N7"
         },
-        "Capacidad": "80",
-        "AsignacionPlazas": "12",
+        "Capacidad": 80,
+        "AsignacionPlazas": 12,
         "Tarifa": 230
       }
     }
@@ -83,8 +83,8 @@
           "Origen": "N1",
           "Destino": "N9"
         },
-        "Capacidad": "80",
-        "AsignacionPlazas": "56",
+        "Capacidad": 80,
+        "AsignacionPlazas": 56,
         "Tarifa": 230
       }
     }
@@ -113,8 +113,8 @@
           "Origen": "N1",
           "Destino": "N16"
         },
-        "Capacidad": "50",
-        "AsignacionPlazas": "21",
+        "Capacidad": 50,
+        "AsignacionPlazas": 21,
         "Tarifa": 180
       }
     }
@@ -143,8 +143,8 @@
           "Origen": "N1",
           "Destino": "N22"
         },
-        "Capacidad": "50",
-        "AsignacionPlazas": "49",
+        "Capacidad": 50,
+        "AsignacionPlazas": 49,
         "Tarifa": 180
       }
     }
