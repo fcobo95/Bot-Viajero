@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 graph = nx.Graph()
 from pymongo import MongoClient
-from flask import Flask, json, Response, jsonify, render_template
+from flask import Flask, json, Response, jsonify, render_template, redirect
 
 app = Flask(__name__)
 
@@ -21,10 +21,10 @@ client = MongoClient('localhost', 35250)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return '<h1>Index Page</h1>'
+    return 'Hi'
 
 
-@app.route('/api/draw-map/')
+@app.route('/api/draw-map/', methods=['GET', 'POST'])
 def node_mapping():
     graph.add_nodes_from([1, 24])
     # Vamos a quitar esto de aqui luego, para agregar logica.
@@ -97,12 +97,12 @@ def node_mapping():
         ]
     )
     # nodes = printNodes()
-    # edges = printEdges()
+    edges = printEdges()
     degree = printNodeDegree()
     drawGraph()
-    # resp = json.dumps(edges)
+    resp = json.dumps(edges)
 
-    return render_template('../HTML/mainpage.html')  # Response(resp, status=200)
+    return Response(resp, status=200)
 
 
 def printNodes():
@@ -115,6 +115,12 @@ def printEdges():
     edges = graph.edges()
 
     return edges
+
+
+@app.route('/nombre/<nombre>', methods=['GET', 'POST'])
+def imprimar_nombre(nombre):
+    print(nombre)
+    return 'True'
 
 
 def printNodeDegree(node=1):
