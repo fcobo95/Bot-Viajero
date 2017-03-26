@@ -3,48 +3,62 @@
     "Distancia": 4.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Miracruz",
+        "PlacaTaxi": "MRC-231",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "7-5689-7235",
+          "Nombre": "Juan Gabriel",
+          "Apellido": "Palino"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.10,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N5",
+          "Destino": "N14"
         }
+      },
+      "Bus": {
+        "NombreCompañia": "Buses Miracruz",
+        "ConductorAsignado": "Maria Teresa Ojeda",
+        "Ruta": {
+          "Origen": "N5",
+          "Destino": "N14"
+        },
+        "Capacidad": 130,
+        "AsignacionPlazas": 100,
+        "Tarifa": 640
       }
     }
   },
   "N20": {
     "Distancia": 6.40,
     "Transporte": {
-      "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
-        "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
-        },
-        "PrecioKM": "PrecioKM",
-        "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
-        }
-      },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Miracruz",
+        "ConductorAsignado": "Maria Teresa Ojeda",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N5",
+          "Destino": "N20"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 130,
+        "AsignacionPlazas": 100,
+        "Tarifa": 640
+      },
+      "Tren": {
+        "NombreCompania": "Trenes Volio",
+        "Ruta": {
+          "Origen": "N3",
+          "Destino": "N16",
+          "Schedule/Horario": {
+            "Lunes": "4 AM - 10 PM",
+            "Martes": "4 AM - 10 PM",
+            "Miercoles": "4 AM - 10 PM",
+            "Jueves": "4 AM - 10 PM",
+            "Viernes": "4 AM - 10 PM",
+            "Sabado": "8 AM - 5 PM",
+            "Domingo": "8 AM - 5 PM"
+          }
+        },
+        "Tarifa": 3650
       }
     }
   }

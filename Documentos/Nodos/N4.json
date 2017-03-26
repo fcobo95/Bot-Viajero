@@ -21,7 +21,7 @@
         "ConductorAsignado": "Mario Segnon",
         "Ruta": {
           "Origen": "N4",
-          "Destiono": "N9"
+          "Destino": "N9"
         },
         "Capacidad": 60,
         "AsignacionPlazas": 59
@@ -53,7 +53,7 @@
         "ConductorAsignado": "Herbert Dong",
         "Ruta": {
           "Origen": "N4",
-          "Destiono": "N21"
+          "Destino": "N21"
         },
         "Cantidad Pasajeros": 450,
         "Horario": {
@@ -86,15 +86,15 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Volio",
+        "ConductorAsignado": "Juan David Martinez",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N4",
+          "Destino": "N22"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": 250
+        "Capacidad": 110,
+        "AsignacionPlazas": 52,
+        "Tarifa": 550
       }
     }
   },
@@ -103,7 +103,7 @@
     "Transporte": {
       "Taxi": {
         "NombreCompañia": "Taxis Matrix",
-        "PlacaTaxi": "MAT-758",
+        "PlacaTaxi": "MTX-758",
         "Conductor": {
           "Id": "1-1010-0010",
           "Nombre": "Neo",

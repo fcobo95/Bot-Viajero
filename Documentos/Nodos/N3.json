@@ -21,7 +21,7 @@
         "ConductorAsignado": "Gino Manzoni",
         "Ruta": {
           "Origen": "N3",
-          "Destiono": "N1"
+          "Destino": "N1"
         },
         "Capacidad": 60,
         "AsignacionPlazas": 16
@@ -86,7 +86,7 @@
         "ConductorAsignado": "Manuel Cabrera",
         "Ruta": {
           "Origen": "N3",
-          "Destiono": "N24"
+          "Destino": "N24"
         },
         "Capacidad": 75,
         "AsignacionPlazas": 75

@@ -3,29 +3,29 @@
     "Distancia": 2,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Veracruz",
+        "PlacaTaxi": "VRC-123",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "3-3334-2221",
+          "Nombre": "Eric",
+          "Apellido": "Panixa"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N6",
+          "Destino": "N8"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Altopalo",
+        "ConductorAsignado": "Bonifacio Teller",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N6",
+          "Destino": "N8"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 80,
+        "AsignacionPlazas": 12,
+        "Tarifa": 255
       }
     }
   },
@@ -33,29 +33,29 @@
     "Distancia": 2.60,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Veracruz",
+        "PlacaTaxi": "VRC-456",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-3356-1232",
+          "Nombre": "Joshua",
+          "Apellido": "Mampos"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N6",
+          "Destino": "N11"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Altopalo",
+        "ConductorAsignado": "Patrick Teller",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N6",
+          "Destino": "N11"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 80,
+        "AsignacionPlazas": 50,
+        "Tarifa": 255
       }
     }
   },
@@ -63,29 +63,29 @@
     "Distancia": 2.70,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Veracruz",
+        "PlacaTaxi": "VRC-789",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-3356-1233",
+          "Nombre": "Javier",
+          "Apellido": "Mampos"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N6",
+          "Destino": "N19"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Altopalo",
+        "ConductorAsignado": "Marjorie Teller",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N6",
+          "Destino": "N19"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 80,
+        "AsignacionPlazas": 30,
+        "Tarifa": 255
       }
     }
   }
