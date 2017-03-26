@@ -2,10 +2,10 @@
 import datetime
 import networkx as nx
 import matplotlib.pyplot as plt
+from pymongo import MongoClient
+from flask import Flask, json, Response, jsonify, render_template
 
 graph = nx.Graph()
-from pymongo import MongoClient
-from flask import Flask, json, Response, jsonify, render_template, redirect
 
 app = Flask(__name__)
 
@@ -21,10 +21,10 @@ client = MongoClient('localhost', 35250)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    return 'Hi'
+    return '<h1>Index Page</h1>'
 
 
-@app.route('/api/draw-map/', methods=['GET', 'POST'])
+@app.route('/api/draw-map/')
 def node_mapping():
     graph.add_nodes_from([1, 24])
     # Vamos a quitar esto de aqui luego, para agregar logica.
@@ -97,12 +97,12 @@ def node_mapping():
         ]
     )
     # nodes = printNodes()
-    edges = printEdges()
+    # edges = printEdges()
     degree = printNodeDegree()
-    drawGraph()
-    resp = json.dumps(edges)
+    drawGraph("fcobo")
+    # resp = json.dumps(edges)
 
-    return Response(resp, status=200)
+    return render_template('../HTML/mainpage.html')  # Response(resp, status=200)
 
 
 def printNodes():
@@ -117,21 +117,15 @@ def printEdges():
     return edges
 
 
-@app.route('/nombre/<nombre>', methods=['GET', 'POST'])
-def imprimar_nombre(nombre):
-    print(nombre)
-    return 'True'
-
-
 def printNodeDegree(node=1):
     degree = graph.degree(node)
 
     return degree
 
 
-def drawGraph():
+def drawGraph(user=""):
     nx.draw(graph)
-    plt.savefig("C:\\Users\\Erick Fernando Cobo\\Pictures\\graph.png")
+    plt.savefig("C:\\Users\\" + user + "\\Pictures\\graph.png")
     return plt.show()
 
 
