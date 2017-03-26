@@ -3,28 +3,29 @@
     "Distancia": 1.10,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompania": "Taxis del Oeste",
+        "PlacaTaxi": "PGB-254",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-9696-2487",
+          "Nombre": "Javier",
+          "Apellido": "Cedeno"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.25,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N1",
+          "Destino": "N3"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompania": "Buses del Oeste",
+        "ConductorAsignado": "Daniel Cerdas",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N1",
+          "Destino": "N3"
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Capacidad": "50",
+        "AsignacionPlazas": "18",
+        "Tarifa": 180
       }
     }
   },
@@ -32,28 +33,29 @@
     "Distancia": 3.50,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompania": "Taxis Don Omar",
+        "PlacaTaxi": "BGP-255",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "2-9695-5689",
+          "Nombre": "Omar",
+          "Apellido": "Donoban"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.80,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N1",
+          "Destino": "N7"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompania": "Buses Don Omar",
+        "ConductorAsignado": "David Gonzaga",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N1",
+          "Destino": "N7"
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Capacidad": "80",
+        "AsignacionPlazas": "12",
+        "Tarifa": 230
       }
     }
   },
@@ -61,28 +63,29 @@
     "Distancia": 4.50,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompania": "Taxis Don Omar",
+        "PlacaTaxi": "BGP-127",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "2-9695-5689",
+          "Nombre": "Mario",
+          "Apellido": "Hariett"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.80,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N1",
+          "Destino": "N9"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompania": "Buses Don Omar",
+        "ConductorAsignado": "Julio Marin",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N1",
+          "Destino": "N9"
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Capacidad": "80",
+        "AsignacionPlazas": "56",
+        "Tarifa": 230
       }
     }
   },
@@ -90,28 +93,29 @@
     "Distancia": 2.10,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompania": "Taxis del Oeste",
+        "PlacaTaxi": "PGB-252",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "5-8932-1528",
+          "Nombre": "Harold",
+          "Apellido": "Meachum"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.25,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N1",
+          "Destino": "N16"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompania": "Buses del Oeste",
+        "ConductorAsignado": "Katia Morera",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N1",
+          "Destino": "N16"
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Capacidad": "50",
+        "AsignacionPlazas": "21",
+        "Tarifa": 180
       }
     }
   },
@@ -119,28 +123,29 @@
     "Distancia": 3.10,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompania": "Taxis del Oeste",
+        "PlacaTaxi": "PGB-128",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "7-5689-7845",
+          "Nombre": "Alejandro",
+          "Apellido": "Jimenez"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.25,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N1",
+          "Destino": "N22"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompania": "Buses del Oeste",
+        "ConductorAsignado": "Julio Jaramillo",
         "Ruta": {
-          "Origen": "Origen",
-          "Destiono": "Destino"
+          "Origen": "N1",
+          "Destino": "N22"
         },
-        "Capacida": "Capacidad",
-        "AsignacionPlazas": "NumeroAsiento"
+        "Capacidad": "50",
+        "AsignacionPlazas": "49",
+        "Tarifa": 180
       }
     }
   }
