@@ -11,24 +11,29 @@ app = Flask(__name__)
 
 def crearNodos():
     elIndice = 1
-    for cadaArchivo in os.listdir(os.getcwd()):
-        elArchivo = open(cadaArchivo).read()
+    for cadaArchivo in range(len(os.listdir(os.getcwd()))):
+        elNodoPrincipal = "N" + str(elIndice)
+        elArchivo = open(elNodoPrincipal+".json").read()
         elArchivoComoJSON = json.dumps(elArchivo)
-        elGrafo.node["N" + str(elIndice)] = elArchivoComoJSON
+        elGrafo.node[elNodoPrincipal] = elArchivoComoJSON
         elIndice += 1
+        if elIndice == 10 or elIndice == 17:
+            elIndice += 1
     print(elGrafo.nodes())
 
 
 def crearAristas():
     elIndice = 1
-    for cadaArchivo in os.listdir(os.getcwd()):
+    for cadaArchivo in range(len(os.listdir(os.getcwd()))):
         elNodoPrincipal = "N" + str(elIndice)
-        elArchivo = open(cadaArchivo).read()
+        elArchivo = open(elNodoPrincipal+".json").read()
         elArchivoComoDiccionario = json.loads(elArchivo)
         for cadaLlave in elArchivoComoDiccionario:
             laDistancia = elArchivoComoDiccionario[cadaLlave]["Distancia"]
             elGrafo.add_edge(elNodoPrincipal, cadaLlave, weight=laDistancia)
         elIndice += 1
+        if elIndice == 10 or elIndice == 17:
+            elIndice += 1
     print(elGrafo.edges())
 
 
@@ -92,4 +97,4 @@ def drawGraph(user=""):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000, host="localhost")
+    app.run(debug=True, port=5000, host="0.0.0.0")
