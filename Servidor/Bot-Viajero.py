@@ -19,7 +19,7 @@ def crearNodos():
         elIndice += 1
         if elIndice == 10 or elIndice == 17:
             elIndice += 1
-    # print(elGrafo.nodes())
+            # print(elGrafo.nodes())
 
 
 def crearAristas():
@@ -34,7 +34,7 @@ def crearAristas():
         elIndice += 1
         if elIndice == 10 or elIndice == 17:
             elIndice += 1
-    # print(elGrafo.edges())
+            # print(elGrafo.edges())
 
 
 with app.app_context():
@@ -53,7 +53,6 @@ with app.app_context():
     os.chdir('../../')
     os.chdir('Servidor/')
 
-
 __Creators__ = 'Joshua Campos and Erick Cobo'
 
 
@@ -67,7 +66,7 @@ def node_mapping():
     losNodos = elGrafo.nodes()
     lasRelaciones = elGrafo.edges()
     lasCosas = elGrafo.get_edge_data(elGrafo, losNodos, lasRelaciones)
-    lasAdyacencias= elGrafo.adjacency_list()
+    lasAdyacencias = elGrafo.adjacency_list()
     laRespuestaJSON = json.dumps(lasCosas)
 
     return Response(laRespuestaJSON, status=200, mimetype='application/json')
@@ -85,7 +84,7 @@ def getRoute():
     laRutaSeleccionada = {'Orden': laRuta}
     for cadaViaje in range(laCantidadDeViajes):
         elNodoActual = laRuta[elIndice]
-        elNodoSiguiente = laRuta[elIndice+1]
+        elNodoSiguiente = laRuta[elIndice + 1]
         elTransporteDisponible = elGrafo.node[elNodoActual]['Data'][elNodoSiguiente]['Transporte']
         laDistancia = elGrafo[elNodoActual][elNodoSiguiente]['Weight']
         if laDistancia < 5:
