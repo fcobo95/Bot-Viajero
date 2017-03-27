@@ -36,9 +36,9 @@
         "NombreCompañia": "Coopetaxi",
         "PlacaTaxi": "CPT-556",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-8956-7845",
+          "Nombre": "Boris",
+          "Apellido": "Slav"
         },
         "PrecioKM": 0.30,
         "Ruta": {
@@ -64,13 +64,13 @@
     "Transporte": {
       "Taxi": {
         "NombreCompañia": "Coopetaxi",
-        "PlacaTaxi": "CPT-455",
+        "PlacaTaxi": "CPT-435",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "2-8956-7845",
+          "Nombre": "Xiomara",
+          "Apellido": "Benavides"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.80,
         "Ruta": {
           "Origen": "N7",
           "Destino": "N23"
@@ -78,14 +78,14 @@
       },
       "Bus": {
         "NombreCompañia": "Buses Volio",
-        "ConductorAsignado": "Mauricio Pineda",
+        "ConductorAsignado": "Pablo Abarca",
         "Ruta": {
           "Origen": "N7",
           "Destino": "N23"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 150,
+        "AsignacionPlazas": 56,
+        "Tarifa": 325
       }
     }
   }

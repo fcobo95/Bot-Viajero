@@ -62,29 +62,29 @@
     "Distancia": 2.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Coopetaxi",
+        "PlacaTaxi": "CPT-656",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "6-8945-7856",
+          "Nombre": "Tomas",
+          "Apellido": "Marx"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.30,
         "Ruta": {
           "Origen": "N9",
-          "Destino": "Destino"
+          "Destino": "N7"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Loghos",
+        "ConductorAsignado": "Federico Ataraxio",
         "Ruta": {
           "Origen": "N9",
-          "Destino": "Destino"
+          "Destino": "N7"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 150,
+        "AsignacionPlazas": 73,
+        "Tarifa": 350
       }
     }
   },
@@ -92,29 +92,29 @@
     "Distancia": 2,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis del Oeste",
+        "PlacaTaxi": "PGB-111",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-8935-4516",
+          "Nombre": "Allan",
+          "Apellido": "Gau"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.25,
         "Ruta": {
           "Origen": "N9",
-          "Destino": "Destino"
+          "Destino": "N23"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Volados",
+        "ConductorAsignado": "Mariela Cernas",
         "Ruta": {
           "Origen": "N9",
-          "Destino": "Destino"
+          "Destino": "N23"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 80,
+        "AsignacionPlazas": 73,
+        "Tarifa": 565
       }
     }
   }

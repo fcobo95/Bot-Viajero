@@ -3,29 +3,29 @@
     "Distancia": 0.65,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Miracruz",
+        "PlacaTaxi": "MRC-235",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-0125-1258",
+          "Nombre": "Kattia",
+          "Apellido": "Kunberg"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.15,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N12",
+          "Destino": "N15"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Miracruz",
+        "ConductorAsignado": "Benito Suarez",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N12",
+          "Destino": "N15"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 200,
+        "AsignacionPlazas": 127,
+        "Tarifa": 190
       }
     }
   },
@@ -33,59 +33,62 @@
     "Distancia": 3.65,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Miracruz",
+        "PlacaTaxi": "MRC-125",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "6-5925-1258",
+          "Nombre": "Marcelo",
+          "Apellido": "Brown"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.15,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N12",
+          "Destino": "N18"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Miracruz",
+        "ConductorAsignado": "Juanito Perejil",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N12",
+          "Destino": "N18"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 200,
+        "AsignacionPlazas": 89,
+        "Tarifa": 190
       }
     }
   },
   "N21": {
     "Distancia": 7.40,
     "Transporte": {
-      "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
-        "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
-        },
-        "PrecioKM": "PrecioKM",
-        "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
-        }
-      },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Hipster",
+        "ConductorAsignado": "Mauricio Jurado",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N12",
+          "Destino": "N21"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 85,
+        "AsignacionPlazas": 80,
+        "Tarifa": 380
+      },
+      "Tren": {
+        "NombreCompania": "Trenes Volio",
+        "Ruta": {
+          "Origen": "N12",
+          "Destino": "N21",
+          "Schedule/Horario": {
+            "Lunes": "4 AM - 10 PM",
+            "Martes": "4 AM - 10 PM",
+            "Miercoles": "4 AM - 10 PM",
+            "Jueves": "4 AM - 10 PM",
+            "Viernes": "4 AM - 10 PM",
+            "Sabado": "8 AM - 5 PM",
+            "Domingo": "8 AM - 5 PM"
+          }
+        },
+        "Tarifa": 5200
       }
     }
   },
@@ -93,29 +96,29 @@
     "Distancia": 1.65,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Don Omar",
+        "PlacaTaxi": "BGP-754",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-0010-1025",
+          "Nombre": "Manfred",
+          "Apellido": "Arroyo"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.90,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N12",
+          "Destino": "N23"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Loghos",
+        "ConductorAsignado": "Immanuel Marx",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N12",
+          "Destino": "N23"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 200,
+        "AsignacionPlazas": 23,
+        "Tarifa": 650
       }
     }
   }

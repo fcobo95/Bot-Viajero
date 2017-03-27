@@ -33,29 +33,29 @@
     "Distancia": 4.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Miracruz",
+        "PlacaTaxi": "MRC-893",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-0265-7854",
+          "Nombre": "Mario",
+          "Apellido": "Suarez"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.10,
         "Ruta": {
           "Origen": "N14",
-          "Destino": "Destino"
+          "Destino": "N5"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Miracruz",
+        "ConductorAsignado": "Julio Aranjuez",
         "Ruta": {
           "Origen": "N14",
-          "Destino": "Destino"
+          "Destino": "N5"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 130,
+        "AsignacionPlazas": 130,
+        "Tarifa": 640
       }
     }
   },
@@ -63,29 +63,29 @@
     "Distancia": 3,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Hazard",
+        "PlacaTaxi": "HZD-953",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-8956-0321",
+          "Nombre": "Sonia",
+          "Apellido": "Marquez"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.30,
         "Ruta": {
           "Origen": "N14",
-          "Destino": "Destino"
+          "Destino": "N18"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Volio",
+        "ConductorAsignado": "Marco Volio",
         "Ruta": {
           "Origen": "N14",
-          "Destino": "Destino"
+          "Destino": "N18"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 60,
+        "AsignacionPlazas": 60,
+        "Tarifa": 850
       }
     }
   }

@@ -3,29 +3,29 @@
     "Distancia": 2,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Veracruz",
+        "PlacaTaxi": "VRC-456",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "5-3894-4587",
+          "Nombre": "Jairo",
+          "Apellido": "Arguedas"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N8",
+          "Destino": "N6"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Altopalo",
+        "ConductorAsignado": "Carmen Teller",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N8",
+          "Destino": "N6"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 80,
+        "AsignacionPlazas": 71,
+        "Tarifa": 255
       }
     }
   },
@@ -33,29 +33,29 @@
     "Distancia": 0.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Hazard",
+        "PlacaTaxi": "HZD-652",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "6-8956-8974",
+          "Nombre": "Danielle",
+          "Apellido": "Bregolli"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.30,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N8",
+          "Destino": "N16"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Hipster",
+        "ConductorAsignado": "Daniel Amadeus",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N8",
+          "Destino": "N16"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 45,
+        "AsignacionPlazas": 25,
+        "Tarifa": 215
       }
     }
   },
@@ -63,29 +63,29 @@
     "Distancia": 1.80,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Hazard",
+        "PlacaTaxi": "HZD-689",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "3-8066-8568",
+          "Nombre": "Lorna",
+          "Apellido": "Blanco"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.30,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N16",
+          "Destino": "N8"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Hipster",
+        "ConductorAsignado": "Cornelius Filch",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N16",
+          "Destino": "N8"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 45,
+        "AsignacionPlazas": 40,
+        "Tarifa": 215
       }
     }
   }

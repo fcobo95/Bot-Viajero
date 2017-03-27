@@ -73,29 +73,29 @@
     "Distancia": 0.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Hazard",
+        "PlacaTaxi": "HZD-689",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "3-8066-8568",
+          "Nombre": "Lorna",
+          "Apellido": "Blanco"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.30,
         "Ruta": {
           "Origen": "N16",
-          "Destino": "Destino"
+          "Destino": "N8"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Hipster",
+        "ConductorAsignado": "Cornelius Filch",
         "Ruta": {
           "Origen": "N16",
-          "Destino": "Destino"
+          "Destino": "N8"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 45,
+        "AsignacionPlazas": 40,
+        "Tarifa": 215
       }
     }
   }

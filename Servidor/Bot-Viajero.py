@@ -7,13 +7,14 @@ import datetime
 import os
 
 app = Flask(__name__)
+__Creators__ = 'Joshua Campos and Erick Cobo'
 
 
 def crearNodos():
     elIndice = 1
     for cadaArchivo in range(len(os.listdir(os.getcwd()))):
         elNodoPrincipal = "N" + str(elIndice)
-        elArchivo = open(elNodoPrincipal+".json").read()
+        elArchivo = open(elNodoPrincipal + ".json").read()
         elArchivoComoJSON = json.dumps(elArchivo)
         elGrafo.node[elNodoPrincipal] = elArchivoComoJSON
         elIndice += 1
@@ -26,7 +27,7 @@ def crearAristas():
     elIndice = 1
     for cadaArchivo in range(len(os.listdir(os.getcwd()))):
         elNodoPrincipal = "N" + str(elIndice)
-        elArchivo = open(elNodoPrincipal+".json").read()
+        elArchivo = open(elNodoPrincipal + ".json").read()
         elArchivoComoDiccionario = json.loads(elArchivo)
         for cadaLlave in elArchivoComoDiccionario:
             laDistancia = elArchivoComoDiccionario[cadaLlave]["Distancia"]
@@ -54,9 +55,6 @@ with app.app_context():
     os.chdir('Servidor/')
 
 
-__Creators__ = 'Joshua Campos and Erick Cobo'
-
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     return '<h1>Index Page</h1>'
@@ -67,7 +65,7 @@ def node_mapping():
     losNodos = elGrafo.nodes()
     lasRelaciones = elGrafo.edges()
     lasCosas = elGrafo.get_edge_data(elGrafo, losNodos, lasRelaciones)
-    lasAdyacencias= elGrafo.adjacency_list()
+    lasAdyacencias = elGrafo.adjacency_list()
     laRespuestaJSON = json.dumps(lasCosas)
 
     return Response(laRespuestaJSON, status=200, mimetype='application/json')

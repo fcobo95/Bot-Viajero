@@ -36,29 +36,29 @@
     "Distancia": 1.70,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Coopetaxi",
+        "PlacaTaxi": "CPT-455",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "8-8989-9898",
+          "Nombre": "Eduacles",
+          "Apellido": "Rojas"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.80,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N23",
+          "Destino": "N7"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Volio",
+        "ConductorAsignado": "Mauricio Pineda",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N23",
+          "Destino": "N7"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 150,
+        "AsignacionPlazas": 25,
+        "Tarifa": 325
       }
     }
   },
@@ -66,29 +66,29 @@
     "Distancia": 2,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis del Oeste",
+        "PlacaTaxi": "PGB-542",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "2-8895-4236",
+          "Nombre": "Tommy",
+          "Apellido": "Han"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.25,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N23",
+          "Destino": "N9"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Volados",
+        "ConductorAsignado": "Mariela Cernas",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N23",
+          "Destino": "N9"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 80,
+        "AsignacionPlazas": 15,
+        "Tarifa": 565
       }
     }
   },
@@ -96,29 +96,29 @@
     "Distancia": 1.65,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Don Omar",
+        "PlacaTaxi": "BGP-784",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "3-2564-1025",
+          "Nombre": "Gerardo",
+          "Apellido": "Managu"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.90,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N23",
+          "Destino": "N12"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Loghos",
+        "ConductorAsignado": "Tales Voltaire",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N23",
+          "Destino": "N12"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 200,
+        "AsignacionPlazas": 156,
+        "Tarifa": 650
       }
     }
   },
@@ -126,29 +126,29 @@
     "Distancia": 1.50,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Unicornio",
+        "PlacaTaxi": "UNI-999",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-1111-1111",
+          "Nombre": "Unicornio",
+          "Apellido": "Encontrado"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 999,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N23",
+          "Destino": "N15"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Unicornio",
+        "ConductorAsignado": "Unicornio Encontrado",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N23",
+          "Destino": "N15"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 999,
+        "AsignacionPlazas": 1,
+        "Tarifa": 999
       }
     }
   }

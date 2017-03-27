@@ -33,29 +33,29 @@
     "Distancia": 2.70,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis del Oeste",
+        "PlacaTaxi": "PGB-568",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-5680-0025",
+          "Nombre": "Gil",
+          "Apellido": "Esteban"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.25,
         "Ruta": {
           "Origen": "N13",
-          "Destino": "Destino"
+          "Destino": "N15"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Altopalo",
+        "ConductorAsignado": "Dominick Grant",
         "Ruta": {
           "Origen": "N13",
-          "Destino": "Destino"
+          "Destino": "N15"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 90,
+        "AsignacionPlazas": 83,
+        "Tarifa": 350
       }
     }
   },
@@ -63,29 +63,29 @@
     "Distancia": 2.10,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Volio",
+        "PlacaTaxi": "TVL-568",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "7-7778-9965",
+          "Nombre": "Kevin",
+          "Apellido": "Marrenco"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.16,
         "Ruta": {
           "Origen": "N13",
-          "Destino": "Destino"
+          "Destino": "N18"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Volio",
+        "ConductorAsignado": "Francisco Tejeda",
         "Ruta": {
           "Origen": "N13",
-          "Destino": "Destino"
+          "Destino": "N18"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 150,
+        "AsignacionPlazas": 56,
+        "Tarifa": 215
       }
     }
   }

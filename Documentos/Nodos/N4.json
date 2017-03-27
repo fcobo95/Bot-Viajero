@@ -64,7 +64,8 @@
           "Viernes": "2 AM - 12 PM",
           "Sabado": "2 AM - 12 PM",
           "Domingo": "2 AM - 12 PM"
-        }
+        },
+        "Tarifa": 6000
       }
     }
   },

@@ -3,59 +3,70 @@
     "Distancia": 2.60,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Veracruz",
+        "PlacaTaxi": "VRC-567",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "5-2458-8975",
+          "Nombre": "Daniel",
+          "Apellido": "Arredondo"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N11",
+          "Destino": "N6"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Altopalo",
+        "ConductorAsignado": "John Teller",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N11",
+          "Destino": "N6"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 80,
+        "AsignacionPlazas": 36,
+        "Tarifa": 255
       }
     }
   },
   "N19": {
     "Distancia": 13.20,
     "Transporte": {
-      "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
-        "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
-        },
-        "PrecioKM": "PrecioKM",
+      "Tren": {
+        "NombreCompania": "Trenes Volio",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
-        }
+          "Origen": "N11",
+          "Destino": "N19",
+          "Schedule/Horario": {
+            "Lunes": "4 AM - 10 PM",
+            "Martes": "4 AM - 10 PM",
+            "Miercoles": "4 AM - 10 PM",
+            "Jueves": "4 AM - 10 PM",
+            "Viernes": "4 AM - 10 PM",
+            "Sabado": "8 AM - 5 PM",
+            "Domingo": "8 AM - 5 PM"
+          }
+        },
+        "Tarifa": 4000
       },
-      "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+      "Avion": {
+        "NombreCompañia": "Alfa",
+        "ConductorAsignado": "Michael Kanter",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N11",
+          "Destino": "N19"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Cantidad Pasajeros": 500,
+        "Horario": {
+          "Lunes": "2 AM - 12 PM",
+          "Martes": "2 AM - 12 PM",
+          "Miercoles": "2 AM - 12 PM",
+          "Jueves": "2 AM - 12 PM",
+          "Viernes": "2 AM - 12 PM",
+          "Sabado": "2 AM - 12 PM",
+          "Domingo": "2 AM - 12 PM"
+        },
+        "Tarifa": 6000
       }
     }
   },
@@ -63,29 +74,29 @@
     "Distancia": 1.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Veracruz",
+        "PlacaTaxi": "VRC-223",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "7-8923-4512",
+          "Nombre": "Dahlia",
+          "Apellido": "Gotenheiser"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.20,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N11",
+          "Destino": "N24"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Altopalo",
+        "ConductorAsignado": "Miranda Miranda",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N11",
+          "Destino": "N24"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 70,
+        "AsignacionPlazas": 23,
+        "Tarifa": 800
       }
     }
   }

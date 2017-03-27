@@ -3,29 +3,29 @@
     "Distancia": 0.65,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Miracruz",
+        "PlacaTaxi": "MRC-234",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "2-1250-8975",
+          "Nombre": "Arturo",
+          "Apellido": "Parra"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.15,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N15",
+          "Destino": "N12"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Miracruz",
+        "ConductorAsignado": "Benito Suarez",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N15",
+          "Destino": "N12"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 200,
+        "AsignacionPlazas": 19,
+        "Tarifa": 190
       }
     }
   },
@@ -33,29 +33,29 @@
     "Distancia": 2.70,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis del Oeste",
+        "PlacaTaxi": "PGB-668",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "3-6589-5625",
+          "Nombre": "Sergio",
+          "Apellido": "Quesada"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.25,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N15",
+          "Destino": "N13"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Altopalo",
+        "ConductorAsignado": "Roberto Hammock",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N15",
+          "Destino": "N13"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 90,
+        "AsignacionPlazas": 12,
+        "Tarifa": 350
       }
     }
   },
@@ -63,29 +63,29 @@
     "Distancia": 1.50,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Unicornio",
+        "PlacaTaxi": "UNI-999",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-1111-1111",
+          "Nombre": "Unicornio",
+          "Apellido": "Encontrado"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 999,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N15",
+          "Destino": "N23"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Unicornio",
+        "ConductorAsignado": "Unicornio Encontrado",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N15",
+          "Destino": "N23"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 999,
+        "AsignacionPlazas": 1,
+        "Tarifa": 999
       }
     }
   }

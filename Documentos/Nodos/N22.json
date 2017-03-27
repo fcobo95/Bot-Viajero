@@ -66,29 +66,29 @@
     "Distancia": 1.80,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Hazard",
+        "PlacaTaxi": "HZD-589",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "4-8895-8568",
+          "Nombre": "Camilo",
+          "Apellido": "Blanco"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.30,
         "Ruta": {
           "Origen": "N22",
-          "Destino": "N1"
+          "Destino": "N8"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Hipster",
+        "ConductorAsignado": "Harry Gutenberg",
         "Ruta": {
           "Origen": "N22",
-          "Destino": "N1"
+          "Destino": "N8"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 45,
+        "AsignacionPlazas": 3,
+        "Tarifa": 215
       }
     }
   }

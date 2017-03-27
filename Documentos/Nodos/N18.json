@@ -12,7 +12,7 @@
         },
         "PrecioKM": "PrecioKM",
         "Ruta": {
-          "Origen": "Origen",
+          "Origen": "N18",
           "Destino": "Destino"
         }
       },
@@ -20,7 +20,7 @@
         "NombreCompañia": "Nombre",
         "ConductorAsignado": "Conductor",
         "Ruta": {
-          "Origen": "Origen",
+          "Origen": "N18",
           "Destino": "Destino"
         },
         "Capacidad": "Capacidadd",
@@ -33,29 +33,29 @@
     "Distancia": 2.10,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Volio",
+        "PlacaTaxi": "TVL-125",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-0078-5865",
+          "Nombre": "Carlos",
+          "Apellido": "Alfaro"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.16,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N18",
+          "Destino": "N13"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Volio",
+        "ConductorAsignado": "Camilo Tejeda",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N18",
+          "Destino": "N13"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 150,
+        "AsignacionPlazas": 147,
+        "Tarifa": 215
       }
     }
   },
@@ -63,29 +63,29 @@
     "Distancia": 3,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Hazard",
+        "PlacaTaxi": "HZD-932",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-0001-0123",
+          "Nombre": "Sylvia",
+          "Apellido": "Gomez"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.30,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N18",
+          "Destino": "N14"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Volio",
+        "ConductorAsignado": "Marco Volio",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N18",
+          "Destino": "N14"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 60,
+        "AsignacionPlazas": 37,
+        "Tarifa": 850
       }
     }
   },
@@ -93,29 +93,29 @@
     "Distancia": 3.40,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Don Omar",
+        "PlacaTaxi": "BGP-921",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "6-8956-7812",
+          "Nombre": "Robin",
+          "Apellido": "Black"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 2,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N18",
+          "Destino": "N20"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Don Omar",
+        "ConductorAsignado": "Don Omar",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N18",
+          "Destino": "N20"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 150,
+        "AsignacionPlazas": 28,
+        "Tarifa": 425
       }
     }
   }

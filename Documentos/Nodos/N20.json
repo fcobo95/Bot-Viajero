@@ -36,29 +36,29 @@
     "Distancia": 3.40,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Don Omar",
+        "PlacaTaxi": "BGP-901",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "7-8956-7812",
+          "Nombre": "Peter",
+          "Apellido": "Parker"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 2,
         "Ruta": {
           "Origen": "N20",
-          "Destino": "Destino"
+          "Destino": "N18"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Don Omar",
+        "ConductorAsignado": "Anthony Martinez",
         "Ruta": {
           "Origen": "N20",
-          "Destino": "Destino"
+          "Destino": "N18"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 150,
+        "AsignacionPlazas": 8,
+        "Tarifa": 425
       }
     }
   },
@@ -66,29 +66,29 @@
     "Distancia": 2.15,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis de los Ultimos Dias",
+        "PlacaTaxi": "TUD-007",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "6-8956-8467",
+          "Nombre": "Maria",
+          "Apellido": "Batres"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.30,
         "Ruta": {
           "Origen": "N20",
-          "Destino": "Destino"
+          "Destino": "N21"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Loghos",
+        "ConductorAsignado": "Voltaire Voltaire",
         "Ruta": {
           "Origen": "N20",
-          "Destino": "Destino"
+          "Destino": "N21"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 40,
+        "AsignacionPlazas": 20,
+        "Tarifa": 600
       }
     }
   }

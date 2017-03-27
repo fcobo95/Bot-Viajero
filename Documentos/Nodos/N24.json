@@ -65,29 +65,29 @@
     "Distancia": 1.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Veracruz",
+        "PlacaTaxi": "VRC-203",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "9-0125-7643",
+          "Nombre": "Isabel",
+          "Apellido": "Martin"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.20,
         "Ruta": {
           "Origen": "N24",
-          "Destino": "Destino"
+          "Destino": "N1"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Altopalo",
+        "ConductorAsignado": "Matilde Miranda",
         "Ruta": {
           "Origen": "N24",
-          "Destino": "Destino"
+          "Destino": "N11"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 70,
+        "AsignacionPlazas": 2,
+        "Tarifa": 800
       }
     }
   },
@@ -95,29 +95,29 @@
     "Distancia": 4.50,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Veracruz",
+        "PlacaTaxi": "VRC-104",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "1-1956-7451",
+          "Nombre": "Torreto",
+          "Apellido": "Rojas"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.99,
         "Ruta": {
           "Origen": "N24",
-          "Destino": "Destino"
+          "Destino": "N19"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Volio",
+        "ConductorAsignado": "Miguel Figueres",
         "Ruta": {
           "Origen": "N24",
-          "Destino": "Destino"
+          "Destino": "N19"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 200,
+        "AsignacionPlazas": 59,
+        "Tarifa": 1000
       }
     }
   }

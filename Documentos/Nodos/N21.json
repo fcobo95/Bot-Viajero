@@ -42,30 +42,33 @@
   "N12": {
     "Distancia": 7.40,
     "Transporte": {
-      "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
-        "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
-        },
-        "PrecioKM": "PrecioKM",
-        "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
-        }
-      },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Hipster",
+        "ConductorAsignado": "Javier Maduro",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N21",
+          "Destino": "N12"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 85,
+        "AsignacionPlazas": 80,
+        "Tarifa": 380
+      },
+      "Tren": {
+        "NombreCompania": "Trenes Volio",
+        "Ruta": {
+          "Origen": "N21",
+          "Destino": "N12",
+          "Schedule/Horario": {
+            "Lunes": "4 AM - 10 PM",
+            "Martes": "4 AM - 10 PM",
+            "Miercoles": "4 AM - 10 PM",
+            "Jueves": "4 AM - 10 PM",
+            "Viernes": "4 AM - 10 PM",
+            "Sabado": "8 AM - 5 PM",
+            "Domingo": "8 AM - 5 PM"
+          }
+        },
+        "Tarifa": 5200
       }
     }
   },
@@ -73,29 +76,29 @@
     "Distancia": 2.15,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis de los Ultimos Dias",
+        "PlacaTaxi": "TUD-957",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "7-1256-4582",
+          "Nombre": "Pablo",
+          "Apellido": "Fernandez"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.30,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N21",
+          "Destino": "N20"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Loghos",
+        "ConductorAsignado": "Katja Weloswoski",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N21",
+          "Destino": "N20"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 40,
+        "AsignacionPlazas": 14,
+        "Tarifa": 600
       }
     }
   }
