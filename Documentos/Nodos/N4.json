@@ -3,7 +3,7 @@
     "Distancia": 3.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Don Omar",
+        "NombreCompania": "Taxis Don Omar",
         "PlacaTaxi": "BGP-001",
         "Conductor": {
           "Id": "1-1526-1234",
@@ -17,7 +17,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Don Omar",
+        "NombreCompania": "Buses Don Omar",
         "ConductorAsignado": "Mario Segnon",
         "Ruta": {
           "Origen": "N4",
@@ -49,7 +49,7 @@
         "Tarifa": 3650
       },
       "Avion": {
-        "NombreCompañia": "Alfa",
+        "NombreCompania": "Alfa",
         "ConductorAsignado": "Herbert Dong",
         "Ruta": {
           "Origen": "N4",
@@ -73,7 +73,7 @@
     "Distancia": 3.95,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis de los Ultimos Dias",
+        "NombreCompania": "Taxis de los Ultimos Dias",
         "PlacaTaxi": "LUD-656",
         "Conductor": {
           "Id": "4-8975-3651",
@@ -87,7 +87,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Volio",
+        "NombreCompania": "Buses Volio",
         "ConductorAsignado": "Juan David Martinez",
         "Ruta": {
           "Origen": "N4",
@@ -103,7 +103,7 @@
     "Distancia": 3.50,
     "Transporte": {
       "Bus": {
-        "NombreCompañia": "Buses Volio",
+        "NombreCompania": "Buses Volio",
         "ConductorAsignado": "Gabriel Martinez",
         "Ruta": {
           "Origen": "N4",

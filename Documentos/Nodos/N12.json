@@ -3,7 +3,7 @@
     "Distancia": 0.65,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Miracruz",
+        "NombreCompania": "Taxis Miracruz",
         "PlacaTaxi": "MRC-235",
         "Conductor": {
           "Id": "1-0125-1258",
@@ -17,7 +17,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Miracruz",
+        "NombreCompania": "Buses Miracruz",
         "ConductorAsignado": "Benito Suarez",
         "Ruta": {
           "Origen": "N12",
@@ -33,7 +33,7 @@
     "Distancia": 3.65,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Miracruz",
+        "NombreCompania": "Taxis Miracruz",
         "PlacaTaxi": "MRC-125",
         "Conductor": {
           "Id": "6-5925-1258",
@@ -47,7 +47,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Miracruz",
+        "NombreCompania": "Buses Miracruz",
         "ConductorAsignado": "Juanito Perejil",
         "Ruta": {
           "Origen": "N12",
@@ -63,7 +63,7 @@
     "Distancia": 7.40,
     "Transporte": {
       "Bus": {
-        "NombreCompañia": "Buses Hipster",
+        "NombreCompania": "Buses Hipster",
         "ConductorAsignado": "Mauricio Jurado",
         "Ruta": {
           "Origen": "N12",
@@ -96,7 +96,7 @@
     "Distancia": 1.65,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Don Omar",
+        "NombreCompania": "Taxis Don Omar",
         "PlacaTaxi": "BGP-754",
         "Conductor": {
           "Id": "1-0010-1025",
@@ -110,7 +110,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Loghos",
+        "NombreCompania": "Buses Loghos",
         "ConductorAsignado": "Immanuel Marx",
         "Ruta": {
           "Origen": "N12",

@@ -20,7 +20,7 @@
         "Tarifa": 3650
       },
       "Avion": {
-        "NombreCompañia": "Alfa",
+        "NombreCompania": "Alfa",
         "ConductorAsignado": "Herbert Dong",
         "Ruta": {
           "Origen": "N21",
@@ -43,7 +43,7 @@
     "Distancia": 7.40,
     "Transporte": {
       "Bus": {
-        "NombreCompañia": "Buses Hipster",
+        "NombreCompania": "Buses Hipster",
         "ConductorAsignado": "Javier Maduro",
         "Ruta": {
           "Origen": "N21",
@@ -76,7 +76,7 @@
     "Distancia": 2.15,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis de los Ultimos Dias",
+        "NombreCompania": "Taxis de los Ultimos Dias",
         "PlacaTaxi": "TUD-957",
         "Conductor": {
           "Id": "7-1256-4582",
@@ -90,7 +90,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Loghos",
+        "NombreCompania": "Buses Loghos",
         "ConductorAsignado": "Katja Weloswoski",
         "Ruta": {
           "Origen": "N21",

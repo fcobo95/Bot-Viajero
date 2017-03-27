@@ -3,7 +3,7 @@
     "Distancia": 2.60,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Veracruz",
+        "NombreCompania": "Taxis Veracruz",
         "PlacaTaxi": "VRC-567",
         "Conductor": {
           "Id": "5-2458-8975",
@@ -17,7 +17,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Altopalo",
+        "NombreCompania": "Buses Altopalo",
         "ConductorAsignado": "John Teller",
         "Ruta": {
           "Origen": "N11",
@@ -50,7 +50,7 @@
         "Tarifa": 4000
       },
       "Avion": {
-        "NombreCompañia": "Alfa",
+        "NombreCompania": "Alfa",
         "ConductorAsignado": "Michael Kanter",
         "Ruta": {
           "Origen": "N11",
@@ -74,7 +74,7 @@
     "Distancia": 1.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Veracruz",
+        "NombreCompania": "Taxis Veracruz",
         "PlacaTaxi": "VRC-223",
         "Conductor": {
           "Id": "7-8923-4512",
@@ -88,7 +88,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Altopalo",
+        "NombreCompania": "Buses Altopalo",
         "ConductorAsignado": "Miranda Miranda",
         "Ruta": {
           "Origen": "N11",

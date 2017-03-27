@@ -3,7 +3,7 @@
     "Distancia": 2.70,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Veracruz",
+        "NombreCompania": "Taxis Veracruz",
         "PlacaTaxi": "VRC-999",
         "Conductor": {
           "Id": "1-3852-3251",
@@ -17,7 +17,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Altopalo",
+        "NombreCompania": "Buses Altopalo",
         "ConductorAsignado": "Marjorie Teller",
         "Ruta": {
           "Origen": "N19",
@@ -50,7 +50,7 @@
         "Tarifa": 4000
       },
       "Avion": {
-        "NombreCompañia": "Alfa",
+        "NombreCompania": "Alfa",
         "ConductorAsignado": "Juana De Vitto",
         "Ruta": {
           "Origen": "N19",
@@ -74,7 +74,7 @@
     "Distancia": 4.50,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Veracruz",
+        "NombreCompania": "Taxis Veracruz",
         "PlacaTaxi": "VRC-934",
         "Conductor": {
           "Id": "1-8956-0154",
@@ -88,7 +88,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Volio",
+        "NombreCompania": "Buses Volio",
         "ConductorAsignado": "Miguel Figueres",
         "Ruta": {
           "Origen": "N19",

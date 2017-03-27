@@ -3,7 +3,7 @@
     "Distancia": 0.65,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Miracruz",
+        "NombreCompania": "Taxis Miracruz",
         "PlacaTaxi": "MRC-234",
         "Conductor": {
           "Id": "2-1250-8975",
@@ -17,7 +17,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Miracruz",
+        "NombreCompania": "Buses Miracruz",
         "ConductorAsignado": "Benito Suarez",
         "Ruta": {
           "Origen": "N15",
@@ -33,7 +33,7 @@
     "Distancia": 2.70,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis del Oeste",
+        "NombreCompania": "Taxis del Oeste",
         "PlacaTaxi": "PGB-668",
         "Conductor": {
           "Id": "3-6589-5625",
@@ -47,7 +47,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Altopalo",
+        "NombreCompania": "Buses Altopalo",
         "ConductorAsignado": "Roberto Hammock",
         "Ruta": {
           "Origen": "N15",
@@ -63,7 +63,7 @@
     "Distancia": 1.50,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Unicornio",
+        "NombreCompania": "Taxis Unicornio",
         "PlacaTaxi": "UNI-999",
         "Conductor": {
           "Id": "1-1111-1111",
@@ -77,7 +77,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Unicornio",
+        "NombreCompania": "Buses Unicornio",
         "ConductorAsignado": "Unicornio Encontrado",
         "Ruta": {
           "Origen": "N15",

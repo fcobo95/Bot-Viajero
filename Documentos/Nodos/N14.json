@@ -3,7 +3,7 @@
     "Distancia": 4.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Miracruz",
+        "NombreCompania": "Taxis Miracruz",
         "PlacaTaxi": "MRC-231",
         "Conductor": {
           "Id": "7-5689-7235",
@@ -17,7 +17,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Miracruz",
+        "NombreCompania": "Buses Miracruz",
         "ConductorAsignado": "Maria Taras",
         "Ruta": {
           "Origen": "N14",
@@ -33,7 +33,7 @@
     "Distancia": 4.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Miracruz",
+        "NombreCompania": "Taxis Miracruz",
         "PlacaTaxi": "MRC-893",
         "Conductor": {
           "Id": "1-0265-7854",
@@ -47,7 +47,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Miracruz",
+        "NombreCompania": "Buses Miracruz",
         "ConductorAsignado": "Julio Aranjuez",
         "Ruta": {
           "Origen": "N14",
@@ -63,7 +63,7 @@
     "Distancia": 3,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Hazard",
+        "NombreCompania": "Hazard",
         "PlacaTaxi": "HZD-953",
         "Conductor": {
           "Id": "1-8956-0321",
@@ -77,7 +77,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Volio",
+        "NombreCompania": "Buses Volio",
         "ConductorAsignado": "Marco Volio",
         "Ruta": {
           "Origen": "N14",

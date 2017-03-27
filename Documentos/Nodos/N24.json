@@ -36,7 +36,7 @@
     "Distancia": 3.45,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Radicales",
+        "NombreCompania": "Taxis Radicales",
         "PlacaTaxi": "RAD-555",
         "Conductor": {
           "Id": "1-8010-4512",
@@ -50,7 +50,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Volados",
+        "NombreCompania": "Buses Volados",
         "ConductorAsignado": "Michael Quesada",
         "Ruta": {
           "Origen": "N24",
@@ -65,7 +65,7 @@
     "Distancia": 1.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Veracruz",
+        "NombreCompania": "Taxis Veracruz",
         "PlacaTaxi": "VRC-203",
         "Conductor": {
           "Id": "9-0125-7643",
@@ -79,7 +79,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Altopalo",
+        "NombreCompania": "Buses Altopalo",
         "ConductorAsignado": "Matilde Miranda",
         "Ruta": {
           "Origen": "N24",
@@ -95,7 +95,7 @@
     "Distancia": 4.50,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Veracruz",
+        "NombreCompania": "Taxis Veracruz",
         "PlacaTaxi": "VRC-104",
         "Conductor": {
           "Id": "1-1956-7451",
@@ -109,7 +109,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Volio",
+        "NombreCompania": "Buses Volio",
         "ConductorAsignado": "Miguel Figueres",
         "Ruta": {
           "Origen": "N24",

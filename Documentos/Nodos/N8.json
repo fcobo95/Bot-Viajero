@@ -3,7 +3,7 @@
     "Distancia": 2,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Veracruz",
+        "NombreCompania": "Taxis Veracruz",
         "PlacaTaxi": "VRC-456",
         "Conductor": {
           "Id": "5-3894-4587",
@@ -17,7 +17,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Altopalo",
+        "NombreCompania": "Buses Altopalo",
         "ConductorAsignado": "Carmen Teller",
         "Ruta": {
           "Origen": "N8",
@@ -33,7 +33,7 @@
     "Distancia": 0.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Hazard",
+        "NombreCompania": "Taxis Hazard",
         "PlacaTaxi": "HZD-652",
         "Conductor": {
           "Id": "6-8956-8974",
@@ -47,7 +47,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Hipster",
+        "NombreCompania": "Buses Hipster",
         "ConductorAsignado": "Daniel Amadeus",
         "Ruta": {
           "Origen": "N8",
@@ -63,7 +63,7 @@
     "Distancia": 1.80,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Hazard",
+        "NombreCompania": "Taxis Hazard",
         "PlacaTaxi": "HZD-689",
         "Conductor": {
           "Id": "3-8066-8568",
@@ -77,7 +77,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Hipster",
+        "NombreCompania": "Buses Hipster",
         "ConductorAsignado": "Cornelius Filch",
         "Ruta": {
           "Origen": "N16",

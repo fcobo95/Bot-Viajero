@@ -3,7 +3,7 @@
     "Distancia": 4.50,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Don Omar",
+        "NombreCompania": "Taxis Don Omar",
         "PlacaTaxi": "BGP-145",
         "Conductor": {
           "Id": "1-8956-5678",
@@ -33,7 +33,7 @@
     "Distancia": 3.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Don Omar",
+        "NombreCompania": "Taxis Don Omar",
         "PlacaTaxi": "BGP-016",
         "Conductor": {
           "Id": "6-1526-1234",
@@ -47,7 +47,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Don Omar",
+        "NombreCompania": "Buses Don Omar",
         "ConductorAsignado": "Mario Segnon",
         "Ruta": {
           "Origen": "N9",
@@ -62,7 +62,7 @@
     "Distancia": 2.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Coopetaxi",
+        "NombreCompania": "Coopetaxi",
         "PlacaTaxi": "CPT-656",
         "Conductor": {
           "Id": "6-8945-7856",
@@ -76,7 +76,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Loghos",
+        "NombreCompania": "Buses Loghos",
         "ConductorAsignado": "Federico Ataraxio",
         "Ruta": {
           "Origen": "N9",
@@ -92,7 +92,7 @@
     "Distancia": 2,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis del Oeste",
+        "NombreCompania": "Taxis del Oeste",
         "PlacaTaxi": "PGB-111",
         "Conductor": {
           "Id": "1-8935-4516",
@@ -106,7 +106,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Volados",
+        "NombreCompania": "Buses Volados",
         "ConductorAsignado": "Mariela Cernas",
         "Ruta": {
           "Origen": "N9",

@@ -3,7 +3,7 @@
     "Distancia": 3.50,
     "Transporte": {
       "Bus": {
-        "NombreCompañia": "Buses Volio",
+        "NombreCompania": "Buses Volio",
         "ConductorAsignado": "David Kant",
         "Ruta": {
           "Origen": "N23",
@@ -36,7 +36,7 @@
     "Distancia": 1.70,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Coopetaxi",
+        "NombreCompania": "Coopetaxi",
         "PlacaTaxi": "CPT-455",
         "Conductor": {
           "Id": "8-8989-9898",
@@ -50,7 +50,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Volio",
+        "NombreCompania": "Buses Volio",
         "ConductorAsignado": "Mauricio Pineda",
         "Ruta": {
           "Origen": "N23",
@@ -66,7 +66,7 @@
     "Distancia": 2,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis del Oeste",
+        "NombreCompania": "Taxis del Oeste",
         "PlacaTaxi": "PGB-542",
         "Conductor": {
           "Id": "2-8895-4236",
@@ -80,7 +80,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Volados",
+        "NombreCompania": "Buses Volados",
         "ConductorAsignado": "Mariela Cernas",
         "Ruta": {
           "Origen": "N23",
@@ -96,7 +96,7 @@
     "Distancia": 1.65,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Don Omar",
+        "NombreCompania": "Taxis Don Omar",
         "PlacaTaxi": "BGP-784",
         "Conductor": {
           "Id": "3-2564-1025",
@@ -110,7 +110,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Loghos",
+        "NombreCompania": "Buses Loghos",
         "ConductorAsignado": "Tales Voltaire",
         "Ruta": {
           "Origen": "N23",
@@ -126,7 +126,7 @@
     "Distancia": 1.50,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Unicornio",
+        "NombreCompania": "Taxis Unicornio",
         "PlacaTaxi": "UNI-999",
         "Conductor": {
           "Id": "1-1111-1111",
@@ -140,7 +140,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Unicornio",
+        "NombreCompania": "Buses Unicornio",
         "ConductorAsignado": "Unicornio Encontrado",
         "Ruta": {
           "Origen": "N23",

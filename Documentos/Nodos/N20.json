@@ -3,7 +3,7 @@
     "Distancia": 6.40,
     "Transporte": {
       "Bus": {
-        "NombreCompañia": "Buses Miracruz",
+        "NombreCompania": "Buses Miracruz",
         "ConductorAsignado": "Jairo Roa",
         "Ruta": {
           "Origen": "N20",
@@ -36,7 +36,7 @@
     "Distancia": 3.40,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Don Omar",
+        "NombreCompania": "Taxis Don Omar",
         "PlacaTaxi": "BGP-901",
         "Conductor": {
           "Id": "7-8956-7812",
@@ -50,7 +50,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Don Omar",
+        "NombreCompania": "Buses Don Omar",
         "ConductorAsignado": "Anthony Martinez",
         "Ruta": {
           "Origen": "N20",
@@ -66,7 +66,7 @@
     "Distancia": 2.15,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis de los Ultimos Dias",
+        "NombreCompania": "Taxis de los Ultimos Dias",
         "PlacaTaxi": "TUD-007",
         "Conductor": {
           "Id": "6-8956-8467",
@@ -80,7 +80,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Loghos",
+        "NombreCompania": "Buses Loghos",
         "ConductorAsignado": "Voltaire Voltaire",
         "Ruta": {
           "Origen": "N20",

@@ -50,7 +50,7 @@
         "Tarifa": 3650
       },
       "Avion": {
-        "NombreCompañia": "Alfa",
+        "NombreCompania": "Alfa",
         "ConductorAsignado": "Mailo Kongo",
         "Ruta": {
           "Origen": "N16",
@@ -73,7 +73,7 @@
     "Distancia": 0.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Hazard",
+        "NombreCompania": "Taxis Hazard",
         "PlacaTaxi": "HZD-689",
         "Conductor": {
           "Id": "3-8066-8568",
@@ -87,7 +87,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Hipster",
+        "NombreCompania": "Buses Hipster",
         "ConductorAsignado": "Cornelius Filch",
         "Ruta": {
           "Origen": "N16",

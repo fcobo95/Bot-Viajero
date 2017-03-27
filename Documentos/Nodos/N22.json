@@ -36,7 +36,7 @@
     "Distancia": 3.95,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis de los Ultimos Dias",
+        "NombreCompania": "Taxis de los Ultimos Dias",
         "PlacaTaxi": "LUD-789",
         "Conductor": {
           "Id": "6-8975-3651",
@@ -50,7 +50,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Volio",
+        "NombreCompania": "Buses Volio",
         "ConductorAsignado": "David Malavasi",
         "Ruta": {
           "Origen": "N22",
@@ -66,7 +66,7 @@
     "Distancia": 1.80,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Hazard",
+        "NombreCompania": "Taxis Hazard",
         "PlacaTaxi": "HZD-589",
         "Conductor": {
           "Id": "4-8895-8568",
@@ -80,7 +80,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Hipster",
+        "NombreCompania": "Buses Hipster",
         "ConductorAsignado": "Harry Gutenberg",
         "Ruta": {
           "Origen": "N22",

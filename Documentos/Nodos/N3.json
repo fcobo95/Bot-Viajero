@@ -3,7 +3,7 @@
     "Distancia": 1.10,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis del Oeste",
+        "NombreCompania": "Taxis del Oeste",
         "PlacaTaxi": "PGB-568",
         "Conductor": {
           "Id": "6-4589-1256",
@@ -17,7 +17,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses del Oeste",
+        "NombreCompania": "Buses del Oeste",
         "ConductorAsignado": "Gino Manzoni",
         "Ruta": {
           "Origen": "N3",
@@ -50,7 +50,7 @@
         "Tarifa": 3650
       },
       "Avion": {
-        "NombreCompañia": "Alfa",
+        "NombreCompania": "Alfa",
         "ConductorAsignado": "Herbert Dong",
         "Ruta": {
           "Origen": "N3",
@@ -74,7 +74,7 @@
     "Distancia": 3.45,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Radicales",
+        "NombreCompania": "Taxis Radicales",
         "PlacaTaxi": "RAD-666",
         "Conductor": {
           "Id": "1-8000-8989",
@@ -88,7 +88,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Volados",
+        "NombreCompania": "Buses Volados",
         "ConductorAsignado": "Manuel Cabrera",
         "Ruta": {
           "Origen": "N3",

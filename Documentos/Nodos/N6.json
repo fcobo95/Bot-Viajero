@@ -3,7 +3,7 @@
     "Distancia": 2,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Veracruz",
+        "NombreCompania": "Taxis Veracruz",
         "PlacaTaxi": "VRC-123",
         "Conductor": {
           "Id": "3-3334-2221",
@@ -17,7 +17,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Altopalo",
+        "NombreCompania": "Buses Altopalo",
         "ConductorAsignado": "Bonifacio Teller",
         "Ruta": {
           "Origen": "N6",
@@ -33,7 +33,7 @@
     "Distancia": 2.60,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Veracruz",
+        "NombreCompania": "Taxis Veracruz",
         "PlacaTaxi": "VRC-456",
         "Conductor": {
           "Id": "1-3356-1232",
@@ -47,7 +47,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Altopalo",
+        "NombreCompania": "Buses Altopalo",
         "ConductorAsignado": "Patrick Teller",
         "Ruta": {
           "Origen": "N6",
@@ -63,7 +63,7 @@
     "Distancia": 2.70,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Veracruz",
+        "NombreCompania": "Taxis Veracruz",
         "PlacaTaxi": "VRC-789",
         "Conductor": {
           "Id": "1-3356-1233",
@@ -77,7 +77,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Altopalo",
+        "NombreCompania": "Buses Altopalo",
         "ConductorAsignado": "Marjorie Teller",
         "Ruta": {
           "Origen": "N6",

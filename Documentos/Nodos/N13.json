@@ -33,7 +33,7 @@
     "Distancia": 2.70,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis del Oeste",
+        "NombreCompania": "Taxis del Oeste",
         "PlacaTaxi": "PGB-568",
         "Conductor": {
           "Id": "1-5680-0025",
@@ -47,7 +47,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Altopalo",
+        "NombreCompania": "Buses Altopalo",
         "ConductorAsignado": "Dominick Grant",
         "Ruta": {
           "Origen": "N13",
@@ -63,7 +63,7 @@
     "Distancia": 2.10,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Volio",
+        "NombreCompania": "Taxis Volio",
         "PlacaTaxi": "TVL-568",
         "Conductor": {
           "Id": "7-7778-9965",
@@ -77,7 +77,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Volio",
+        "NombreCompania": "Buses Volio",
         "ConductorAsignado": "Francisco Tejeda",
         "Ruta": {
           "Origen": "N13",

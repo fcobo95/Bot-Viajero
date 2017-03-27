@@ -3,7 +3,7 @@
     "Distancia": 3.65,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
+        "NombreCompania": "Nombre",
         "PlacaTaxi": "Placa",
         "Conductor": {
           "Id": "Id",
@@ -17,7 +17,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
+        "NombreCompania": "Nombre",
         "ConductorAsignado": "Conductor",
         "Ruta": {
           "Origen": "N18",
@@ -33,7 +33,7 @@
     "Distancia": 2.10,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Volio",
+        "NombreCompania": "Taxis Volio",
         "PlacaTaxi": "TVL-125",
         "Conductor": {
           "Id": "1-0078-5865",
@@ -47,7 +47,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Volio",
+        "NombreCompania": "Buses Volio",
         "ConductorAsignado": "Camilo Tejeda",
         "Ruta": {
           "Origen": "N18",
@@ -63,7 +63,7 @@
     "Distancia": 3,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Hazard",
+        "NombreCompania": "Hazard",
         "PlacaTaxi": "HZD-932",
         "Conductor": {
           "Id": "1-0001-0123",
@@ -77,7 +77,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Volio",
+        "NombreCompania": "Buses Volio",
         "ConductorAsignado": "Marco Volio",
         "Ruta": {
           "Origen": "N18",
@@ -93,7 +93,7 @@
     "Distancia": 3.40,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Don Omar",
+        "NombreCompania": "Taxis Don Omar",
         "PlacaTaxi": "BGP-921",
         "Conductor": {
           "Id": "6-8956-7812",
@@ -107,7 +107,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Don Omar",
+        "NombreCompania": "Buses Don Omar",
         "ConductorAsignado": "Don Omar",
         "Ruta": {
           "Origen": "N18",

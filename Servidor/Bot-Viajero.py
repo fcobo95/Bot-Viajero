@@ -110,7 +110,7 @@ def getRoute():
                 laRutaSeleccionada[elNodoActual] = {'Avion': elTransporteAdecuado}
         elIndice += 1
     laRutaSeleccionadaComoJSON = json.dumps(laRutaSeleccionada)
-    return Response(laRutaSeleccionadaComoJSON, 200, mimetype='application/json')
+    return Response(laRutaSeleccionadaComoJSON, status=200, mimetype='application/json')
 
 
 def printNodes():

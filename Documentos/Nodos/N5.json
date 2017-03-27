@@ -3,7 +3,7 @@
     "Distancia": 4.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Taxis Miracruz",
+        "NombreCompania": "Taxis Miracruz",
         "PlacaTaxi": "MRC-123",
         "Conductor": {
           "Id": "9-5689-7235",
@@ -17,7 +17,7 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Miracruz",
+        "NombreCompania": "Buses Miracruz",
         "ConductorAsignado": "Maria Teresa Ojeda",
         "Ruta": {
           "Origen": "N5",
@@ -33,7 +33,7 @@
     "Distancia": 6.40,
     "Transporte": {
       "Bus": {
-        "NombreCompañia": "Buses Miracruz",
+        "NombreCompania": "Buses Miracruz",
         "ConductorAsignado": "Maria Teresa Ojeda",
         "Ruta": {
           "Origen": "N5",
