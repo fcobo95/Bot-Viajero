@@ -7,7 +7,6 @@ import datetime
 import os
 
 app = Flask(__name__)
-__Creators__ = 'Joshua Campos and Erick Cobo'
 
 
 def crearNodos():
@@ -15,12 +14,12 @@ def crearNodos():
     for cadaArchivo in range(len(os.listdir(os.getcwd()))):
         elNodoPrincipal = "N" + str(elIndice)
         elArchivo = open(elNodoPrincipal + ".json").read()
-        elArchivoComoJSON = json.dumps(elArchivo)
-        elGrafo.node[elNodoPrincipal] = elArchivoComoJSON
+        elArchivoComoJSON = json.loads(elArchivo)
+        elGrafo.add_node(elNodoPrincipal, Data=elArchivoComoJSON)
         elIndice += 1
         if elIndice == 10 or elIndice == 17:
             elIndice += 1
-    print(elGrafo.nodes())
+    # print(elGrafo.nodes())
 
 
 def crearAristas():
@@ -31,11 +30,11 @@ def crearAristas():
         elArchivoComoDiccionario = json.loads(elArchivo)
         for cadaLlave in elArchivoComoDiccionario:
             laDistancia = elArchivoComoDiccionario[cadaLlave]["Distancia"]
-            elGrafo.add_edge(elNodoPrincipal, cadaLlave, weight=laDistancia)
+            elGrafo.add_edge(elNodoPrincipal, cadaLlave, Weight=laDistancia)
         elIndice += 1
         if elIndice == 10 or elIndice == 17:
             elIndice += 1
-    print(elGrafo.edges())
+    # print(elGrafo.edges())
 
 
 with app.app_context():
@@ -55,6 +54,9 @@ with app.app_context():
     os.chdir('Servidor/')
 
 
+__Creators__ = 'Joshua Campos and Erick Cobo'
+
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
     return '<h1>Index Page</h1>'
@@ -65,10 +67,51 @@ def node_mapping():
     losNodos = elGrafo.nodes()
     lasRelaciones = elGrafo.edges()
     lasCosas = elGrafo.get_edge_data(elGrafo, losNodos, lasRelaciones)
-    lasAdyacencias = elGrafo.adjacency_list()
+    lasAdyacencias= elGrafo.adjacency_list()
     laRespuestaJSON = json.dumps(lasCosas)
 
     return Response(laRespuestaJSON, status=200, mimetype='application/json')
+
+
+@app.route('/api/get-route', methods=['POST'])
+def getRoute():
+    losParametros = request.args
+    elOrigen = "N" + losParametros['Origen']
+    elDestino = "N" + losParametros['Destino']
+    laPrioridad = losParametros['Prioridad']
+    elIndice = 0
+    laRuta = nx.dijkstra_path(elGrafo, elOrigen, elDestino)
+    laCantidadDeViajes = len(laRuta) - 1
+    laRutaSeleccionada = {'Orden': laRuta}
+    for cadaViaje in range(laCantidadDeViajes):
+        elNodoActual = laRuta[elIndice]
+        elNodoSiguiente = laRuta[elIndice+1]
+        elTransporteDisponible = elGrafo.node[elNodoActual]['Data'][elNodoSiguiente]['Transporte']
+        laDistancia = elGrafo[elNodoActual][elNodoSiguiente]['Weight']
+        if laDistancia < 5:
+            if laPrioridad == 'E':
+                elTransporteAdecuado = elTransporteDisponible['Bus']
+                laRutaSeleccionada[elNodoActual] = {'Bus': elTransporteAdecuado}
+            else:
+                elTransporteAdecuado = elTransporteDisponible['Taxi']
+                laRutaSeleccionada[elNodoActual] = {'Taxi': elTransporteAdecuado}
+        elif 5 <= laDistancia < 10:
+            if laPrioridad == 'E':
+                elTransporteAdecuado = elTransporteDisponible['Bus']
+                laRutaSeleccionada[elNodoActual] = {'Bus': elTransporteAdecuado}
+            else:
+                elTransporteAdecuado = elTransporteDisponible['Tren']
+                laRutaSeleccionada[elNodoActual] = {'Tren': elTransporteAdecuado}
+        else:
+            if laPrioridad == 'E':
+                elTransporteAdecuado = elTransporteDisponible['Tren']
+                laRutaSeleccionada[elNodoActual] = {'Tren': elTransporteAdecuado}
+            else:
+                elTransporteAdecuado = elTransporteDisponible['Avion']
+                laRutaSeleccionada[elNodoActual] = {'Avion': elTransporteAdecuado}
+        elIndice += 1
+    laRutaSeleccionadaComoJSON = json.dumps(laRutaSeleccionada)
+    return Response(laRutaSeleccionadaComoJSON, 200, mimetype='application/json')
 
 
 def printNodes():
