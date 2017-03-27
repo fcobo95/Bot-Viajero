@@ -2,30 +2,33 @@
   "N4": {
     "Distancia": 3.50,
     "Transporte": {
-      "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
-        "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
-        },
-        "PrecioKM": "PrecioKM",
-        "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
-        }
-      },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Volio",
+        "ConductorAsignado": "David Kant",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N23",
+          "Destino": "N4"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 110,
+        "AsignacionPlazas": 89,
+        "Tarifa": 550
+      },
+      "Tren": {
+        "NombreCompania": "Trenes Volio",
+        "Ruta": {
+          "Origen": "N23",
+          "Destino": "N4",
+          "Schedule/Horario": {
+            "Lunes": "4 AM - 10 PM",
+            "Martes": "4 AM - 10 PM",
+            "Miercoles": "4 AM - 10 PM",
+            "Jueves": "4 AM - 10 PM",
+            "Viernes": "4 AM - 10 PM",
+            "Sabado": "8 AM - 5 PM",
+            "Domingo": "8 AM - 5 PM"
+          }
+        },
+        "Tarifa": 3650
       }
     }
   },

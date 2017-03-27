@@ -1,31 +1,41 @@
 {
   "N4": {
-    "Distancia": 7.55,
+    "Distancia": 14.20,
     "Transporte": {
-      "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
-        "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
-        },
-        "PrecioKM": "PrecioKM",
+      "Tren": {
+        "NombreCompania": "Trenes Volio",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
-        }
+          "Origen": "N21",
+          "Destino": "N4",
+          "Schedule/Horario": {
+            "Lunes": "4 AM - 10 PM",
+            "Martes": "4 AM - 10 PM",
+            "Miercoles": "4 AM - 10 PM",
+            "Jueves": "4 AM - 10 PM",
+            "Viernes": "4 AM - 10 PM",
+            "Sabado": "8 AM - 5 PM",
+            "Domingo": "8 AM - 5 PM"
+          }
+        },
+        "Tarifa": 3650
       },
-      "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+      "Avion": {
+        "NombreCompañia": "Alfa",
+        "ConductorAsignado": "Herbert Dong",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N21",
+          "Destino": "N4"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Cantidad Pasajeros": 450,
+        "Horario": {
+          "Lunes": "2 AM - 12 PM",
+          "Martes": "2 AM - 12 PM",
+          "Miercoles": "2 AM - 12 PM",
+          "Jueves": "2 AM - 12 PM",
+          "Viernes": "2 AM - 12 PM",
+          "Sabado": "2 AM - 12 PM",
+          "Domingo": "2 AM - 12 PM"
+        }
       }
     }
   },

@@ -34,8 +34,8 @@
       "Tren": {
         "NombreCompania": "Trenes Volio",
         "Ruta": {
-          "Origen": "N3",
-          "Destino": "N16",
+          "Origen": "N4",
+          "Destino": "N21",
           "Schedule/Horario": {
             "Lunes": "4 AM - 10 PM",
             "Martes": "4 AM - 10 PM",
@@ -93,27 +93,24 @@
           "Destino": "N22"
         },
         "Capacidad": 110,
-        "AsignacionPlazas": 52,
+        "AsignacionPlazas": 5,
         "Tarifa": 550
       }
     }
   },
   "N23": {
-    "Distancia": 5.30,
+    "Distancia": 3.50,
     "Transporte": {
-      "Taxi": {
-        "NombreCompañia": "Taxis Matrix",
-        "PlacaTaxi": "MTX-758",
-        "Conductor": {
-          "Id": "1-1010-0010",
-          "Nombre": "Neo",
-          "Apellido": "Blue"
-        },
-        "PrecioKM": 0.85,
+      "Bus": {
+        "NombreCompañia": "Buses Volio",
+        "ConductorAsignado": "Gabriel Martinez",
         "Ruta": {
           "Origen": "N4",
           "Destino": "N23"
-        }
+        },
+        "Capacidad": 110,
+        "AsignacionPlazas": 16,
+        "Tarifa": 550
       },
       "Tren": {
         "NombreCompania": "Trenes Volio",

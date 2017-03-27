@@ -17,36 +17,23 @@
         }
       },
       "Bus": {
-        "NombreCompañia": "Buses Hipster",
+        "NombreCompañia": "Buses del Oeste",
         "ConductorAsignado": "Gino Manzoni",
         "Ruta": {
           "Origen": "N3",
           "Destino": "N1"
         },
-        "Capacidad": 60,
-        "AsignacionPlazas": 16
+        "Capacidad": 50,
+        "AsignacionPlazas": 18,
+        "Tarifa": 180
       }
     }
   },
   "N16": {
     "Distancia": 10,
     "Transporte": {
-      "Taxi": {
-        "NombreCompañia": "Taxis Radicales",
-        "PlacaTaxi": "RAD-777",
-        "Conductor": {
-          "Id": "1-7777-5623",
-          "Nombre": "Martin",
-          "Apellido": "Pereira"
-        },
-        "PrecioKM": 2.30,
-        "Ruta": {
-          "Origen": "N3",
-          "Destino": "N16"
-        }
-      },
       "Tren": {
-        "NombreCompania": "Trenes Volio",
+        "NombreCompania": "Trenes Transtico",
         "Ruta": {
           "Origen": "N3",
           "Destino": "N16",
@@ -61,6 +48,24 @@
           }
         },
         "Tarifa": 3650
+      },
+      "Avion": {
+        "NombreCompañia": "Alfa",
+        "ConductorAsignado": "Herbert Dong",
+        "Ruta": {
+          "Origen": "N3",
+          "Destino": "N16"
+        },
+        "Cantidad Pasajeros": 450,
+        "Horario": {
+          "Lunes": "2 AM - 12 PM",
+          "Martes": "2 AM - 12 PM",
+          "Miercoles": "2 AM - 12 PM",
+          "Jueves": "2 AM - 12 PM",
+          "Viernes": "2 AM - 12 PM",
+          "Sabado": "2 AM - 12 PM",
+          "Domingo": "2 AM - 12 PM"
+        }
       }
     }
   },

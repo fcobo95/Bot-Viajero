@@ -48,6 +48,7 @@ with app.app_context():
     os.chdir('../../')
     os.chdir('Servidor/')
 
+
 __Creators__ = 'Joshua Campos and Erick Cobo'
 
 
@@ -58,13 +59,13 @@ def index():
 
 @app.route('/api/draw-map/')
 def node_mapping():
-    # nodes = printNodes()
-    edges = printEdges()
-    degree = printNodeDegree()
-    drawGraph("Erick Fernando Cobo")
-    resp = json.dumps(edges)
+    losNodos = elGrafo.nodes()
+    lasRelaciones = elGrafo.edges()
+    lasCosas = elGrafo.get_edge_data(elGrafo, losNodos, lasRelaciones)
+    lasAdyacencias= elGrafo.adjacency_list()
+    laRespuestaJSON = json.dumps(lasCosas)
 
-    return Response(resp, status=200)
+    return Response(laRespuestaJSON, status=200, mimetype='application/json')
 
 
 def printNodes():

@@ -3,59 +3,69 @@
     "Distancia": 2.10,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompania": "Taxis del Oeste",
+        "PlacaTaxi": "PGB-200",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "6-8522-1898",
+          "Nombre": "Ward",
+          "Apellido": "Meachum"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 0.25,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N16",
+          "Destino": "N1"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompania": "Buses del Oeste",
+        "ConductorAsignado": "Vladimir Botin",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N16",
+          "Destino": "N1"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 50,
+        "AsignacionPlazas": 47,
+        "Tarifa": 180
       }
     }
   },
   "N3": {
-    "Distancia": 2.60,
+    "Distancia": 10,
     "Transporte": {
-      "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
-        "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
-        },
-        "PrecioKM": "PrecioKM",
+      "Tren": {
+        "NombreCompania": "Trenes Transtico",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
-        }
+          "Origen": "N16",
+          "Destino": "N3",
+          "Schedule/Horario": {
+            "Lunes": "4 AM - 10 PM",
+            "Martes": "4 AM - 10 PM",
+            "Miercoles": "4 AM - 10 PM",
+            "Jueves": "4 AM - 10 PM",
+            "Viernes": "4 AM - 10 PM",
+            "Sabado": "8 AM - 5 PM",
+            "Domingo": "8 AM - 5 PM"
+          }
+        },
+        "Tarifa": 3650
       },
-      "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+      "Avion": {
+        "NombreCompañia": "Alfa",
+        "ConductorAsignado": "Mailo Kongo",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N16",
+          "Destino": "N3"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Cantidad Pasajeros": 450,
+        "Horario": {
+          "Lunes": "2 AM - 12 PM",
+          "Martes": "2 AM - 12 PM",
+          "Miercoles": "2 AM - 12 PM",
+          "Jueves": "2 AM - 12 PM",
+          "Viernes": "2 AM - 12 PM",
+          "Sabado": "2 AM - 12 PM",
+          "Domingo": "2 AM - 12 PM"
+        }
       }
     }
   },
@@ -72,7 +82,7 @@
         },
         "PrecioKM": "PrecioKM",
         "Ruta": {
-          "Origen": "Origen",
+          "Origen": "N16",
           "Destino": "Destino"
         }
       },
@@ -80,7 +90,7 @@
         "NombreCompañia": "Nombre",
         "ConductorAsignado": "Conductor",
         "Ruta": {
-          "Origen": "Origen",
+          "Origen": "N16",
           "Destino": "Destino"
         },
         "Capacidad": "Capacidadd",

@@ -4,9 +4,9 @@
     "Transporte": {
       "Taxi": {
         "NombreCompañia": "Taxis Miracruz",
-        "PlacaTaxi": "MRC-231",
+        "PlacaTaxi": "MRC-123",
         "Conductor": {
-          "Id": "7-5689-7235",
+          "Id": "9-5689-7235",
           "Nombre": "Juan Gabriel",
           "Apellido": "Palino"
         },
@@ -44,7 +44,7 @@
         "Tarifa": 640
       },
       "Tren": {
-        "NombreCompania": "Trenes Volio",
+        "NombreCompania": "Trenes Transtico",
         "Ruta": {
           "Origen": "N3",
           "Destino": "N16",

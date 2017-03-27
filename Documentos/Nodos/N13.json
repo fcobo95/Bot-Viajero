@@ -3,29 +3,29 @@
     "Distancia": 2.40,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompania": "Taxis Hazard",
+        "PlacaTaxi": "HZD-666",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "5-6555-5555",
+          "Nombre": "Dante Mauricio",
+          "Apellido": "Sparda"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.30,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N13",
+          "Destino": "N2"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompania": "Buses Loghos",
+        "ConductorAsignado": "Socrates Leporino",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N13",
+          "Destino": "N2"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 150,
+        "AsignacionPlazas": 114,
+        "Tarifa": 350
       }
     }
   },
@@ -42,7 +42,7 @@
         },
         "PrecioKM": "PrecioKM",
         "Ruta": {
-          "Origen": "Origen",
+          "Origen": "N13",
           "Destino": "Destino"
         }
       },
@@ -50,7 +50,7 @@
         "NombreCompañia": "Nombre",
         "ConductorAsignado": "Conductor",
         "Ruta": {
-          "Origen": "Origen",
+          "Origen": "N13",
           "Destino": "Destino"
         },
         "Capacidad": "Capacidadd",
@@ -72,7 +72,7 @@
         },
         "PrecioKM": "PrecioKM",
         "Ruta": {
-          "Origen": "Origen",
+          "Origen": "N13",
           "Destino": "Destino"
         }
       },
@@ -80,7 +80,7 @@
         "NombreCompañia": "Nombre",
         "ConductorAsignado": "Conductor",
         "Ruta": {
-          "Origen": "Origen",
+          "Origen": "N13",
           "Destino": "Destino"
         },
         "Capacidad": "Capacidadd",

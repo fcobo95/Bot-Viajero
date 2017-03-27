@@ -1,31 +1,31 @@
 {
   "N2": {
-    "Distancia": 2.90,
+    "Distancia": 4.30,
     "Transporte": {
       "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompañia": "Taxis Miracruz",
+        "PlacaTaxi": "MRC-231",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "7-5689-7235",
+          "Nombre": "Fausto",
+          "Apellido": "Hornos"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.10,
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N14",
+          "Destino": "N5"
         }
       },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Miracruz",
+        "ConductorAsignado": "Maria Taras",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N14",
+          "Destino": "N5"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 130,
+        "AsignacionPlazas": 25,
+        "Tarifa": 640
       }
     }
   },
@@ -42,7 +42,7 @@
         },
         "PrecioKM": "PrecioKM",
         "Ruta": {
-          "Origen": "Origen",
+          "Origen": "N14",
           "Destino": "Destino"
         }
       },
@@ -50,7 +50,7 @@
         "NombreCompañia": "Nombre",
         "ConductorAsignado": "Conductor",
         "Ruta": {
-          "Origen": "Origen",
+          "Origen": "N14",
           "Destino": "Destino"
         },
         "Capacidad": "Capacidadd",
@@ -72,7 +72,7 @@
         },
         "PrecioKM": "PrecioKM",
         "Ruta": {
-          "Origen": "Origen",
+          "Origen": "N14",
           "Destino": "Destino"
         }
       },
@@ -80,7 +80,7 @@
         "NombreCompañia": "Nombre",
         "ConductorAsignado": "Conductor",
         "Ruta": {
-          "Origen": "Origen",
+          "Origen": "N14",
           "Destino": "Destino"
         },
         "Capacidad": "Capacidadd",

@@ -2,30 +2,33 @@
   "N5": {
     "Distancia": 6.40,
     "Transporte": {
-      "Taxi": {
-        "NombreCompañia": "Nombre",
-        "PlacaTaxi": "Placa",
-        "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
-        },
-        "PrecioKM": "PrecioKM",
-        "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
-        }
-      },
       "Bus": {
-        "NombreCompañia": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompañia": "Buses Miracruz",
+        "ConductorAsignado": "Jairo Roa",
         "Ruta": {
-          "Origen": "Origen",
-          "Destino": "Destino"
+          "Origen": "N20",
+          "Destino": "N5"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 130,
+        "AsignacionPlazas": 23,
+        "Tarifa": 640
+      },
+      "Tren": {
+        "NombreCompania": "Trenes Transtico",
+        "Ruta": {
+          "Origen": "N20",
+          "Destino": "N5",
+          "Schedule/Horario": {
+            "Lunes": "4 AM - 10 PM",
+            "Martes": "4 AM - 10 PM",
+            "Miercoles": "4 AM - 10 PM",
+            "Jueves": "4 AM - 10 PM",
+            "Viernes": "4 AM - 10 PM",
+            "Sabado": "8 AM - 5 PM",
+            "Domingo": "8 AM - 5 PM"
+          }
+        },
+        "Tarifa": 3650
       }
     }
   },
@@ -42,7 +45,7 @@
         },
         "PrecioKM": "PrecioKM",
         "Ruta": {
-          "Origen": "Origen",
+          "Origen": "N20",
           "Destino": "Destino"
         }
       },
@@ -50,7 +53,7 @@
         "NombreCompañia": "Nombre",
         "ConductorAsignado": "Conductor",
         "Ruta": {
-          "Origen": "Origen",
+          "Origen": "N20",
           "Destino": "Destino"
         },
         "Capacidad": "Capacidadd",
@@ -72,7 +75,7 @@
         },
         "PrecioKM": "PrecioKM",
         "Ruta": {
-          "Origen": "Origen",
+          "Origen": "N20",
           "Destino": "Destino"
         }
       },
@@ -80,7 +83,7 @@
         "NombreCompañia": "Nombre",
         "ConductorAsignado": "Conductor",
         "Ruta": {
-          "Origen": "Origen",
+          "Origen": "N20",
           "Destino": "Destino"
         },
         "Capacidad": "Capacidadd",
