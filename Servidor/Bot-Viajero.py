@@ -4,6 +4,7 @@ from pymongo import MongoClient
 import networkx as nx
 import matplotlib.pyplot as plt
 import os
+import socket
 
 app = Flask(__name__)
 
@@ -136,5 +137,7 @@ def drawGraph(user=""):
     return plt.show()
 
 
+host_name = socket.gethostname()
+ip = socket.gethostbyname(host_name)
 if __name__ == '__main__':
-    app.run(debug=True, port=5000, host="localhost")
+    app.run(debug=True, port=5000, host=ip)
