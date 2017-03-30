@@ -56,9 +56,9 @@ with app.app_context():
 __Creators__ = 'Joshua Campos and Erick Cobo'
 
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET'])
 def index():
-    return '<h1>Index Page</h1>'
+    return render_template("index.html")
 
 
 @app.route('/api/draw-map/')
