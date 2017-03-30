@@ -72,10 +72,27 @@ span.psw {
 .psw {
     color: darkred;
 }
-.login{
+
+.login {
     width: 5%;
 }
-.login:hover{
+
+.login:hover {
     width: 10%;
     alignment: right;
+}
+
+#map {
+    color: #f44336;
+}
+
+#information {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#graphmap {
+    color: #f44336;
+    align-items: center;
+    width: 450px;
 }

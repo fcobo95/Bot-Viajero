@@ -1,9 +1,8 @@
 # Imports section
-from flask import Flask, json, Response, request, jsonify, render_template
+from flask import Flask, json, Response, request
 from pymongo import MongoClient
 import networkx as nx
 import matplotlib.pyplot as plt
-import datetime
 import os
 
 app = Flask(__name__)
@@ -58,7 +57,7 @@ __Creators__ = 'Joshua Campos and Erick Cobo'
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template("index.html")
+    return '<h1>Index Page</h1>'
 
 
 @app.route('/api/draw-map/')
@@ -72,7 +71,7 @@ def node_mapping():
     return Response(laRespuestaJSON, status=200, mimetype='application/json')
 
 
-@app.route('/api/get-route', methods=['POST'])
+@app.route('/api/get-route', methods=['POST', 'GET'])
 def getRoute():
     losParametros = request.args
     elOrigen = "N" + losParametros['Origen']
@@ -138,4 +137,4 @@ def drawGraph(user=""):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000, host="0.0.0.0")
+    app.run(debug=True, port=5000, host="localhost")

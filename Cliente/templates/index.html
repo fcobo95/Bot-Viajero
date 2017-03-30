@@ -25,6 +25,7 @@ Use of SRI is recommended as a best-practice, whenever libraries are loaded from
 <title>IndexPage</title>
 </head>
 <body background="../Resources/background.jpg">
+
 <div class="lol">
     <h1 id="header">Tribot!</h1>
 </div>
@@ -36,5 +37,25 @@ Use of SRI is recommended as a best-practice, whenever libraries are loaded from
 <a href="signup.html">
     <button class="login">Signup</button>
 </a>
+
+<div id="map" align="middle">
+    <h1>Costa Rica locations map!</h1>
+    <img src="../../Documentos/MapaGrafo.png" name="Render map here!" id="graphmap" align="middle">
+</div>
+
+<div id="information">
+    <form action="http://localhost:5000/api/get-route" method="get">
+        <label><b>Origin</b></label>
+        <input type="text" id="origin" placeholder="Enter Origin" name="Origen" required>
+
+        <label><b>Destination</b></label>
+        <input type="text" id="destination" placeholder="Enter Destination" name="Destino" required>
+
+        <label><b>Prioridad</b></label>
+        <input type="text" id="priority" placeholder="Priority" name="Prioridad" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
 </body>
 </html>
