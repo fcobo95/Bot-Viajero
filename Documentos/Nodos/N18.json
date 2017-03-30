@@ -3,29 +3,29 @@
     "Distancia": 3.65,
     "Transporte": {
       "Taxi": {
-        "NombreCompania": "Nombre",
-        "PlacaTaxi": "Placa",
+        "NombreCompania": "Taxis Miracruz",
+        "PlacaTaxi": "MRC-195",
         "Conductor": {
-          "Id": "Id",
-          "Nombre": "Nombre",
-          "Apellido": "Apellido"
+          "Id": "7-5925-1258",
+          "Nombre": "Carmelo",
+          "Apellido": "Bleu"
         },
-        "PrecioKM": "PrecioKM",
+        "PrecioKM": 1.15,
         "Ruta": {
           "Origen": "N18",
-          "Destino": "Destino"
+          "Destino": "N12"
         }
       },
       "Bus": {
-        "NombreCompania": "Nombre",
-        "ConductorAsignado": "Conductor",
+        "NombreCompania": "Buses Miracruz",
+        "ConductorAsignado": "Banen Tandem",
         "Ruta": {
           "Origen": "N18",
-          "Destino": "Destino"
+          "Destino": "N12"
         },
-        "Capacidad": "Capacidadd",
-        "AsignacionPlazas": "NumeroAsiento",
-        "Tarifa": "Tarifa"
+        "Capacidad": 200,
+        "AsignacionPlazas": 50,
+        "Tarifa": 190
       }
     }
   },
