@@ -8,6 +8,8 @@ import socket
 
 app = Flask(__name__)
 
+__Creators__ = 'Joshua Campos and Erick Cobo'
+
 
 def crearNodos():
     elIndice = 1
@@ -52,8 +54,6 @@ with app.app_context():
     crearAristas()
     os.chdir('../../')
     os.chdir('Servidor/')
-
-__Creators__ = 'Joshua Campos and Erick Cobo'
 
 
 @app.route('/', methods=['GET'])
@@ -137,7 +137,5 @@ def drawGraph(user=""):
     return plt.show()
 
 
-host_name = socket.gethostname()
-ip = socket.gethostbyname(host_name)
 if __name__ == '__main__':
-    app.run(debug=True, port=5000, host=ip)
+    app.run(debug=True, port=5000, host="0.0.0.0")
