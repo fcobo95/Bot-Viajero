@@ -62,6 +62,19 @@ with app.app_context():
 def index():
     return '<h1>Index Page</h1>'
 
+@app.route('/prueba', methods=['POST'])
+def prueba():
+    losParametros = request.args
+    elOrigen = "N" + losParametros['Origen']
+    elDestino = "N" + losParametros['Destino']
+    laPrioridad = losParametros['Prioridad']
+    otrasRutas = (list(nx.shortest_simple_paths(elGrafo, elOrigen, elDestino)))[1:5]
+    for i in range(4):
+        otraOpcion = otrasRutas[i]
+        laCantidadDeViajes = len(otraOpcion) - 1
+        elResultado = {"Opcion"+str(i+1): {"Orden": otraOpcion}}
+    return 'True'
+
 
 @app.route('/api/get-route', methods=['POST', 'GET'])
 def getRoute():
