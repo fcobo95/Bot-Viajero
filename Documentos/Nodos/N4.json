@@ -113,22 +113,19 @@
         "AsignacionPlazas": 16,
         "Tarifa": 550
       },
-      "Tren": {
-        "NombreCompania": "Trenes Volio",
+      "Taxi": {
+        "NombreCompania": "Taxis de los Ultimos Dias",
+        "PlacaTaxi": "KDT-852",
+        "Conductor": {
+          "Id": "4-4286-1795",
+          "Nombre": "Rafael",
+          "Apellido": "Aguilar"
+        },
+        "PrecioKM": 1.35,
         "Ruta": {
           "Origen": "N4",
-          "Destino": "N23",
-          "Schedule/Horario": {
-            "Lunes": "4 AM - 10 PM",
-            "Martes": "4 AM - 10 PM",
-            "Miercoles": "4 AM - 10 PM",
-            "Jueves": "4 AM - 10 PM",
-            "Viernes": "4 AM - 10 PM",
-            "Sabado": "8 AM - 5 PM",
-            "Domingo": "8 AM - 5 PM"
-          }
-        },
-        "Tarifa": 3650
+          "Destino": "N23"
+        }
       }
     }
   }
