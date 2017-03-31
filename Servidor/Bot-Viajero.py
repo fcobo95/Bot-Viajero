@@ -5,6 +5,8 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import os
 import socket
+import datetime
+from bson import ObjectId
 
 app = Flask(__name__)
 
@@ -21,7 +23,6 @@ def crearNodos():
         elIndice += 1
         if elIndice == 10 or elIndice == 17:
             elIndice += 1
-            # print(elGrafo.nodes())
 
 
 def crearAristas():
@@ -36,16 +37,17 @@ def crearAristas():
         elIndice += 1
         if elIndice == 10 or elIndice == 17:
             elIndice += 1
-            # print(elGrafo.edges())
 
 
 with app.app_context():
     print("Cargando configuración...")
     # Mongo AWS Database Connection
     uri = "mongodb://ecoboe249:viper1829@ds153609.mlab.com:53609/bootowl"
-    clientWeb = MongoClient(uri)
+    clienteWeb = MongoClient(uri)
+    cloudDatabase = clienteWeb.MongoCloud
     # Mongo Local Database Connection
-    clientLocal = MongoClient('localhost', 35250)
+    clienteLocal = MongoClient('localhost', 27017)
+    localDatabase = clienteLocal.MongoLocal
     # Graph Creation and Configuration
     elGrafo = nx.DiGraph()
     os.chdir('../')
@@ -61,80 +63,80 @@ def index():
     return '<h1>Index Page</h1>'
 
 
-@app.route('/api/draw-map/')
-def node_mapping():
-    losNodos = elGrafo.nodes()
-    lasRelaciones = elGrafo.edges()
-    lasCosas = elGrafo.get_edge_data(elGrafo, losNodos, lasRelaciones)
-    lasAdyacencias = elGrafo.adjacency_list()
-    laRespuestaJSON = json.dumps(lasCosas)
-
-    return Response(laRespuestaJSON, status=200, mimetype='application/json')
-
-
 @app.route('/api/get-route', methods=['POST', 'GET'])
 def getRoute():
-    losParametros = request.args
-    elOrigen = "N" + losParametros['Origen']
-    elDestino = "N" + losParametros['Destino']
-    laPrioridad = losParametros['Prioridad']
-    elIndice = 0
-    laRuta = nx.dijkstra_path(elGrafo, elOrigen, elDestino)
-    laCantidadDeViajes = len(laRuta) - 1
-    laRutaSeleccionada = {'Orden': laRuta}
-    for cadaViaje in range(laCantidadDeViajes):
-        elNodoActual = laRuta[elIndice]
-        elNodoSiguiente = laRuta[elIndice + 1]
-        elTransporteDisponible = elGrafo.node[elNodoActual]['Data'][elNodoSiguiente]['Transporte']
-        laDistancia = elGrafo[elNodoActual][elNodoSiguiente]['Weight']
-        if laDistancia < 5:
-            if laPrioridad == 'E':
-                elTransporteAdecuado = elTransporteDisponible['Bus']
-                laRutaSeleccionada[elNodoActual] = {'Bus': elTransporteAdecuado}
+    try:
+        losParametros = request.args
+        elOrigen = "N" + losParametros['Origen']
+        elDestino = "N" + losParametros['Destino']
+        laPrioridad = losParametros['Prioridad']
+        elIndice = 0
+        laRuta = nx.dijkstra_path(elGrafo, elOrigen, elDestino)
+        laCantidadDeViajes = len(laRuta) - 1
+        laRutaSeleccionada = {'Orden': laRuta}
+        for cadaViaje in range(laCantidadDeViajes):
+            elNodoActual = laRuta[elIndice]
+            elNodoSiguiente = laRuta[elIndice + 1]
+            elTransporteDisponible = elGrafo.node[elNodoActual]['Data'][elNodoSiguiente]['Transporte']
+            laDistancia = elGrafo[elNodoActual][elNodoSiguiente]['Weight']
+            if laDistancia < 5:
+                if laPrioridad == 'E':
+                    elTransporteAdecuado = elTransporteDisponible['Bus']
+                    laRutaSeleccionada[elNodoActual] = {'Bus': elTransporteAdecuado}
+                else:
+                    elTransporteAdecuado = elTransporteDisponible['Taxi']
+                    laRutaSeleccionada[elNodoActual] = {'Taxi': elTransporteAdecuado}
+            elif 5 <= laDistancia < 10:
+                if laPrioridad == 'E':
+                    elTransporteAdecuado = elTransporteDisponible['Bus']
+                    laRutaSeleccionada[elNodoActual] = {'Bus': elTransporteAdecuado}
+                else:
+                    elTransporteAdecuado = elTransporteDisponible['Tren']
+                    laRutaSeleccionada[elNodoActual] = {'Tren': elTransporteAdecuado}
             else:
-                elTransporteAdecuado = elTransporteDisponible['Taxi']
-                laRutaSeleccionada[elNodoActual] = {'Taxi': elTransporteAdecuado}
-        elif 5 <= laDistancia < 10:
-            if laPrioridad == 'E':
-                elTransporteAdecuado = elTransporteDisponible['Bus']
-                laRutaSeleccionada[elNodoActual] = {'Bus': elTransporteAdecuado}
-            else:
-                elTransporteAdecuado = elTransporteDisponible['Tren']
-                laRutaSeleccionada[elNodoActual] = {'Tren': elTransporteAdecuado}
-        else:
-            if laPrioridad == 'E':
-                elTransporteAdecuado = elTransporteDisponible['Tren']
-                laRutaSeleccionada[elNodoActual] = {'Tren': elTransporteAdecuado}
-            else:
-                elTransporteAdecuado = elTransporteDisponible['Avion']
-                laRutaSeleccionada[elNodoActual] = {'Avion': elTransporteAdecuado}
-        elIndice += 1
-    laRutaSeleccionadaComoJSON = json.dumps(laRutaSeleccionada)
-    return Response(laRutaSeleccionadaComoJSON, status=200, mimetype='application/json')
+                if laPrioridad == 'E':
+                    elTransporteAdecuado = elTransporteDisponible['Tren']
+                    laRutaSeleccionada[elNodoActual] = {'Tren': elTransporteAdecuado}
+                else:
+                    elTransporteAdecuado = elTransporteDisponible['Avion']
+                    laRutaSeleccionada[elNodoActual] = {'Avion': elTransporteAdecuado}
+            elIndice += 1
+        laRutaSeleccionadaComoJSON = json.dumps(laRutaSeleccionada)
+        laAccion = elOrigen + " - " + elDestino + " : " + laPrioridad
+        ingreseElLog(laAccion)
+        return Response(laRutaSeleccionadaComoJSON, status=200, mimetype='application/json')
+    except Exception as e:
+        return formateeElError(e)
 
 
-def printNodes():
-    nodes = elGrafo.nodes()
-
-    return nodes
-
-
-def printEdges():
-    edges = elGrafo.edges()
-
-    return edges
+def definaElUsuario():
+    elUsuario = request.remote_addr
+    laSolicitud = localDatabase.Usuarios.find_one({"_id": elUsuario})
+    if laSolicitud != None:
+        elUsuario = laSolicitud["Nombre"]
+    return elUsuario
 
 
-def printNodeDegree(node=1):
-    degree = elGrafo.degree(node)
+def ingreseElLog(laAccion):
+    elUsuario = definaElUsuario()
+    elLog = {
+        "_id": str(ObjectId()),
+        "Usuario": elUsuario,
+        "Fecha": datetime.datetime.now(),
+        "Accion": laAccion
+    }
+    # cloudDatabase.Log_Operaciones.insert_one(elLog)
+    localDatabase.Log_Operaciones.insert_one(elLog)
 
-    return degree
 
-
-def drawGraph(user=""):
-    nx.draw(elGrafo)
-    plt.savefig("C:\\Users\\" + user + "\\Pictures\\elGrafo.png")
-    return plt.show()
+def formateeElError(e):
+    elErrorComoTexto = str(e)
+    elEnunciado = "Lo lamento. Ha ocurrido un error " + elErrorComoTexto
+    elEnunciadoComoJSON = json.dumps(elEnunciado)
+    elErrorHTTP = elErrorComoTexto[:3]
+    laActividad = elErrorComoTexto
+    ingreseElLog(laActividad)
+    return Response(elEnunciadoComoJSON, elErrorHTTP, mimetype="application/json")
 
 
 if __name__ == '__main__':
