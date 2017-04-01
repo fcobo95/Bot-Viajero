@@ -9,7 +9,7 @@ from bson import ObjectId
 from flask_httpauth import HTTPBasicAuth
 
 app = Flask(__name__)
-
+auth = HTTPBasicAuth()
 __Creators__ = 'Joshua Campos and Erick Cobo'
 
 
@@ -44,7 +44,7 @@ with app.app_context():
     # Mongo AWS Database Connection
     uri = "mongodb://ecoboe249:viper1829@ds153609.mlab.com:53609/bootowl"
     clienteWeb = MongoClient(uri)
-    cloudDatabase = clienteWeb.MongoCloud
+    cloudDatabase = clienteWeb.get_default_database()
     # Mongo Local Database Connection
     clienteLocal = MongoClient('localhost', 27017)
     localDatabase = clienteLocal.MongoLocal
@@ -61,6 +61,7 @@ with app.app_context():
 @app.route('/', methods=['GET'])
 def index():
     return '<h1>Index Page</h1>'
+
 
 @app.route('/api/create-user', methods=['POST'])
 def createUser():
@@ -79,8 +80,10 @@ def createUser():
         "Usuario": elUsuario,
         "Contrasena": laContrasena
     }
+    cloudDatabase.Usuarios.insert_one(elRegistro)
     localDatabase.Usuarios.insert_one(elRegistro)
     return "True"
+
 
 @app.route('/prueba', methods=['POST'])
 def prueba():
@@ -89,16 +92,16 @@ def prueba():
     elDestino = "N" + losParametros['Destino']
     laPrioridad = losParametros['Prioridad']
     otrasRutas = (list(nx.shortest_simple_paths(elGrafo, elOrigen, elDestino)))[1:5]
-    elResultado = {'Rutas':''}
+    elResultado = {'Rutas': ''}
     for i in range(4):
         otraOpcion = otrasRutas[i]
         laCantidadDeViajes = len(otraOpcion) - 1
-        elResultado['Rutas'] = {"Opcion"+str(i+1):otraOpcion}
+        elResultado['Rutas'] = {"Opcion" + str(i + 1): otraOpcion}
     print(elResultado)
     return 'True'
 
 
-@app.route('/api/get-route', methods=['POST', 'GET'])
+@app.route('/api/get-route', methods=['POST'])
 def getRoute():
     try:
         losParametros = request.args
@@ -160,7 +163,7 @@ def ingreseElLog(laAccion):
         "Fecha": datetime.datetime.now(),
         "Accion": laAccion
     }
-    # cloudDatabase.Log_Operaciones.insert_one(elLog)
+    cloudDatabase.Log_Operaciones.insert_one(elLog)
     localDatabase.Log_Operaciones.insert_one(elLog)
 
 
