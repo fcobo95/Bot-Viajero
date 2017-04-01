@@ -2,11 +2,11 @@
 from flask import Flask, json, Response, request
 from pymongo import MongoClient
 import networkx as nx
-import matplotlib.pyplot as plt
 import os
 import socket
 import datetime
 from bson import ObjectId
+from flask_httpauth import HTTPBasicAuth
 
 app = Flask(__name__)
 
@@ -62,6 +62,26 @@ with app.app_context():
 def index():
     return '<h1>Index Page</h1>'
 
+@app.route('/api/create-user', methods=['POST'])
+def createUser():
+    losParametros = request.json
+    laIdentificacion = str(ObjectId())
+    elNombre = losParametros['Nombre']
+    elApellido = losParametros['Apellido']
+    elCorreo = losParametros['Correo']
+    elUsuario = losParametros['Usuario']
+    laContrasena = losParametros['Contrasena']
+    elRegistro = {
+        "_id": laIdentificacion,
+        "Nombre": elNombre,
+        "Apellido": elApellido,
+        "Correo": elCorreo,
+        "Usuario": elUsuario,
+        "Contrasena": laContrasena
+    }
+    localDatabase.Usuarios.insert_one(elRegistro)
+    return "True"
+
 @app.route('/prueba', methods=['POST'])
 def prueba():
     losParametros = request.args
@@ -69,10 +89,12 @@ def prueba():
     elDestino = "N" + losParametros['Destino']
     laPrioridad = losParametros['Prioridad']
     otrasRutas = (list(nx.shortest_simple_paths(elGrafo, elOrigen, elDestino)))[1:5]
+    elResultado = {'Rutas':''}
     for i in range(4):
         otraOpcion = otrasRutas[i]
         laCantidadDeViajes = len(otraOpcion) - 1
-        elResultado = {"Opcion"+str(i+1): {"Orden": otraOpcion}}
+        elResultado['Rutas'] = {"Opcion"+str(i+1):otraOpcion}
+    print(elResultado)
     return 'True'
 
 
