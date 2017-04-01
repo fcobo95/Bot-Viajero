@@ -72,6 +72,9 @@ def createUser():
     elCorreo = losParametros['Correo']
     elUsuario = losParametros['Usuario']
     laContrasena = losParametros['Contrasena']
+    laVerificacion = localDatabase.Usuarios.find_one({'Usuario': elUsuario})
+    if laVerificacion != None:
+        return "False"
     elRegistro = {
         "_id": laIdentificacion,
         "Nombre": elNombre,
