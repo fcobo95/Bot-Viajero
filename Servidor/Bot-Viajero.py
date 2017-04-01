@@ -9,7 +9,7 @@ from bson import ObjectId
 from flask_httpauth import HTTPBasicAuth
 
 app = Flask(__name__)
-auth = HTTPBasicAuth()
+
 __Creators__ = 'Joshua Campos and Erick Cobo'
 
 
@@ -44,7 +44,7 @@ with app.app_context():
     # Mongo AWS Database Connection
     uri = "mongodb://ecoboe249:viper1829@ds153609.mlab.com:53609/bootowl"
     clienteWeb = MongoClient(uri)
-    cloudDatabase = clienteWeb.get_default_database()
+    cloudDatabase = clienteWeb.MongoCloud
     # Mongo Local Database Connection
     clienteLocal = MongoClient('localhost', 27017)
     localDatabase = clienteLocal.MongoLocal
@@ -80,28 +80,11 @@ def createUser():
         "Usuario": elUsuario,
         "Contrasena": laContrasena
     }
-    cloudDatabase.Usuarios.insert_one(elRegistro)
     localDatabase.Usuarios.insert_one(elRegistro)
     return "True"
 
 
-@app.route('/prueba', methods=['POST'])
-def prueba():
-    losParametros = request.args
-    elOrigen = "N" + losParametros['Origen']
-    elDestino = "N" + losParametros['Destino']
-    laPrioridad = losParametros['Prioridad']
-    otrasRutas = (list(nx.shortest_simple_paths(elGrafo, elOrigen, elDestino)))[1:5]
-    elResultado = {'Rutas': ''}
-    for i in range(4):
-        otraOpcion = otrasRutas[i]
-        laCantidadDeViajes = len(otraOpcion) - 1
-        elResultado['Rutas'] = {"Opcion" + str(i + 1): otraOpcion}
-    print(elResultado)
-    return 'True'
-
-
-@app.route('/api/get-route', methods=['POST'])
+@app.route('/api/get-route', methods=['GET', 'POST'])
 def getRoute():
     try:
         losParametros = request.args
@@ -147,6 +130,54 @@ def getRoute():
         return formateeElError(e)
 
 
+@app.route('/api/get-alternatives', methods=['GET', 'POST'])
+def getAlternatives():
+    try:
+        losParametros = request.args
+        elOrigen = "N" + losParametros['Origen']
+        elDestino = "N" + losParametros['Destino']
+        laPrioridad = losParametros['Prioridad']
+        otrasRutas = (list(nx.shortest_simple_paths(elGrafo, elOrigen, elDestino)))[1:5]
+        lasAlternativas = {}
+        for i in range(4):
+            unaRuta = otrasRutas[i]
+            laCantidadDeViajes = len(unaRuta) - 1
+            laAlternativa = "Alternativa" + str(i + 1)
+            lasAlternativas[laAlternativa] = {'Orden': unaRuta}
+            for n in range(laCantidadDeViajes):
+                elNodoActual = unaRuta[n]
+                elNodoSiguiente = unaRuta[n + 1]
+                elTransporteDisponible = elGrafo.node[elNodoActual]['Data'][elNodoSiguiente]['Transporte']
+                laDistancia = elGrafo[elNodoActual][elNodoSiguiente]['Weight']
+                if laDistancia < 5:
+                    if laPrioridad == 'E':
+                        elTransporteAdecuado = elTransporteDisponible['Bus']
+                        lasAlternativas[laAlternativa][elNodoActual] = {'Bus': elTransporteAdecuado}
+                    else:
+                        elTransporteAdecuado = elTransporteDisponible['Taxi']
+                        lasAlternativas[laAlternativa][elNodoActual] = {'Taxi': elTransporteAdecuado}
+                elif 5 <= laDistancia < 10:
+                    if laPrioridad == 'E':
+                        elTransporteAdecuado = elTransporteDisponible['Bus']
+                        lasAlternativas[laAlternativa][elNodoActual] = {'Bus': elTransporteAdecuado}
+                    else:
+                        elTransporteAdecuado = elTransporteDisponible['Tren']
+                        lasAlternativas[laAlternativa][elNodoActual] = {'Tren': elTransporteAdecuado}
+                else:
+                    if laPrioridad == 'E':
+                        elTransporteAdecuado = elTransporteDisponible['Tren']
+                        lasAlternativas[laAlternativa][elNodoActual] = {'Tren': elTransporteAdecuado}
+                    else:
+                        elTransporteAdecuado = elTransporteDisponible['Avion']
+                        lasAlternativas[laAlternativa] = {'Avion': elTransporteAdecuado}
+        lasAlternativasComoJSON = json.dumps(lasAlternativas)
+        laAccion = "Alternativas: " + elOrigen + " - " + elDestino + " : " + laPrioridad
+        ingreseElLog(laAccion)
+        return Response(lasAlternativasComoJSON, status=200, mimetype='application/json')
+    except Exception as e:
+        return formateeElError(e)
+
+
 def definaElUsuario():
     elUsuario = request.remote_addr
     laSolicitud = localDatabase.Usuarios.find_one({"_id": elUsuario})
@@ -163,7 +194,7 @@ def ingreseElLog(laAccion):
         "Fecha": datetime.datetime.now(),
         "Accion": laAccion
     }
-    cloudDatabase.Log_Operaciones.insert_one(elLog)
+    # cloudDatabase.Log_Operaciones.insert_one(elLog)
     localDatabase.Log_Operaciones.insert_one(elLog)
 
 
