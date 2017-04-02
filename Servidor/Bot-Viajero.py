@@ -79,6 +79,8 @@ def createUser():
         if laVerificacion != None:
             laRespuesta = {"id": 2, "Mensaje": "Error: El usuario ya existe."}
             laRespuestaComoJSON = json.dumps(laRespuesta)
+            laAccion = "Create user error."
+            ingreseElLog(laAccion)
             return Response(laRespuestaComoJSON, 200, mimetype='application/json')
         elRegistro = {
             "_id": laIdentificacion,
@@ -91,6 +93,8 @@ def createUser():
         localDatabase.Usuarios.insert_one(elRegistro)
         laRespuesta = {"id": 1, "Mensaje": "El usuario se ha creado exitosamente."}
         laRespuestaComoJSON = json.dumps(laRespuesta)
+        laAccion = "Create user: " + elUsuario
+        ingreseElLog(laAccion)
         return Response(laRespuestaComoJSON, 200, mimetype='application/json')
     except Exception as e:
         print(e)
