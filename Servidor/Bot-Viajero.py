@@ -65,26 +65,30 @@ def index():
 
 @app.route('/api/create-user', methods=['POST'])
 def createUser():
-    losParametros = request.json
-    laIdentificacion = str(ObjectId())
-    elNombre = losParametros['Nombre']
-    elApellido = losParametros['Apellido']
-    elCorreo = losParametros['Correo']
-    elUsuario = losParametros['Usuario']
-    laContrasena = losParametros['Contrasena']
-    laVerificacion = localDatabase.Usuarios.find_one({'Usuario': elUsuario})
-    if laVerificacion != None:
-        return "False"
-    elRegistro = {
-        "_id": laIdentificacion,
-        "Nombre": elNombre,
-        "Apellido": elApellido,
-        "Correo": elCorreo,
-        "Usuario": elUsuario,
-        "Contrasena": laContrasena
-    }
-    localDatabase.Usuarios.insert_one(elRegistro)
-    return Response("True", 200, mimetype='text/html')
+    try:
+        losParametros = request.json
+        laIdentificacion = str(ObjectId())
+        elNombre = losParametros['Nombre']
+        elApellido = losParametros['Apellido']
+        elCorreo = losParametros['Correo']
+        elUsuario = losParametros['Usuario']
+        laContrasena = losParametros['Contrasena']
+        laVerificacion = localDatabase.Usuarios.find_one({'Usuario': elUsuario})
+        if laVerificacion != None:
+            Response("False", 200, mimetype='text/html')
+        elRegistro = {
+            "_id": laIdentificacion,
+            "Nombre": elNombre,
+            "Apellido": elApellido,
+            "Correo": elCorreo,
+            "Usuario": elUsuario,
+            "Contrasena": laContrasena
+        }
+        localDatabase.Usuarios.insert_one(elRegistro)
+        return Response("True", 200, mimetype='text/html')
+    except Exception as e:
+        print(e)
+        return formateeElError(e)
 
 
 @app.route('/api/get-route', methods=['GET', 'POST'])
