@@ -1,14 +1,16 @@
 # Imports section
-from flask import Flask, json, Response, request, jsonify, make_response
+from flask import Flask, json, Response, request, jsonify, make_response, current_app
 from pymongo import MongoClient
 import networkx as nx
 import os
 import socket
 import datetime
 from bson import ObjectId
+from flask_cors import CORS, cross_origin
 from flask_httpauth import HTTPBasicAuth
 
 app = Flask(__name__)
+CORS(app)
 
 __Creators__ = 'Joshua Campos and Erick Cobo'
 
@@ -75,10 +77,9 @@ def createUser():
         laContrasena = losParametros['Contrasena']
         laVerificacion = localDatabase.Usuarios.find_one({'Usuario': elUsuario})
         if laVerificacion != None:
-            laRespuesta = {"Mensaje": "Error: El usuario ya existe."}
+            laRespuesta = {"id": 2, "Mensaje": "Error: El usuario ya existe."}
             laRespuestaComoJSON = json.dumps(laRespuesta)
-            print(laRespuestaComoJSON)
-            return laRespuestaComoJSON
+            return Response(laRespuestaComoJSON, 200, mimetype='application/json')
         elRegistro = {
             "_id": laIdentificacion,
             "Nombre": elNombre,
@@ -88,7 +89,9 @@ def createUser():
             "Contrasena": laContrasena
         }
         localDatabase.Usuarios.insert_one(elRegistro)
-        return Response("El usuario se ha creado exitosamente.", 200, mimetype='text/html')
+        laRespuesta = {"id": 1, "Mensaje": "El usuario se ha creado exitosamente."}
+        laRespuestaComoJSON = json.dumps(laRespuesta)
+        return Response(laRespuestaComoJSON, 200, mimetype='application/json')
     except Exception as e:
         print(e)
         return formateeElError(e)

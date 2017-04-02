@@ -46,9 +46,11 @@
                 "data": formData,
                 success: function (response) {
                     console.log(response);
+                    alert(response.Mensaje)
                 },
                 error: function (response) {
-                    alert(response);
+                    console.log(response);
+                    alert(response.Mensaje)
                 }
             });
         }
