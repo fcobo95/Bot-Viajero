@@ -1,5 +1,5 @@
 # Imports section
-from flask import Flask, json, Response, request, make_response
+from flask import Flask, json, Response, request, jsonify, make_response
 from pymongo import MongoClient
 import networkx as nx
 import os
@@ -66,7 +66,7 @@ def index():
 @app.route('/api/create-user', methods=['POST'])
 def createUser():
     try:
-        losParametros = request.json
+        losParametros = request.form
         laIdentificacion = str(ObjectId())
         elNombre = losParametros['Nombre']
         elApellido = losParametros['Apellido']
@@ -75,7 +75,10 @@ def createUser():
         laContrasena = losParametros['Contrasena']
         laVerificacion = localDatabase.Usuarios.find_one({'Usuario': elUsuario})
         if laVerificacion != None:
-            Response("False", 200, mimetype='text/html')
+            laRespuesta = {"Mensaje": "Error: El usuario ya existe."}
+            laRespuestaComoJSON = json.dumps(laRespuesta)
+            print(laRespuestaComoJSON)
+            return laRespuestaComoJSON
         elRegistro = {
             "_id": laIdentificacion,
             "Nombre": elNombre,
@@ -85,7 +88,7 @@ def createUser():
             "Contrasena": laContrasena
         }
         localDatabase.Usuarios.insert_one(elRegistro)
-        return Response("True", 200, mimetype='text/html')
+        return Response("El usuario se ha creado exitosamente.", 200, mimetype='text/html')
     except Exception as e:
         print(e)
         return formateeElError(e)

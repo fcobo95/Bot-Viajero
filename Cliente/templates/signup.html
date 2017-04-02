@@ -24,13 +24,7 @@
     Use of SRI is recommended as a best-practice, whenever libraries are loaded from a third-party source. Read more at srihash.org -->
     <script type="text/javascript">
         function send() {
-            var user = JSON.stringify({
-	            "Nombre":$('#name').val(),
-	            "Apellido":$('#lname').val(),
-	            "Correo":$('#email').val(),
-	            "Usuario":$('#user').val(),
-	            "Contrasena":$('#password').val()
-            })
+            var formData = $("#signup").serialize();
 
             var settings = {
                 "async": true,
@@ -39,11 +33,23 @@
                 "method": "POST",
                 "dataType": "json",
                 "processData": false,
-                "data": user
+                "data": formData
             }
 
-            $.ajax(settings).done(function (response) {
-                console.log(response);
+            $.ajax({
+                "async": true,
+                "crossDomain": true,
+                "url": "http://127.0.0.1:5000/api/create-user",
+                "method": "POST",
+                "dataType": "json",
+                "processData": false,
+                "data": formData,
+                success: function (response) {
+                    console.log(response);
+                },
+                error: function (response) {
+                    alert(response);
+                }
             });
         }
     </script>
@@ -58,24 +64,24 @@
         <h1 id="header">Signup</h1>
     </div>
 </header>
-<form method="post" name="signup" onsubmit="send()">
+<form id="signup" method="post" name="signup" onsubmit="send()">
 
     <div class="container">
 
         <label><b>Name</b></label>
-        <input type="text" id="name" placeholder="Enter Name" name="name" required>
+        <input type="text" id="name" placeholder="Enter Name" name="Nombre" required>
 
         <label><b>Last Name</b></label>
-        <input type="text" id="lname" placeholder="Enter Last Name" name="lname" required>
+        <input type="text" id="lname" placeholder="Enter Last Name" name="Apellido" required>
 
         <label><b>Email</b></label>
-        <input type="text" id="email" placeholder="Enter Email" name="email" required>
+        <input type="text" id="email" placeholder="Enter Email" name="Correo" required>
 
         <label><b>Username</b></label>
-        <input type="text" id="user" placeholder="Enter Username" name="uname" required>
+        <input type="text" id="user" placeholder="Enter Username" name="Usuario" required>
 
         <label><b>Password</b></label>
-        <input type="password" id="password" placeholder="Enter Password" required>
+        <input type="password" id="password" placeholder="Enter Password" name="Contrasena" required>
 
         <button type="submit">Submit</button>
 
