@@ -25,21 +25,31 @@
     <script type="text/javascript">
     function send() {
         var person = {
+	        "Nombre":"Juan",
+	        "Apellido":"Vargas",
+	        "Correo":"jojoca@hotmail.com",
+	        "Usuario":"Chiny22",
+	        "Contrasena":"asdf"
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: 'http://127.0.0.1:5000/api/create-user',
+            crossDomain: true,
+            data: {
 	        Nombre:"Juan",
 	        Apellido:"Vargas",
 	        Correo:"jojoca@hotmail.com",
 	        Usuario:"Chiny22",
 	        Contrasena:"asdf"
-        }
-
-        $.ajax({
-            url: '/api/create-user',
-            type: 'post',
-            dataType: 'json',
-            success: function () {
-                alert("Success");
             },
-            data: person
+            dataType: 'json',
+            success: function(responseData, textStatus, jqXHR) {
+                var value = responseData.someKey;
+            },
+            error: function() {
+                alert('Error: No se pudo ingresar el usuario.');
+            }
         });
     }
 </script>
@@ -54,7 +64,7 @@
         <h1 id="header">Signup</h1>
     </div>
 </header>
-<form action="127.0.0.1:5000/api/create-user">
+<form method="post" name="signup" onsubmit="send()">
 
     <div class="container">
 
@@ -73,7 +83,7 @@
         <label><b>Password</b></label>
         <input type="password" id="password" placeholder="Enter Password" required>
 
-        <button type="button" onclick="send()">Submit</button>
+        <button type="submit">Submit</button>
 
         <button type="button" id="cancel">Cancel</button>
 

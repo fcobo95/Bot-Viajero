@@ -1,5 +1,5 @@
 # Imports section
-from flask import Flask, json, Response, request
+from flask import Flask, json, Response, request, make_response
 from pymongo import MongoClient
 import networkx as nx
 import os
@@ -84,7 +84,7 @@ def createUser():
         "Contrasena": laContrasena
     }
     localDatabase.Usuarios.insert_one(elRegistro)
-    return "True"
+    return Response("True", 200, mimetype='text/html')
 
 
 @app.route('/api/get-route', methods=['GET', 'POST'])
