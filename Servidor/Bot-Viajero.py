@@ -55,6 +55,7 @@ with app.app_context():
     os.chdir('../../')
     os.chdir('Servidor/')
 
+@app.route('/api/login/<elUsuario>')
 @auth.get_password
 def getPassword(elUsuario):
     laVerificacion = localDatabase.Usuarios.find_one({'Usuario': elUsuario})
@@ -63,10 +64,16 @@ def getPassword(elUsuario):
     else:
         return None
 
-@app.route('/', methods=['GET'])
-@auth.login_required
+@app.route('/', methods=['GET', 'POST'])
+# @auth.login_required
 def index():
-    return "Hello, " + auth.username() + "!"
+    elMensaje = "Hello, " + auth.username() + "!"
+    return json.dumps({"Mensaje": elMensaje})
+
+# @app.route('/login', methods=['POST'])
+# @auth.login_required
+# def login():
+#     return "True"
 
 
 @app.route('/api/create-user', methods=['POST'])
