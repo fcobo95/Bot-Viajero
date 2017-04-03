@@ -24,8 +24,8 @@
     Use of SRI is recommended as a best-practice, whenever libraries are loaded from a third-party source. Read more at srihash.org -->
     <script type="text/javascript">
         function send() {
-            var username = $("#user").val()
-            var password = $("#password").val()
+            var username = $("#user").val();
+            var password = $("#password").val();
             var settings = {
                 "async": true,
                 "crossDomain": true,
@@ -33,11 +33,11 @@
                 "method": "GET",
                 "headers": {
                     "content-type": "application/json",
-                    "authorization": "Basic " + btoa(username + ":" + password),
+                    "authorization": "Basic " + btoa(username + ":" + password)
                 },
                 "processData": false,
                 "data": "{\n\t\"Nombre\":\"Joshua\",\n\t\"Apellido\":\"Campos\",\n\t\"Correo\":\"jocamchi21@hotmail.com\",\n\t\"Usuario\":\"Chiny21\",\n\t\"Contrasena\":\"abc123\"\n}"
-            }
+            };
 
             $.ajax({
                 "async": true,
@@ -46,7 +46,7 @@
                 "method": "GET",
                 "headers": {
                     "content-type": "application/json",
-                    "authorization": "Basic " + btoa(username + ":" + password),
+                    "authorization": "Basic " + btoa(username + ":" + password)
                 },
                 "processData": false,
                 "data": "{\n\t\"Nombre\":\"Joshua\",\n\t\"Apellido\":\"Campos\",\n\t\"Correo\":\"jocamchi21@hotmail.com\",\n\t\"Usuario\":\"Chiny21\",\n\t\"Contrasena\":\"abc123\"\n}",
