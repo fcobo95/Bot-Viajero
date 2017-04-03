@@ -55,14 +55,16 @@ with app.app_context():
     os.chdir('../../')
     os.chdir('Servidor/')
 
+
 @app.route('/api/login/<elUsuario>')
 @auth.get_password
 def getPassword(elUsuario):
     laVerificacion = localDatabase.Usuarios.find_one({'Usuario': elUsuario})
-    if laVerificacion != None:
+    if laVerificacion is not None:
         return laVerificacion['Contrasena']
     else:
         return None
+
 
 @app.route('/', methods=['GET', 'POST'])
 # @auth.login_required
@@ -87,7 +89,7 @@ def createUser():
         elUsuario = losParametros['Usuario']
         laContrasena = losParametros['Contrasena']
         laVerificacion = localDatabase.Usuarios.find_one({'Usuario': elUsuario})
-        if laVerificacion != None:
+        if laVerificacion is not None:
             laRespuesta = {"id": 2, "Mensaje": "Error: El usuario ya existe."}
             laRespuestaComoJSON = json.dumps(laRespuesta)
             laAccion = "Create user error."
@@ -211,7 +213,7 @@ def getAlternatives():
 def definaElUsuario():
     elUsuario = request.remote_addr
     laSolicitud = localDatabase.Usuarios.find_one({"_id": elUsuario})
-    if laSolicitud != None:
+    if laSolicitud is not None:
         elUsuario = laSolicitud["Nombre"]
     return elUsuario
 
