@@ -1,15 +1,15 @@
 # Imports section
-from flask import Flask, json, Response, request, jsonify, make_response, current_app
+from flask import Flask, json, Response, request
 from pymongo import MongoClient
 import networkx as nx
 import os
-import socket
 import datetime
 from bson import ObjectId
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 from flask_httpauth import HTTPBasicAuth
 
 app = Flask(__name__)
+auth = HTTPBasicAuth()
 CORS(app)
 
 __Creators__ = 'Joshua Campos and Erick Cobo'
@@ -43,10 +43,6 @@ def crearAristas():
 
 with app.app_context():
     print("Cargando configuración...")
-    # Mongo AWS Database Connection
-    uri = "mongodb://ecoboe249:viper1829@ds153609.mlab.com:53609/bootowl"
-    clienteWeb = MongoClient(uri)
-    cloudDatabase = clienteWeb.MongoCloud
     # Mongo Local Database Connection
     clienteLocal = MongoClient('localhost', 27017)
     localDatabase = clienteLocal.MongoLocal
@@ -59,10 +55,18 @@ with app.app_context():
     os.chdir('../../')
     os.chdir('Servidor/')
 
+@auth.get_password
+def getPassword(elUsuario):
+    laVerificacion = localDatabase.Usuarios.find_one({'Usuario': elUsuario})
+    if laVerificacion != None:
+        return laVerificacion['Contrasena']
+    else:
+        return None
 
 @app.route('/', methods=['GET'])
+@auth.login_required
 def index():
-    return '<h1>Index Page</h1>'
+    return "Hello, " + auth.username() + "!"
 
 
 @app.route('/api/create-user', methods=['POST'])
@@ -101,7 +105,8 @@ def createUser():
         return formateeElError(e)
 
 
-@app.route('/api/get-route', methods=['GET', 'POST'])
+@app.route('/api/get-route', methods=['GET'])
+@auth.login_required
 def getRoute():
     try:
         losParametros = request.args
@@ -147,7 +152,8 @@ def getRoute():
         return formateeElError(e)
 
 
-@app.route('/api/get-alternatives', methods=['GET', 'POST'])
+@app.route('/api/get-alternatives', methods=['GET'])
+@auth.login_required
 def getAlternatives():
     try:
         losParametros = request.args
@@ -211,7 +217,6 @@ def ingreseElLog(laAccion):
         "Fecha": datetime.datetime.now(),
         "Accion": laAccion
     }
-    # cloudDatabase.Log_Operaciones.insert_one(elLog)
     localDatabase.Log_Operaciones.insert_one(elLog)
 
 
