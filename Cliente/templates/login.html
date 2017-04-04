@@ -22,44 +22,34 @@
             crossorigin="anonymous"></script>
     <!-- The integrity and crossorigin attributes are used for Subresource Integrity (SRI) checking. This allows browsers to ensure that resources hosted on third-party servers have not been tampered with.
     Use of SRI is recommended as a best-practice, whenever libraries are loaded from a third-party source. Read more at srihash.org -->
-    <script type="text/javascript">
-        function send() {
-            var username = $("#user").val();
-            var password = $("#password").val();
-            var settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": "http://127.0.0.1:5000/",
-                "method": "GET",
-                "headers": {
-                    "content-type": "application/json",
-                    "authorization": "Basic " + btoa(username + ":" + password)
-                },
-                "processData": false,
-                "data": "{\n\t\"Nombre\":\"Joshua\",\n\t\"Apellido\":\"Campos\",\n\t\"Correo\":\"jocamchi21@hotmail.com\",\n\t\"Usuario\":\"Chiny21\",\n\t\"Contrasena\":\"abc123\"\n}"
-            };
 
-            $.ajax({
-                "async": true,
-                "crossDomain": true,
-                "url": "http://127.0.0.1:5000/",
-                "method": "GET",
-                "headers": {
-                    "content-type": "application/json",
-                    "authorization": "Basic " + btoa(username + ":" + password)
-                },
-                "processData": false,
-                "data": "{\n\t\"Nombre\":\"Joshua\",\n\t\"Apellido\":\"Campos\",\n\t\"Correo\":\"jocamchi21@hotmail.com\",\n\t\"Usuario\":\"Chiny21\",\n\t\"Contrasena\":\"abc123\"\n}",
-                success: function (response) {
-                    console.log(response);
-                    alert(response.Mensaje)
-                },
-                error: function (response) {
-                    console.log(response);
-                    alert(response.Mensaje)
-                }
+    <script type="text/javascript">
+        $(function () {
+            $("#submit_button").click(function () {
+                var username = $("#user").val();
+                var password = $("#password").val();
+                $.ajax({
+                    "async": true,
+                    "crossDomain": true,
+                    "url": "http://127.0.0.1:5000/",
+                    "method": "GET",
+                    "headers": {
+                        "authorization": "Basic " + btoa(username + ":" + password)
+                    },
+                    success: function (response) {
+                        console.log(response);
+                        alert(response.Mensaje)
+                        if (response.id == 1) {
+                            window.location.href = "routes.html";
+                        }
+                    },
+                    error: function (response) {
+                        console.log(response);
+                        alert("Error: " + response.Mensaje)
+                    }
+                });
             });
-        }
+        });
     </script>
     <link href="../CSS/Bot-Viajero.css" rel="stylesheet">
     <meta charset="UTF-8">
@@ -72,7 +62,7 @@
         <h1 id="header">Tribot!</h1>
     </div>
 </header>
-<form id="login" method="post" name="login" onsubmit="send()">
+<form id="login" method="post" name="login">
 
     <div class="container">
 
@@ -82,11 +72,11 @@
         <label><b>Password</b></label>
         <input type="password" id="password" placeholder="Enter Password" name="password" required>
 
-        <button type="submit">Login</button>
+        <button id="submit_button" type="button">Login</button>
         <input type="checkbox" checked="checked">
         <p class="remember">Remember me</p>
 
-        <button type="button" id="cancel">Cancel</button>
+        <button type="button" id="signup" onclick="window.location.href = 'signup.html';">Signup</button>
         <br>
         <span class="psw">Forgot <a href="#">password?</a></span>
 
