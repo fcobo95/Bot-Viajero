@@ -22,21 +22,12 @@
             crossorigin="anonymous"></script>
     <!-- The integrity and crossorigin attributes are used for Subresource Integrity (SRI) checking. This allows browsers to ensure that resources hosted on third-party servers have not been tampered with.
     Use of SRI is recommended as a best-practice, whenever libraries are loaded from a third-party source. Read more at srihash.org -->
+
     <script type="text/javascript">
-        function send() {
-            var formData = $("#signup").serialize();
-
-            var settings = {
-                "async": true,
-                "crossDomain": true,
-                "url": "http://127.0.0.1:5000/api/create-user",
-                "method": "POST",
-                "dataType": "json",
-                "processData": false,
-                "data": formData
-            }
-
-            $.ajax({
+        $(function () {
+            $("#submit_button").click(function () {
+                var formData = $("#signup").serialize();
+                $.ajax({
                 "async": true,
                 "crossDomain": true,
                 "url": "http://127.0.0.1:5000/api/create-user",
@@ -47,13 +38,17 @@
                 success: function (response) {
                     console.log(response);
                     alert(response.Mensaje)
+                    if (response.id == 1) {
+                            window.location.href = "login.html";
+                        }
                 },
                 error: function (response) {
                     console.log(response);
                     alert(response.Mensaje)
                 }
             });
-        }
+            });
+        });
     </script>
     <link href="../CSS/Bot-Viajero.css" rel="stylesheet">
     <meta charset="UTF-8">
@@ -66,7 +61,7 @@
         <h1 id="header">Signup</h1>
     </div>
 </header>
-<form id="signup" method="post" name="signup" onsubmit="send()">
+<form id="signup" method="post" name="signup">
 
     <div class="container">
 
@@ -85,7 +80,7 @@
         <label><b>Password</b></label>
         <input type="password" id="password" placeholder="Enter Password" name="Contrasena" required>
 
-        <button type="submit">Submit</button>
+        <button id="submit_button" type="button">Submit</button>
 
         <button type="button" id="cancel" onclick="location.href='login.html';">Cancel</button>
 
