@@ -67,10 +67,15 @@ def getPassword(elUsuario):
 
 @app.route('/', methods=['GET'])
 @auth.login_required
-def index():
-    laRespuesta = {"id": 1, "Mensaje": "Welcome, " + auth.username() + "!"}
-    laRespuestaComoJSON = json.dumps(laRespuesta)
-    return Response(laRespuestaComoJSON, 200, mimetype='application/json')
+def login():
+    try:
+        laRespuesta = {"id": 1, "Mensaje": "Welcome, " + auth.username() + "!"}
+        laRespuestaComoJSON = json.dumps(laRespuesta)
+        laAccion = "Login"
+        ingreseElLog(laAccion)
+        return Response(laRespuestaComoJSON, 200, mimetype='application/json')
+    except Exception as e:
+        return formateeElError(e)
 
 
 @app.route('/api/create-user', methods=['POST'])
@@ -105,7 +110,6 @@ def createUser():
         ingreseElLog(laAccion)
         return Response(laRespuestaComoJSON, 200, mimetype='application/json')
     except Exception as e:
-        print(e)
         return formateeElError(e)
 
 
@@ -206,10 +210,9 @@ def getAlternatives():
 
 
 def definaElUsuario():
-    elUsuario = request.remote_addr
-    laSolicitud = localDatabase.Usuarios.find_one({"_id": elUsuario})
-    if laSolicitud is not None:
-        elUsuario = laSolicitud["Nombre"]
+    elUsuario = auth.username()
+    if elUsuario == "":
+        elUsuario = request.remote_addr
     return elUsuario
 
 
