@@ -10,123 +10,175 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <script>
-        $(function () {
+    <script type="application/javascript">
+        $(document).ready(function () {
+            $(function () {
 
-            $("#Origen").selectmenu();
+                $("#Origen").selectmenu();
 
-            $("#Destino").selectmenu();
+                $("#Destino").selectmenu();
 
-            $("#Prioridad").selectmenu();
+                $("#Prioridad").selectmenu();
+            });
         });
+
+        $(function () {
+            $("#detalles-ruta").children().css("color", "rgb(0,170,255)")
+        })
+
     </script>
 
 </head>
 
 <body background="../Resources/background.jpg">
 
-<div class="lol">
+<div class="lol animated bounce">
     <h1 id="header">Select your route!</h1>
 </div>
 
-<a href="login.html">
-    <button class="login" id="login" type="button">Login</button>
-</a>
+<div class="container-fluid col-md-2" id="login-signup">
+    <a href="login.html">
+        <button class="btn btn-primary btn-block" id="login" type="button">Login</button>
+    </a>
+    <br>
+    <a href="signup.html">
+        <button class="btn btn-primary btn-block" id="signup" type="button">Signup</button>
+    </a>
+</div>
 <br>
-<a href="signup.html">
-    <button class="login" id="signup" type="button">Signup</button>
-</a>
+<br>
+<br>
+<div class="container-fluid col-md-12" id="rutas">
+    <div align="center" id="map">
+        <h1 id="crc">Costa Rica locations map!</h1>
+        <img src="../../Documentos/MapaGrafo.png" name="Render map here!" id="graphmap" class="img-responsive">
+    </div>
 
-<div id="map" align="middle">
-    <h1 id="crc">Costa Rica locations map!</h1>
-    <img src="../../Documentos/MapaGrafo.png" name="Render map here!" id="graphmap" align="middle">
+    <div class="container-fluid" id="information">
+
+        <form action="http://127.0.0.1:5000/api/get-route" method="get">
+            <div class="row">
+                <div class="col-md-4">
+                    <div>
+                        <fieldset>
+                            <label for="Origen">Select an Origin Node</label>
+                            <select name="Origen" id="Origen">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>11</option>
+                                <option>12</option>
+                                <option>13</option>
+                                <option>14</option>
+                                <option>15</option>
+                                <option>16</option>
+                                <option>18</option>
+                                <option>19</option>
+                                <option>20</option>
+                                <option>21</option>
+                                <option>22</option>
+                                <option>23</option>
+                                <option>24</option>
+                            </select>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <fieldset>
+                        <label for="Destino">Select a Destination Node</label>
+                        <select name="Destino" id="Destino">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div class="col-md-4">
+                    <fieldset>
+                        <label for="Prioridadv">Select your priority</label>
+                        <select name="Prioridad" id="Prioridad">
+                            <option>E</option>
+                            <option>R</option>
+
+                        </select>
+                    </fieldset>
+
+
+                </div>
+                <div class="col-md-12">
+                    <button class="btn btn-primary" type="submit" id="sub-btn">Submit</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
 </div>
+<br>
+<br>
+<div class="container-fluid" id="alternativas">
+    <div class="text-center col-md-12">
+        <label>Detalles del viaje</label>
+    </div>
+    <div id="detalles-ruta">
+        <div class="col-md-4">
+            <div id="orden">
+                <label>Orden del viaje</label>
+                <ol>
+                    <li>Nodo:</li>
 
-<div id="information">
+                </ol>
+            </div>
+            <div id="transporte">
+                <label>Transporte</label>
+                <ol>
+                    <li>Nodo:</li>
 
-    <form action="http://127.0.0.1:5000/api/get-route" method="get">
-
-        <fieldset>
-            <label for="Origen">Select an Origin Node</label>
-            <select name="Origen" id="Origen">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-                <option>13</option>
-                <option>14</option>
-                <option>15</option>
-                <option>16</option>
-                <option>17</option>
-                <option>18</option>
-                <option>19</option>
-                <option>20</option>
-                <option>21</option>
-                <option>22</option>
-                <option>23</option>
-                <option>24</option>
-            </select>
-        </fieldset>
-
-        <fieldset>
-            <label for="Destino">Select a Destination Node</label>
-            <select name="Destino" id="Destino">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                <option>11</option>
-                <option>12</option>
-                <option>13</option>
-                <option>14</option>
-                <option>15</option>
-                <option>16</option>
-                <option>17</option>
-                <option>18</option>
-                <option>19</option>
-                <option>20</option>
-                <option>21</option>
-                <option>22</option>
-                <option>23</option>
-                <option>24</option>
-            </select>
-        </fieldset>
-
-        <fieldset>
-            <label for="Prioridadv">Select your priority</label>
-            <select name="Prioridad" id="Prioridad">
-                <option>E</option>
-                <option>R</option>
-
-            </select>
-        </fieldset>
-        <button type="submit">Submit</button>
-
-    </form>
-
+                </ol>
+            </div>
+            <div id="precio">
+                <label>Precios</label>
+                <ol>
+                    <li>Nodo:</li>
+                </ol>
+            </div>
+        </div>
+    </div>
 </div>
-
-<div id="tripinfo">
-    <canvas>
-
-    </canvas>
-</div>
-
 </body>
 
 </html>
