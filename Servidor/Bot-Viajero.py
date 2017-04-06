@@ -160,11 +160,11 @@ def getRoute():
         return formateeElError(e)
 
 
-@app.route('/api/get-alternatives', methods=['GET'])
+@app.route('/api/get-alternatives', methods=['POST'])
 @auth.login_required
 def getAlternatives():
     try:
-        losParametros = request.args
+        losParametros = request.json
         elOrigen = "N" + losParametros['Origen']
         elDestino = "N" + losParametros['Destino']
         laPrioridad = losParametros['Prioridad']
