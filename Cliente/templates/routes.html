@@ -28,44 +28,41 @@
             $("#Prioridad").selectmenu();
         });
 
-        var username = "fcobo95";
-        var password = "viper1829";
         $(function () {
-            var origen = $("#Origen").val();
-            var destino = $("#Destino").val();
-            var prioridad = $("#Prioridad").val();
             $("#get-json").click(function () {
-                var response = $.ajax({
+                var origen = $("#Origen").val();
+                var destino = $("#Destino").val();
+                var prioridad = $("#Prioridad").val();
+                var json = {};
+                $.ajax({
                     "async": true,
                     "crossDomain": true,
-                    "url": "http://127.0.0.1:5000/api/get-route?Origen=" + origen + "&Destino=" + destino + "&Prioridad=" + prioridad,
-                    "method": "GET",
+                    "url": "http://192.168.1.17:5000/api/get-route",
+                    "method": "POST",
                     "headers": {
-                        "authorization": "Basic " + btoa(username + ":" + password)
+                        "authorization": "Basic ZmNvYm85NTp2aXBlcjE4Mjk=",
+                        "content-type": "application/json"
                     },
+                    "processData": false,
+                    "data": JSON.stringify({Origen: origen, Destino: destino, Prioridad: prioridad}),
                     success: function (response) {
                         console.log(response);
-                        alert(response.N1);
+                        //alert(resultado['Orden']);
+                        $.each(response, function (key, value) {
+                            alert(key + ":" + value);
+                            $.each(value, function (data, data2) {
+                                alert(data + ":" + data2);
+                                $.each(data2, function (data3, data4) {
+                                    alert(data3 + ":" + data4);
+                                });
+                            });
+                        });
                     },
                     error: function (response) {
                         console.log(response);
                         alert("Error: " + response.Mensaje)
                     }
-                }, function () {
-                    var html = "";
-
-                    response.forEach(function (val) {
-                        var keys = Object.keys(val);
-                        html += "<div class='container-fluid col-md-5'>";
-                        keys.forEach(function (key) {
-                            html += "<strong>" + key + "</strong> " + val[key] + "<br>";
-                        });
-                        html += "</div><br>"
-                    });
-                    $("#detalles-ruta").document(html)
                 });
-
-
             });
         });
     </script>
@@ -185,27 +182,7 @@
         <label>Detalles del viaje</label>
     </div>
     <div id="detalles-ruta">
-        <div class="col-md-4">
-            <div id="orden">
-                <label>Orden del viaje</label>
-                <ol>
-                    <li>Nodo:</li>
-                </ol>
-            </div>
-            <div id="transporte">
-                <label>Transporte</label>
-                <ol>
-                    <li>Nodo:</li>
 
-                </ol>
-            </div>
-            <div id="precio">
-                <label>Precios</label>
-                <ol>
-                    <li>Nodo:</li>
-                </ol>
-            </div>
-        </div>
     </div>
 
 </div>

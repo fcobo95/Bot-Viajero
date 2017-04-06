@@ -113,11 +113,11 @@ def createUser():
         return formateeElError(e)
 
 
-@app.route('/api/get-route', methods=['GET'])
+@app.route('/api/get-route', methods=['POST'])
 @auth.login_required
 def getRoute():
     try:
-        losParametros = request.args
+        losParametros = request.json
         elOrigen = "N" + losParametros['Origen']
         elDestino = "N" + losParametros['Destino']
         laPrioridad = losParametros['Prioridad']
