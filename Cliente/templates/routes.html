@@ -19,87 +19,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <script type="application/javascript">
-        $(document).ready(function () {
-            $(function () {
-                $("#Origen").selectmenu();
-                $("#Destino").selectmenu();
-                $("#Prioridad").selectmenu();
-            });
-        });
-    </script>
-    <script type="text/javascript">
-        $(function () {
-            $("#get-json").click(function (e) {
-                e.preventDefault();
-                var origen = $("#Origen").val();
-                var destino = $("#Destino").val();
-                var prioridad = $("#Prioridad").val();
-                $.ajax({
-                    "async": true,
-                    "crossDomain": true,
-                    "url": "http://127.0.0.1:5000/api/get-route",
-                    "method": "POST",
-                    "headers": {
-                        "content-type": "application/json",
-                    },
-                    "processData": false,
-                    "data": JSON.stringify({Origen: origen, Destino: destino, Prioridad: prioridad}),
-                    success: function (response) {
-                        var ruta = response['Orden'];
-                        var viajes = ruta.length - 1;
-                        var html = "<div class='container-fluid' id='ruta'><h4>Ruta: "+ruta+"</h4>";
-                        for (var i = 0; i < viajes; i++) {
-                            var transporte = response[ruta[i]];
-                            var nodo = ruta[i];
-                            html += "<div id='nodo'><label>" + nodo + "</label><br>";
-                            if (transporte.hasOwnProperty('Bus')){
-                                html += "<label>Transporte: Bus</label><ul>";
-                                for (var key in transporte['Bus']){
-                                    if (key != 'Ruta'){
-                                        html += "<li>"+key+" : "+transporte['Bus'][key]+"</li>";
-                                    }
-                                }
-                                html += "</ul></div></div>"
-                            } else if (transporte.hasOwnProperty('Taxi')){
-                                html += "<label>Transporte: Taxi</label><ul>";
-                                for (var key in transporte['Taxi']){
-                                    if (key != 'Ruta'){
-                                        html += "<li>"+key+" : "+transporte['Taxi'][key]+"</li>";
-                                    }
-                                }
-                                html += "</ul></div></div>"
-                            }else if (transporte.hasOwnProperty('Tren')){
-                                html += "<label>Transporte: Tren</label><ul>";
-                                for (var key in transporte['Tren']){
-                                    if (key != 'Ruta'){
-                                        html += "<li>"+key+" : "+transporte['Tren'][key]+"</li>";
-                                    }
-                                }
-                                html += "</ul></div></div>"
-                            } else {
-                                html += "<label>Transporte: Avio</label><ul>";
-                                for (var key in transporte['Avion']){
-                                    if (key != 'Ruta'){
-                                        html += "<li>"+key+" : "+transporte['Avion'][key]+"</li>";
-                                    }
-                                }
-                                html += "</ul></div></div>"
-                            }
+    <script src="../JS/formatButtons.js" type="application/javascript"></script>
 
-                            //alert(response[ruta[i]]['Bus']['Capacidad']);
-                        }
-                        $("#alternativas").html(html).children().css("color","white");
-                        console.log(response);
-                    },
-                    error: function (response) {
-                        console.log(response);
-                        alert("Error: " + response['Mensaje'])
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="../JS/viajesNodos.js" type="text/javascript"></script>
+
 
 </head>
 
@@ -117,8 +40,8 @@
 <br>
 <br>
 <br>
-<div class="container-fluid col-md-12" id="rutas">
-    <div align="center" id="map">
+<div class="container-fluid row" id="rutas" align="left">
+    <div id="map">
         <h1 id="crc">Costa Rica locations map!</h1>
         <img src="../../Documentos/MapaGrafo.png" name="Render map here!" id="graphmap" class="img-responsive">
     </div>
@@ -126,8 +49,8 @@
     <div class="container-fluid" id="information">
 
         <form>
-            <div class="row">
-                <div class="col-md-4">
+            <div>
+                <div>
                     <div>
                         <fieldset>
                             <label for="Origen">Select an Origin Node</label>
@@ -158,7 +81,7 @@
                         </fieldset>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div>
                     <fieldset>
                         <label for="Destino">Select a Destination Node</label>
                         <select name="Destino" id="Destino">
@@ -187,7 +110,7 @@
                         </select>
                     </fieldset>
                 </div>
-                <div class="col-md-4">
+                <div>
                     <fieldset>
                         <label for="Prioridad">Select your priority</label>
                         <select name="Prioridad" id="Prioridad">
@@ -196,30 +119,27 @@
 
                         </select>
                     </fieldset>
-
-
                 </div>
                 <div>
                     <button class="btn btn-primary col-md-12" id="get-json">
-                        View Alternatives
+                        Get Route
                     </button>
                 </div>
             </div>
         </form>
 
     </div>
+
+
 </div>
-<br>
-<br>
-<div class="container-fluid" id="alternativas">
-    <div class="text-center col-md-12">
-        <label>Detalles del viaje</label>
-    </div>
+
+<div class="" id="alternativas">
+    <label>Detalles del viaje</label>
     <div id="detalles-ruta">
 
     </div>
-
 </div>
+
 </body>
 
 </html>
