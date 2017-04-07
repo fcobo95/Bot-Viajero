@@ -21,13 +21,13 @@ $(function () {
             success: function (response) {
                 var ruta = response['Orden'];
                 var viajes = ruta.length - 1;
-                var html = "<div class='container-fluid col-md-4' id='ruta'><h4>Ruta: " + ruta + "</h4>";
+                var html = "<div class='container-fluid col-md-8' id='ruta'><h4>Ruta: " + ruta + "</h4>";
                 for (var i = 0; i < viajes; i++) {
                     var transporte = response[ruta[i]];
                     var nodo = ruta[i];
                     html += "<div id='nodo'><label>" + nodo + "</label><br>";
                     if (transporte.hasOwnProperty('Bus')) {
-                        html += "<label>Transporte: Bus</label><ul>";
+                        html += "<label>Transporte: Bus</label><br><ul>";
                         for (var key in transporte['Bus']) {
                             if (key != 'Ruta') {
                                 html += "<li>" + key + " : " + transporte['Bus'][key] + "</li>";
@@ -43,7 +43,7 @@ $(function () {
                         }
                         html += "</ul></div></div>"
                     } else if (transporte.hasOwnProperty('Tren')) {
-                        html += "<label>Transporte: Tren</label><ul>";
+                        html += "<label>Transporte: Tren</label><br><ul>";
                         for (var key in transporte['Tren']) {
                             if (key != 'Ruta') {
                                 html += "<li>" + key + " : " + transporte['Tren'][key] + "</li>";
@@ -51,7 +51,7 @@ $(function () {
                         }
                         html += "</ul></div></div>"
                     } else {
-                        html += "<label>Transporte: Avio</label><ul>";
+                        html += "<label>Transporte: Avion</label><br><ul>";
                         for (var key in transporte['Avion']) {
                             if (key != 'Ruta') {
                                 html += "<li>" + key + " : " + transporte['Avion'][key] + "</li>";
@@ -62,9 +62,8 @@ $(function () {
                 }
                 var alternativas = $("#detalles-ruta");
                 alternativas.html(html);
-                alternativas.children();
-                alternativas.css({"color":"white"});
-                alternativas.on("load").animate("fadeIn");
+                alternativas.css({"color": "red", "opacity": "0.3"});
+                alternativas.animate({"color": "white", "opacity": "1", "fontSize": "2em", "padding": "100px"}, 3000);
                 console.log(response);
             },
             error: function (response) {
