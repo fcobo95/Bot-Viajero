@@ -25,7 +25,7 @@ $(function () {
                 for (var i = 0; i < viajes; i++) {
                     var transporte = response[ruta[i]];
                     var nodo = ruta[i];
-                    html += "<div id='nodo'><label>" + nodo + "</label><br>";
+                    html += "<div id='nodo'><label>"+ (i+1) + ")"+ nodo + "</label><br>";
                     if (transporte.hasOwnProperty('Bus')) {
                         html += "<label>Transporte: Bus</label><br><ul>";
                         for (var key in transporte['Bus']) {
@@ -63,7 +63,7 @@ $(function () {
                 var alternativas = $("#detalles-ruta");
                 alternativas.html(html);
                 alternativas.css({"color": "red", "opacity": "0.3"});
-                alternativas.animate({"color": "white", "opacity": "1", "fontSize": "2em", "padding": "100px"}, 3000);
+                alternativas.animate({"color": "white", "opacity": "1", "fontSize": "2.2em", "padding": "100px"}, 3000);
                 console.log(response);
             },
             error: function (response) {

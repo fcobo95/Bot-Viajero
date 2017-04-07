@@ -42,5 +42,20 @@ $(document).ready(function () {
             "opacity": "0.1"
         });
         crc.animate({"opacity": "0.9"});
+
+        var rutas = $("#get-json").button();
+        rutas.css({
+            "width": "1px",
+            "height": "1px", "border-radius": "5%"
+        });
+        rutas.animate({
+            "width": "150px",
+            "height": "40px",
+            "margin": "80px 650px",
+            "border-radius": "5%",
+            "text-align": "center",
+            "background-color": "rgb(0,255,0)"
+        }, 1800);
     });
+
 });
