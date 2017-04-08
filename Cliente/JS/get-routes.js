@@ -1,13 +1,14 @@
 /**
- * Created by Erick Fernando Cobo on 4/6/2017.
+ * Created by Erick Fernando Cobo on 4/7/2017.
  */
-$(function () {
-    $("#get-json").click(function (e) {
-        e.preventDefault();
+function rutas() {
+    $("#get-route").click(function (event) {
         var origen = $("#Origen").val();
         var destino = $("#Destino").val();
         var prioridad = $("#Prioridad").val();
-        $.ajax({
+        event.preventDefault();
+
+        var settings = {
             "async": true,
             "crossDomain": true,
             "url": "http://127.0.0.1:5000/api/get-route",
@@ -25,11 +26,11 @@ $(function () {
                 for (var i = 0; i < viajes; i++) {
                     var transporte = response[ruta[i]];
                     var nodo = ruta[i];
-                    html += "<div id='nodo'><label>"+ (i+1) + ")"+ nodo + "</label><br>";
+                    html += "<div id='nodo'><label>" + (i + 1) + ") " + nodo + "</label><br>";
                     if (transporte.hasOwnProperty('Bus')) {
                         html += "<label>Transporte: Bus</label><br><ul>";
                         for (var key in transporte['Bus']) {
-                            if (key != 'Ruta') {
+                            if (key !== 'Ruta') {
                                 html += "<li>" + key + " : " + transporte['Bus'][key] + "</li>";
                             }
                         }
@@ -37,7 +38,7 @@ $(function () {
                     } else if (transporte.hasOwnProperty('Taxi')) {
                         html += "<label>Transporte: Taxi</label><ul>";
                         for (var key in transporte['Taxi']) {
-                            if (key != 'Ruta') {
+                            if (key !== 'Ruta') {
                                 html += "<li>" + key + " : " + transporte['Taxi'][key] + "</li>";
                             }
                         }
@@ -45,7 +46,7 @@ $(function () {
                     } else if (transporte.hasOwnProperty('Tren')) {
                         html += "<label>Transporte: Tren</label><br><ul>";
                         for (var key in transporte['Tren']) {
-                            if (key != 'Ruta') {
+                            if (key !== 'Ruta') {
                                 html += "<li>" + key + " : " + transporte['Tren'][key] + "</li>";
                             }
                         }
@@ -53,23 +54,27 @@ $(function () {
                     } else {
                         html += "<label>Transporte: Avion</label><br><ul>";
                         for (var key in transporte['Avion']) {
-                            if (key != 'Ruta') {
+                            if (key !== 'Ruta') {
                                 html += "<li>" + key + " : " + transporte['Avion'][key] + "</li>";
                             }
                         }
                         html += "</ul></div></div>"
                     }
                 }
-                var alternativas = $("#detalles-ruta");
-                alternativas.html(html);
-                alternativas.css({"color": "red", "opacity": "0.3"});
-                alternativas.animate({"color": "white", "opacity": "1", "fontSize": "2.2em", "padding": "100px"}, 3000);
+                var rutas = $("#detalles-ruta");
+                rutas.html(html);
+                rutas.css({"color": "red", "opacity": "0.3"});
+                rutas.animate({"color": "grey", "opacity": "1", "fontSize": "2.2em", "padding": "100px"}, 3000);
                 console.log(response);
             },
             error: function (response) {
                 console.log(response);
                 alert("Error: " + response['Mensaje'])
             }
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response)
         });
     });
-});
+}

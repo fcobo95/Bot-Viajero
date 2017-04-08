@@ -1,9 +1,6 @@
 <!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/html">
-
 <head>
-
     <title>Routes</title>
     <link href="../CSS/Bot-Viajero.css" rel="stylesheet">
     <meta charset="UTF-8">
@@ -18,18 +15,13 @@
           integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
           integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
     <script src="../JS/Format.js" type="application/javascript"></script>
-    <script src="../JS/HTMLNodes.js" type="text/javascript"></script>
-
-
+    <script src="../JS/get-routes.js" type="text/javascript"></script>
+    <script src="../JS/get-alternatives.js" type="text/javascript"></script>
 </head>
-
 <body background="../Resources/background.jpg">
 <div class="container-fluid">
-
     <h1 class="rutass" id="header">Seleccione su ruta</h1>
-
     <div class="col-md-12">
         <a href="login.html">
             <button class="btn btn-primary btn-block" id="sign-out" type="button">Sign Out</button>
@@ -37,7 +29,6 @@
     </div>
     <h1 id="crc" class="text-center">Mapa de Costa Rica</h1>
     <div class="row">
-
         <div class="col-md-12">
             <center><img src="../../Documentos/MapaGrafo.png" class="img-responsive map"></center>
         </div>
@@ -111,24 +102,27 @@
             </div>
         </form>
     </div>
-    <div>
-        <button class="btn btn-primary routes" id="get-json">Get Route</button>
-    </div>
-</div>
-
-<div class="container-fluid">
-    <div>
-        <label>Detalles del viaje</label>
-
-    </div>
     <div class="row">
-        <div id="detalles-ruta">
-
+        <div class="col-md-8">
+            <button class="btn btn-primary routes" id="get-route" onclick="rutas()" type="button">Get Route</button>
+        </div>
+        <div class="col-md-8">
+            <button class="btn btn-info" id="get-alternatives" onclick="alternativas()" hidden>Get alternatives</button>
         </div>
     </div>
 </div>
-
-
+<div class="container-fluid">
+    <div>
+        <label>Detalles del viaje</label>
+    </div>
+    <div>
+        <div id="detalles-ruta">
+        </div>
+    </div>
+    <div>
+        <div id="rutas-alternativas">
+        </div>
+    </div>
+</div>
 </body>
-
 </html>
