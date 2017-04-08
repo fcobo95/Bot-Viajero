@@ -1,14 +1,18 @@
 # Imports section
-from flask import Flask, json, Response, request
+from flask import Flask, json, Response, request, jsonify
 from pymongo import MongoClient
 import networkx as nx
 import os
 import datetime
+import base64
 from bson import ObjectId
 from flask_cors import CORS
 from flask_httpauth import HTTPBasicAuth
+from itsdangerous import (TimedJSONWebSignatureSerializer
+                          as Serializer, BadSignature, SignatureExpired)
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = '12345'
 auth = HTTPBasicAuth()
 CORS(app)
 
@@ -66,7 +70,7 @@ def getPassword(elUsuario):
 
 
 @app.route('/', methods=['GET'])
-@auth.login_required
+@auth.verify_password
 def login():
     try:
         laRespuesta = {"id": 1, "Mensaje": "Welcome, " + auth.username() + "!"}
@@ -235,6 +239,49 @@ def formateeElError(e):
     laActividad = elErrorComoTexto
     ingreseElLog(laActividad)
     return Response(elEnunciadoComoJSON, elErrorHTTP, mimetype="application/json")
+
+
+@app.route('/api/login')
+@auth.login_required
+def obtengaToken():
+    laAutorizacion = request.headers.get('authorization')
+    elCodigo = laAutorizacion[6:]
+    laAutenticacion = base64.b64decode(elCodigo)
+    laAutenticacionComoTexto = laAutenticacion.decode("utf-8")
+    losCredenciales = laAutenticacionComoTexto.split(':')
+    elUsuario = losCredenciales[0]
+    laContrasena = losCredenciales[1]
+    elToken = genereToken(elUsuario, laContrasena)
+    laRespuesta = {'Token': elToken.decode('ascii')}
+    return jsonify(laRespuesta)
+
+
+def genereToken(usuario, contrasena, expiration=1800):
+    laSerie = Serializer(app.config['SECRET_KEY'], expires_in=expiration)
+    elToken = laSerie.dumps({'Usuario': usuario, 'Contrasena': contrasena})
+    return elToken
+
+
+def verifiqueToken(token):
+    laSerie = Serializer(app.config['SECRET_KEY'])
+    try:
+        losDatos = laSerie.loads(token)
+    except SignatureExpired:
+        return None
+    except BadSignature:
+        return None
+    elUsuario = losDatos['Usuario']
+    return elUsuario
+
+
+@auth.verify_password
+def verifiqueContrasena(usuario_o_token, password):
+    elUsuario = verifiqueToken(usuario_o_token)
+    if elUsuario is None:
+        elUsuario = localDatabase.Usuarios.find_one({'Usuario': usuario_o_token})
+        if elUsuario['Contrasena'] != password:
+            return False
+    return True
 
 
 if __name__ == '__main__':
