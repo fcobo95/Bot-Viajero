@@ -31,21 +31,20 @@
                 $.ajax({
                     "async": true,
                     "crossDomain": true,
-                    "url": "http://127.0.0.1:5000/",
+                    "url": "http://127.0.0.1:5000/api/login",
                     "method": "GET",
                     "headers": {
                         "authorization": "Basic " + btoa(username + ":" + password)
                     },
                     success: function (response) {
                         console.log(response);
-                        alert(response.Mensaje);
-                        if (response.id == 1) {
-                            window.location.href = "routes.html";
-                        }
+                        alert("Welcome, " + username + "!");
+                        localStorage.setItem("Token", response['Token'])
+                        window.location.href = "routes.html";
                     },
                     error: function (response) {
                         console.log(response);
-                        alert("Error: " + response.Mensaje)
+                        alert(response)
                     }
                 });
             });

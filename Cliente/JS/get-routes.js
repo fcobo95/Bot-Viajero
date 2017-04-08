@@ -1,6 +1,3 @@
-/**
- * Created by Erick Fernando Cobo on 4/7/2017.
- */
 function rutas() {
     $("#get-route").click(function (event) {
         var origen = $("#Origen").val();
@@ -13,7 +10,7 @@ function rutas() {
             "url": "http://127.0.0.1:5000/api/get-route",
             "method": "POST",
             "headers": {
-                "authorization": "Basic ZmNvYm85NTp2aXBlcjE4Mjk=",
+                "authorization": "Basic " + btoa(localStorage.getItem("Token")),
                 "content-type": "application/json"
             },
             "processData": false,
@@ -76,4 +73,9 @@ function rutas() {
             console.log(response)
         });
     });
+}
+
+function logout() {
+    localStorage.removeItem("Token")
+    window.location.href = 'login.html'
 }

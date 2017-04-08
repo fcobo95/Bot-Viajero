@@ -1,6 +1,3 @@
-/**
- * Created by Erick Fernando Cobo on 4/7/2017.
- */
 function alternativas() {
     $("#get-alternatives").click(function (event) {
         var origen = $("#Origen").val();
@@ -13,7 +10,7 @@ function alternativas() {
             "url": "http://127.0.0.1:5000/api/get-alternatives",
             "method": "POST",
             "headers": {
-                "authorization": "Basic ZmNvYm85NTp2aXBlcjE4Mjk=",
+                "authorization": "Basic " + btoa(localStorage.getItem("Token")),
                 "content-type": "application/json"
             },
             "processData": false,

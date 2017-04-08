@@ -60,24 +60,20 @@ with app.app_context():
     os.chdir('Servidor/')
 
 
-@auth.get_password
-def getPassword(elUsuario):
-    laVerificacion = localDatabase.Usuarios.find_one({'Usuario': elUsuario})
-    if laVerificacion is not None:
-        return laVerificacion['Contrasena']
-    else:
-        return None
-
-
-@app.route('/', methods=['GET'])
 @auth.verify_password
-def login():
+def verifiqueContrasena(usuario_o_token, password):
     try:
-        laRespuesta = {"id": 1, "Mensaje": "Welcome, " + auth.username() + "!"}
-        laRespuestaComoJSON = json.dumps(laRespuesta)
-        laAccion = "Login"
-        ingreseElLog(laAccion)
-        return Response(laRespuestaComoJSON, 200, mimetype='application/json')
+        elUsuario = verifiqueToken(usuario_o_token)
+        if elUsuario is None:
+            elUsuario = localDatabase.Usuarios.find_one({'Usuario': usuario_o_token})
+            if elUsuario is not None:
+                laContrasena = elUsuario['Contrasena']
+                if laContrasena != password:
+                    return False
+                else:
+                    return True
+        else:
+            return True
     except Exception as e:
         return formateeElError(e)
 
@@ -113,6 +109,26 @@ def createUser():
         laAccion = "Create user: " + elUsuario
         ingreseElLog(laAccion)
         return Response(laRespuestaComoJSON, 200, mimetype='application/json')
+    except Exception as e:
+        return formateeElError(e)
+
+
+@app.route('/api/login')
+@auth.login_required
+def obtengaToken():
+    try:
+        laAutorizacion = request.headers.get('authorization')
+        elCodigo = laAutorizacion[6:]
+        laAutenticacion = base64.b64decode(elCodigo)
+        laAutenticacionComoTexto = laAutenticacion.decode("utf-8")
+        losCredenciales = laAutenticacionComoTexto.split(':')
+        elUsuario = losCredenciales[0]
+        laContrasena = losCredenciales[1]
+        elToken = genereToken(elUsuario, laContrasena)
+        laRespuesta = {'Token': elToken.decode('ascii')}
+        laAccion = "Login"
+        ingreseElLog(laAccion)
+        return jsonify(laRespuesta)
     except Exception as e:
         return formateeElError(e)
 
@@ -241,21 +257,6 @@ def formateeElError(e):
     return Response(elEnunciadoComoJSON, elErrorHTTP, mimetype="application/json")
 
 
-@app.route('/api/login')
-@auth.login_required
-def obtengaToken():
-    laAutorizacion = request.headers.get('authorization')
-    elCodigo = laAutorizacion[6:]
-    laAutenticacion = base64.b64decode(elCodigo)
-    laAutenticacionComoTexto = laAutenticacion.decode("utf-8")
-    losCredenciales = laAutenticacionComoTexto.split(':')
-    elUsuario = losCredenciales[0]
-    laContrasena = losCredenciales[1]
-    elToken = genereToken(elUsuario, laContrasena)
-    laRespuesta = {'Token': elToken.decode('ascii')}
-    return jsonify(laRespuesta)
-
-
 def genereToken(usuario, contrasena, expiration=1800):
     laSerie = Serializer(app.config['SECRET_KEY'], expires_in=expiration)
     elToken = laSerie.dumps({'Usuario': usuario, 'Contrasena': contrasena})
@@ -272,16 +273,6 @@ def verifiqueToken(token):
         return None
     elUsuario = losDatos['Usuario']
     return elUsuario
-
-
-@auth.verify_password
-def verifiqueContrasena(usuario_o_token, password):
-    elUsuario = verifiqueToken(usuario_o_token)
-    if elUsuario is None:
-        elUsuario = localDatabase.Usuarios.find_one({'Usuario': usuario_o_token})
-        if elUsuario['Contrasena'] != password:
-            return False
-    return True
 
 
 if __name__ == '__main__':
