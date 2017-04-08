@@ -1,13 +1,12 @@
 /**
  * Created by Erick Fernando Cobo on 4/7/2017.
  */
-var origen = $("#Origen").val();
-var destino = $("#Destino").val();
-var prioridad = $("#Prioridad").val();
-
 function alternativas() {
-    $.preventDefault();
-    $("#get-alternatives").click(function () {
+    $("#get-alternatives").click(function (event) {
+        var origen = $("#Origen").val();
+        var destino = $("#Destino").val();
+        var prioridad = $("#Prioridad").val();
+        event.preventDefault();
         var settings = {
             "async": true,
             "crossDomain": true,
@@ -83,4 +82,6 @@ function alternativas() {
             console.log(response);
         });
     });
+
+
 }

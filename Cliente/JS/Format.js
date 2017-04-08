@@ -1,7 +1,6 @@
 /**
  * Created by Erick Fernando Cobo on 4/6/2017.
  */
-
 $(document).ready(function () {
     $(function () {
         var alternatives = $("#get-alternatives", function () {
@@ -63,12 +62,7 @@ $(document).ready(function () {
         var rutas = $("#get-route").button();
         rutas.css({"width": "1px", "height": "1px", "border-radius": "20%"});
         rutas.animate({
-            "width": "150px",
-            "height": "40px",
-            "margin": "30px 650px",
-            "border-radius": "5%",
-            "text-align": "center",
-            "background-color": "rgb(29,181,24)"
+            "width": "150px", "height": "40px", "margin": "30px 650px", "border-radius": "5%", "text-align": "center", "background-color": "rgb(29,181,24)"
         }, 1800);
     });
 });
