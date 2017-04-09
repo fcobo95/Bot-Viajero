@@ -135,7 +135,7 @@ function alternativas() {
             alert("Error: " + response['Mensaje'])
         }
     };
-    alert("Evaluando posibilidades. Por favor espere un momento.")
+    alert("Evaluando posibilidades. Por favor espere un momento.");
     $.ajax(settings).done(function (response) {
         console.log(response);
     });
