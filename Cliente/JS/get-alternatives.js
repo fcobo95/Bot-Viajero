@@ -1,9 +1,10 @@
 function alternativas() {
     $("#get-alternatives").click(function (event) {
-        event.preventDefault();
         var origen = $("#Origen").val();
         var destino = $("#Destino").val();
         var prioridad = $("#Prioridad").val();
+        event.preventDefault();
+
         var settings = {
             "async": true,
             "crossDomain": true,
@@ -16,11 +17,14 @@ function alternativas() {
             "processData": false,
             "data": JSON.stringify({Origen: origen, Destino: destino, Prioridad: prioridad}),
             success: function (response) {
-                var html = ""
+                var html = "";
+                var index = 1;
                 $.each(response, function (llave, valor) {
+                    html += "<span><label>Alternativa #" + index + "</label></span>";
+
                     var ruta = response[llave]['Orden'];
                     var viajes = ruta.length - 1;
-                    html = "<div class='container-fluid col-md-8' id='ruta'><h4>Ruta: " + ruta + "</h4>";
+                    html += "<div class='container-fluid col-md-8' id='ruta" + index + "'><h4>Ruta: " + ruta + "</h4>";
                     for (var i = 0; i < viajes; i++) {
                         var transporte = response[llave][ruta[i]];
                         var nodo = ruta[i];
@@ -85,7 +89,8 @@ function alternativas() {
                             html += "</ul></div></div>"
                         }
                     }
-                })
+                    index++;
+                });
                 var alternativas = $("#rutas-alternativas");
                 alternativas.html(html);
                 alternativas.css({"color": "red", "opacity": "0.3"});

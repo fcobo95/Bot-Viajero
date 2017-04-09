@@ -4,6 +4,7 @@ function rutas() {
         var destino = $("#Destino").val();
         var prioridad = $("#Prioridad").val();
         event.preventDefault();
+
         var settings = {
             "async": true,
             "crossDomain": true,
