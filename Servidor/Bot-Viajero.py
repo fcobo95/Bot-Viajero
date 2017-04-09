@@ -232,7 +232,11 @@ def getAlternatives():
 def definaElUsuario():
     elUsuario = auth.username()
     if elUsuario == "":
-        elUsuario = request.remote_addr
+        laAutorizacion = request.headers.get('authorization')
+        elCodigo = laAutorizacion[6:]
+        laAutenticacion = base64.b64decode(elCodigo)
+        elToken = laAutenticacion.decode("utf-8")
+        elUsuario = verifiqueToken(elToken)
     return elUsuario
 
 
