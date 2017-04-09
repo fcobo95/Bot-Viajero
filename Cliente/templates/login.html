@@ -28,25 +28,29 @@
             $("#submit_button").click(function () {
                 var username = $("#user").val();
                 var password = $("#password").val();
-                $.ajax({
-                    "async": true,
-                    "crossDomain": true,
-                    "url": "http://127.0.0.1:5000/api/login",
-                    "method": "GET",
-                    "headers": {
-                        "authorization": "Basic " + btoa(username + ":" + password)
-                    },
-                    success: function (response) {
-                        console.log(response);
-                        alert("Welcome, " + username + "!");
-                        localStorage.setItem("Token", response['Token'])
-                        window.location.href = "routes.html";
-                    },
-                    error: function (response) {
-                        console.log(response);
-                        alert(response)
-                    }
-                });
+                if (username == "" || password == ""){
+                    alert("Error: Ingrese su usuario y contraseña.")
+                } else {
+                    $.ajax({
+                        "async": true,
+                        "crossDomain": true,
+                        "url": "http://127.0.0.1:5000/api/login",
+                        "method": "GET",
+                        "headers": {
+                            "authorization": "Basic " + btoa(username + ":" + password)
+                        },
+                        success: function (response) {
+                            console.log(response);
+                            alert("Welcome, " + username + "!");
+                            localStorage.setItem("Token", response['Token'])
+                            window.location.href = "routes.html";
+                        },
+                        error: function (response) {
+                            console.log(response);
+                            alert("Error: " + response['responseText'])
+                        }
+                    });
+                }
             });
         });
     </script>
