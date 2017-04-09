@@ -10,7 +10,7 @@ function rutas() {
         "url": "http://127.0.0.1:5000/api/get-route",
         "method": "POST",
         "headers": {
-            "authorization": "Basic " + btoa(localStorage.getItem("Token")),
+            "authorization": "Basic " + btoa(sessionStorage.getItem("Token")),
             "content-type": "application/json"
         },
         "processData": false,
@@ -142,6 +142,6 @@ function rutas() {
 }
 
 function logout() {
-    localStorage.removeItem("Token");
+    sessionStorage.clear();
     window.location.href = 'login.html'
 }

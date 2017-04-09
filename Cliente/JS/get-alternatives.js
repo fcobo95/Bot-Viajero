@@ -10,7 +10,7 @@ function alternativas() {
         "url": "http://127.0.0.1:5000/api/get-alternatives",
         "method": "POST",
         "headers": {
-            "authorization": "Basic " + btoa(localStorage.getItem("Token")),
+            "authorization": "Basic " + btoa(sessionStorage.getItem("Token")),
             "content-type": "application/json"
         },
         "processData": false,
@@ -135,7 +135,7 @@ function alternativas() {
             alert("Error: " + response['Mensaje'])
         }
     };
-
+    alert("Evaluando posibilidades. Por favor espere un momento.")
     $.ajax(settings).done(function (response) {
         console.log(response);
     });
