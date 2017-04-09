@@ -37,13 +37,31 @@ function rutas() {
                             if (key !== 'Ruta') {
                                 html += "<li>" + key + " : " + transporte['Taxi'][key] + "</li>";
                             }
+
+                            if (key === 'Conductor') {
+                                html += "<ul>";
+                                for (var value in transporte['Taxi']['Conductor']) {
+                                    html += "<li>" + value + " : " + transporte['Taxi']['Conductor'][value] + "</li>";
+                                }
+                                html += "</ul>";
+                            }
+
                         }
-                        html += "</ul></div></div>"
+                        html += "</ul></div></div>";
+
                     } else if (transporte.hasOwnProperty('Tren')) {
                         html += "<label>Transporte: Tren</label><br><ul>";
                         for (var key in transporte['Tren']) {
                             if (key !== 'Ruta') {
                                 html += "<li>" + key + " : " + transporte['Tren'][key] + "</li>";
+                            }
+
+                            if (key === 'Horario') {
+                                html += "<ul>";
+                                for (var value in transporte['Tren']['Horario']) {
+                                    html += "<li>" + value + " : " + transporte['Tren']['Horario'][value] + "</li>";
+                                }
+                                html += "</ul>";
                             }
                         }
                         html += "</ul></div></div>"
@@ -52,6 +70,14 @@ function rutas() {
                         for (var key in transporte['Avion']) {
                             if (key !== 'Ruta') {
                                 html += "<li>" + key + " : " + transporte['Avion'][key] + "</li>";
+                            }
+
+                            if (key === 'Horario') {
+                                html += "<ul>";
+                                for (var value in transporte['Avion']['Horario']) {
+                                    html += "<li>" + value + " : " + transporte['Avion']['Horario'][value] + "</li>";
+                                }
+                                html += "</ul>";
                             }
                         }
                         html += "</ul></div></div>"
