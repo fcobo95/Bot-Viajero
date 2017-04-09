@@ -16,16 +16,18 @@ function rutas() {
         "processData": false,
         "data": JSON.stringify({Origen: origen, Destino: destino, Prioridad: prioridad}),
         success: function (response) {
+            var index = 0;
+
             var ruta = response['Orden'];
             var viajes = ruta.length - 1;
-            var html = "<div class='container-fluid' id='ruta'>";
-            html += "<div id='ruta-nodo'";
+            var html = "<div class='container-fluid' id='contenedor'>";
+            html += "<div id='ruta-nodo'>";
             html += "<h2>Ruta: " + ruta + "</h2>";
             html += "</div>";
             for (var i = 0; i < viajes; i++) {
                 var transporte = response[ruta[i]];
                 var nodo = ruta[i];
-                html += "<div id='nodo'  class='row'>";
+                html += "<div id='nodo'" + index + "  class='row'>";
                 html += "<div id='titulo-nodo'>";
                 html += "<label>" + (i + 1) + ') ' + nodo + "</label>";
                 html += "</div>";
@@ -45,7 +47,11 @@ function rutas() {
                     html += "</div>";
                     html += "</div>";
                 } else if (transporte.hasOwnProperty('Taxi')) {
-                    html += "<label>Transporte: Taxi</label><ul>";
+                    html += "<div id='transporte-nodo' class='col'>";
+                    html += "<label>Transporte: Taxi</label>";
+                    html += "</div>";
+                    html += "<div id='lista-nodo' class='col'>";
+                    html += "<ul>";
                     for (var key in transporte['Taxi']) {
                         if (key !== 'Ruta') {
                             html += "<li>" + key + " : " + transporte['Taxi'][key] + "</li>";
@@ -65,7 +71,11 @@ function rutas() {
                     html += "</div>";
 
                 } else if (transporte.hasOwnProperty('Tren')) {
-                    html += "<label>Transporte: Tren</label><br><ul>";
+                    html += "<div id='transporte-nodo' class='col'>";
+                    html += "<label>Transporte: Tren</label>";
+                    html += "</div>";
+                    html += "<div id='lista-nodo' class='col'>";
+                    html += "<ul>";
                     for (var key in transporte['Tren']) {
                         if (key !== 'Ruta') {
                             html += "<li>" + key + " : " + transporte['Tren'][key] + "</li>";
@@ -76,6 +86,7 @@ function rutas() {
                             for (var value in transporte['Tren']['Horario']) {
                                 html += "<li>" + value + " : " + transporte['Tren']['Horario'][value] + "</li>";
                             }
+                            html += "</ul>"
                         }
                     }
                     html += "</ul>";
@@ -83,7 +94,11 @@ function rutas() {
                     html += "</div>";
                     html += "</div>";
                 } else {
-                    html += "<label>Transporte: Avion</label><br><ul>";
+                    html += "<div id='transporte-nodo' class='col'>";
+                    html += "<label>Transporte: Avion</label>";
+                    html += "</div>";
+                    html += "<div id='lista-nodo' class='col'>";
+                    html += "<ul>";
                     for (var key in transporte['Avion']) {
                         if (key !== 'Ruta') {
                             html += "<li>" + key + " : " + transporte['Avion'][key] + "</li>";
@@ -106,7 +121,14 @@ function rutas() {
             var rutas = $("#detalles-ruta");
             rutas.html(html);
             rutas.css({"color": "red", "opacity": "0.3"});
-            rutas.animate({"color": "grey", "opacity": "1", "fontSize": "2.5em", "padding": "100px"}, 3000);
+            rutas.animate({"color": "grey", "opacity": "1", "fontSize": "1em", "padding": "50px"}, 3000);
+
+            var ruta_nodo = $("#ruta-nodo");
+            ruta_nodo.children().css(
+                {
+                    "color": "green"
+                }
+            );
         },
         error: function (response) {
             console.log(response);

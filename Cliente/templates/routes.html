@@ -34,43 +34,41 @@
         </div>
         <div id="form-div">
             <form>
-                <div class="col-md-4">
+                <div class="col-md-4 form-group">
                     <fieldset>
-                        <div class="col-md-4 form-group">
-                            <div id="origen-field">
-                                <label for="Origen" >Origen</label>
-                            </div>
-                            <select name="Origen" id="Origen">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>11</option>
-                                <option>12</option>
-                                <option>13</option>
-                                <option>14</option>
-                                <option>15</option>
-                                <option>16</option>
-                                <option>18</option>
-                                <option>19</option>
-                                <option>20</option>
-                                <option>21</option>
-                                <option>22</option>
-                                <option>23</option>
-                                <option>24</option>
-                            </select>
+                        <div id="origen-field">
+                            <h3 for="Origen">Origen</h3>
                         </div>
+                        <select name="Origen" id="Origen">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                        </select>
                     </fieldset>
                 </div>
                 <div class="col-md-4 form-group">
                     <fieldset>
                         <div id="destino-field">
-                            <label for="Destino" >Destino</label>
+                            <h3 for="Destino">Destino</h3>
                         </div>
                         <select name="Destino" id="Destino">
                             <option>1</option>
@@ -98,11 +96,11 @@
                         </select>
                     </fieldset>
                 </div>
-                <div class="col-md-1 form-group">
+                <div class="col-md-4 form-group">
                     <fieldset>
                         <div id="prioridad-field">
-                                <label for="Prioridad" >Prioridad</label>
-                            </div>
+                            <h3 for="Prioridad">Prioridad</h3>
+                        </div>
                         <select name="Prioridad" id="Prioridad">
                             <option>E</option>
                             <option>R</option>
@@ -113,24 +111,27 @@
         </div>
     </div>
     <div class="row">
+        <div>
+            <h2>Detalles del viaje</h2>
+        </div>
+        <div>
+            <div id="detalles-ruta">
+            </div>
+        </div>
         <div class="col-md-8">
-            <button class="btn btn-primary routes" id="get-route" onclick="rutas()" type="button">Get Route</button>
+            <button class="btn btn-primary routes" id="get-route" onclick="rutas()">Get Route</button>
         </div>
     </div>
-</div>
-<div class="container-fluid">
     <div>
-        <label>Detalles del viaje</label>
-    </div>
-    <div>
-        <div id="detalles-ruta">
+        <div>
+            <h2>Rutas Alternas</h2>
         </div>
-    </div>
-    <div class="col-md-8">
+        <div>
+            <div id="rutas-alternativas">
+            </div>
+        </div>
+        <div class="col-md-8">
             <button class="btn btn-info" id="get-alternatives" onclick="alternativas()" hidden>Get Alternatives</button>
-        </div>
-    <div>
-        <div id="rutas-alternativas">
         </div>
     </div>
 </div>

@@ -5,11 +5,11 @@ $(document).ready(function () {
     $(function () {
         var alternatives = $("#get-alternatives", function () {
             $("#get-route").click(function () {
-                alternatives.css({"display": "inline"});
+                alternatives.css({"width": "1px", "height": "1px", "border-radius": "20%", "display": "inline"});
                 alternatives.animate({
                     "width": "150px",
                     "height": "40px",
-                    "margin": "50px 850px",
+                    "margin": "30px 850px",
                     "border-radius": "5%",
                     "text-align": "center",
                     "background-color": "rgb(0,0,255)"
@@ -17,6 +17,17 @@ $(document).ready(function () {
             });
             alternatives.css("display", "none");
         });
+
+        var rutas = $("#get-route").button();
+        rutas.css({"width": "1px", "height": "1px", "border-radius": "20%"});
+        rutas.animate({
+            "width": "150px",
+            "height": "40px",
+            "margin": "30px 850px",
+            "border-radius": "5%",
+            "text-align": "center",
+            "background-color": "rgb(29,181,24)"
+        }, 1800);
 
         var body = $("body");
         body.css({"background-repeat": "no-repeat", "background-attachment": "fixed"});
@@ -69,7 +80,7 @@ $(document).ready(function () {
         }, 1800);
 
         var prioridad = $("#Prioridad");
-        var prioridad_field = $("#priordad-field");
+        var prioridad_field = $("#prioridad-field");
         prioridad.select();
         prioridad.css({
             "width": "1px",
@@ -107,15 +118,11 @@ $(document).ready(function () {
         });
         crc.animate({"opacity": "0.9"});
 
-        var rutas = $("#get-route").button();
-        rutas.css({"width": "1px", "height": "1px", "border-radius": "20%"});
-        rutas.animate({
-            "width": "150px",
-            "height": "40px",
-            "margin": "30px 850px",
-            "border-radius": "5%",
-            "text-align": "center",
-            "background-color": "rgb(29,181,24)"
-        }, 1800);
+
+        var h2 = $("h2");
+        h2.css({"color": "white", "text-align": "center"});
+
+        var h3 = $("h3");
+        h3.css({"color": "black", "text-align": "right"})
     });
 });
