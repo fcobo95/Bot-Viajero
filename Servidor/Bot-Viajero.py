@@ -1,4 +1,4 @@
-# Imports section
+# SECCION PARA IMPORTAR MODULOS NECESARIOS
 from flask import Flask, json, Response, request, jsonify
 from pymongo import MongoClient
 import networkx as nx
@@ -11,14 +11,18 @@ from flask_httpauth import HTTPBasicAuth
 from itsdangerous import (TimedJSONWebSignatureSerializer
                           as Serializer, BadSignature, SignatureExpired)
 
+# SE CREA LA APLICACION DE FLASK, SE DEFINE LA LLAVE SECRETA PARA LA CREACION DE TOKENS,
+# SE INICIALIZA LA AUTENTICACION BASICA Y SE IMPLEMENTA CROSS-DOMAIN CON CORS
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '12345'
+app.config['SECRET_KEY'] = 'JE9395ccce'
 auth = HTTPBasicAuth()
 CORS(app)
 
 __Creators__ = 'Joshua Campos and Erick Cobo'
 
 
+# ESTA FUNCION LEE CADA JSON DENTRO DE LA CARPETA DE NODOS EN LA CARPETA DE DOCUMENTOS,
+# CREA EL NODO RESPECTIVO Y LE AGREGA EL JSON AL NODO
 def crearNodos():
     elIndice = 1
     for cadaArchivo in range(len(os.listdir(os.getcwd()))):
@@ -31,6 +35,9 @@ def crearNodos():
             elIndice += 1
 
 
+# ESTA FUNCION LEE CADA JSON DENTRO DE LA CARPETA DE NODOS EN LA CARPETA DE DOCUMENTOS,
+# Y CREA LAS ARISTAS DEL GRAFO SEGUN LAS RELACIONES QUE ESTAN EN EL JSON Y LE ASIGNA
+# EL PESO CORRESPONDIENTE A CADA ARISTA
 def crearAristas():
     elIndice = 1
     for cadaArchivo in range(len(os.listdir(os.getcwd()))):
@@ -45,12 +52,13 @@ def crearAristas():
             elIndice += 1
 
 
+# ESTA FUNCION CORRE UNA VEZ AL INICIAR EL SERVIDOR, EN DONDE CREA LA CONEXION CON LA BASE
+# DE DATOS LOCAL, CREA EL GRAFO, Y UTILIZA LAS FUNCIONES ANTERIORES PARA CREAR LOS NODOS
+# Y LAS ARISTAS.
 with app.app_context():
     print("Cargando configuración...")
-    # Mongo Local Database Connection
     clienteLocal = MongoClient('localhost', 27017)
     localDatabase = clienteLocal.MongoLocal
-    # Graph Creation and Configuration
     elGrafo = nx.DiGraph()
     os.chdir('../')
     os.chdir('Documentos/Nodos')
@@ -60,6 +68,9 @@ with app.app_context():
     os.chdir('Servidor/')
 
 
+# ESTE METODO VERIFICA QUE EL USUARIO SEA VALIDO, AL RECIBIR DOS PARAMETROS. PRIMERO REVISA SI
+# LO QUE RECIBE ES UN TOKEN Y SI ES VALIDO, SI NO ES ASI, BUSCA EL USUARIO EN LA BASE DE DATOS
+# Y VERIFICA SI EL USUARIO Y LA CONTRASENA COINCIDEN CON LOS REGISTROS.
 @auth.verify_password
 def verifiqueContrasena(usuario_o_token, password):
     try:
@@ -78,6 +89,9 @@ def verifiqueContrasena(usuario_o_token, password):
         return formateeElError(e)
 
 
+# ESTA FUNCION RECIBE UN FORM, EL CUAL PARSEA PARA OBTENER TODOS LOS DATOS INDIVIDUALES. REVISA
+# SI EL USUARIO YA EXISTE, Y SI FUERA ASI, ENVIA UN MENSAJE DE ERROR; SI NO EXISTE, CREA EL
+# USUARIO Y LO INGRESA A LA BASE DE DATOS.
 @app.route('/api/create-user', methods=['POST'])
 def createUser():
     try:
@@ -113,6 +127,9 @@ def createUser():
         return formateeElError(e)
 
 
+# ESTE METODO VERIFICA LOS CREDENCIALES ENVIADOS EN EL HEADER, Y LOS DECODIFICA PARA OBTENER
+# EL USUARIO Y CONTRASENA ORIGINALES. POSTERIORMENTE, CREA UN TOKEN UTILIZANDO ESOS DATOS
+# Y SE LO ENVIA AL CLIENTE.
 @app.route('/api/login')
 @auth.login_required
 def obtengaToken():
@@ -133,6 +150,9 @@ def obtengaToken():
         return formateeElError(e)
 
 
+# ESTE METODO RECIBE UN JSON CON LA INFORMACION CORRESPONDIENTE PARA BUSCAR UNA RUTA. SE BUSCA
+# LA RUTA MAS CORTA, Y SE TRAE LA INFORMACION CORRESPONDIENTE DE CADA UNO DE LOS NODOS QUE POSEE
+# ESA RUTA, SEGUN LA PRIORIDAD ELEGIDA POR EL USUARIO. LUEGO SE ENVIA TODA ESTA INFORMACION AL CLIENTE.
 @app.route('/api/get-route', methods=['POST'])
 @auth.login_required
 def getRoute():
@@ -180,6 +200,9 @@ def getRoute():
         return formateeElError(e)
 
 
+# ESTE METODO RECIBE UN JSON CON LA INFORMACION CORRESPONDIENTE PARA BUSCAR UNA RUTA. BUSCA LAS
+# CUATRO SIGUIENTES RUTAS MAS CORTAS, Y LUEGO RECORRE CADA RUTA Y TRAE LA INFORMACION CORRESPONDIENTE
+# DE CADA NODO. LUEGO LE ENVIA AL CLIENTE TODA LA INFORMACION OBTENIDA.
 @app.route('/api/get-alternatives', methods=['POST'])
 @auth.login_required
 def getAlternatives():
@@ -229,6 +252,9 @@ def getAlternatives():
         return formateeElError(e)
 
 
+# ESTA FUNCION REVISA EL USUARIO DE LA SESION. SI REALIZA UNA CONEXION DIRECTA CON EL AUTENTICADOR,
+# SE OBTIENE DE AHI; SINO SE REVISA LOS CREDENCIALES DEL HEADER, SE DECODIFICAN, Y SE OBTIENE EL
+# USUARIO.
 def definaElUsuario():
     elUsuario = auth.username()
     if elUsuario == "":
@@ -240,6 +266,8 @@ def definaElUsuario():
     return elUsuario
 
 
+# ESTA FUNCION CREA CADA LOG DE OPERACIONES. PRIMERO DEFINE EL USUARIO QUE REALIZA LA ACCION,
+# LUEGO CREA EL LOG Y LO INGRESA A LA BASE DE DATOS.
 def ingreseElLog(laAccion):
     elUsuario = definaElUsuario()
     elLog = {
@@ -251,6 +279,8 @@ def ingreseElLog(laAccion):
     localDatabase.Log_Operaciones.insert_one(elLog)
 
 
+# ESTA FUNCION OBTIENE LOS ERRORES, LOS FORMATEA Y ENVIA UNA RESPUESTA CON LA
+# INFORMACION CORRESPONDIENTE.
 def formateeElError(e):
     elErrorComoTexto = str(e)
     elEnunciado = "Lo lamento. Ha ocurrido un error " + elErrorComoTexto
@@ -261,12 +291,18 @@ def formateeElError(e):
     return Response(elEnunciadoComoJSON, elErrorHTTP, mimetype="application/json")
 
 
+# ESTA FUNCION CREA UN TOKEN DE AUTENTICACION. SE DEFINE LA SERIE SEGUN LA LLAVE SECRETA,
+# Y LUEGO CREA EL TOKEN UTILIZANDO EL USUARIO Y CONTRASENA QUE RECIBE COMO PARAMETRO. CADA
+# TOKEN EXPIRA CADA MEDIA HORA.
 def genereToken(usuario, contrasena, expiration=1800):
     laSerie = Serializer(app.config['SECRET_KEY'], expires_in=expiration)
     elToken = laSerie.dumps({'Usuario': usuario, 'Contrasena': contrasena})
     return elToken
 
 
+# ESTE METODO VERIFICA SI EL TOKEN ES VALIDO. DEFINE LA SERIE SEGUN LA LLAVE SECRETA,
+# LUEGO CARGA EL TOKEN Y LO DECODIFICA SEGUN LA SERIE, Y REVISA SI EL TOKEN EXPIRO,
+# SI ES INVALIDO, O SINO, OBTIENE EL USUARIO Y LO DEVUELVE.
 def verifiqueToken(token):
     laSerie = Serializer(app.config['SECRET_KEY'])
     try:
@@ -279,5 +315,6 @@ def verifiqueToken(token):
     return elUsuario
 
 
+# AQUI SE INICIALIZA EL PROGRAMA
 if __name__ == '__main__':
     app.run(debug=True, port=5000, host="0.0.0.0")
