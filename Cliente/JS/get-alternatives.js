@@ -25,8 +25,8 @@ function alternativas() {
                 html += "<div>";
                 html += "<h2>Alternativa #" + index + "</h2>";
                 html += "</div>";
-                html += "<div id='ruta-nodo'>";
-                html += "<h>Ruta: " + ruta + "</h>";
+                html += "<div id='ruta-nodo-alternatives'>";
+                html += "<h2>Ruta: " + ruta + "</h2>";
                 html += "</div>";
                 for (var i = 0; i < viajes; i++) {
                     var transporte = response[llave][ruta[i]];
@@ -128,7 +128,10 @@ function alternativas() {
             var alternativas = $("#rutas-alternativas");
             alternativas.html(html);
             alternativas.css({"color": "red", "opacity": "0.3"});
-            alternativas.animate({"color": "grey", "opacity": "1", "fontSize": "1em", "padding": "50px"}, 3000);
+            alternativas.animate({"color": "grey", "opacity": "1", "fontSize": "1.5em", "padding": "50px"}, 3000);
+
+            var rutas_nodo = $("#ruta-nodo-alternatives");
+            rutas_nodo.children().css("color", "green")
         },
         error: function (response) {
             console.log(response);

@@ -121,7 +121,7 @@ function rutas() {
             var rutas = $("#detalles-ruta");
             rutas.html(html);
             rutas.css({"color": "red", "opacity": "0.3"});
-            rutas.animate({"color": "grey", "opacity": "1", "fontSize": "1em", "padding": "50px"}, 3000);
+            rutas.animate({"color": "grey", "opacity": "1", "fontSize": "1.5em", "padding": "50px"}, 3000);
 
             var ruta_nodo = $("#ruta-nodo");
             ruta_nodo.children().css(
