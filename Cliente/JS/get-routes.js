@@ -60,7 +60,7 @@ function rutas() {
                 var rutas = $("#detalles-ruta");
                 rutas.html(html);
                 rutas.css({"color": "red", "opacity": "0.3"});
-                rutas.animate({"color": "grey", "opacity": "1", "fontSize": "2.2em", "padding": "100px"}, 3000);
+                rutas.animate({"color": "grey", "opacity": "1", "fontSize": "2.5em", "padding": "100px"}, 3000);
                 console.log(response);
             },
             error: function (response) {
