@@ -42,7 +42,7 @@
                         success: function (response) {
                             console.log(response);
                             alert("Welcome, " + username + "!");
-                            localStorage.setItem("Token", response['Token'])
+                            sessionStorage.setItem("Token", response['Token'])
                             window.location.href = "routes.html";
                         },
                         error: function (response) {
@@ -76,12 +76,9 @@
         <input type="password" id="password" placeholder="Enter Password" name="password" required>
 
         <button id="submit_button" type="button">Login</button>
-        <input type="checkbox" checked="checked">
-        <p class="remember">Remember me</p>
 
         <button type="button" id="signup" onclick="window.location.href = 'signup.html';">Signup</button>
         <br>
-        <span class="psw">Forgot <a href="#">password?</a></span>
 
     </div>
 </form>

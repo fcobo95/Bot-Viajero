@@ -1,6 +1,3 @@
-/**
- * Created by Erick Fernando Cobo on 4/6/2017.
- */
 $(document).ready(function () {
     $(function () {
         var alternatives = $("#get-alternatives", function () {
