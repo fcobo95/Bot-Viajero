@@ -8,6 +8,7 @@ $(document).ready(function () {
                     "height": "40px",
                     "margin": "30px 850px",
                     "border-radius": "5%",
+                    "margin-left": "68%",
                     "text-align": "center",
                     "background-color": "rgb(0,0,255)"
                 }, 1800)
@@ -20,7 +21,8 @@ $(document).ready(function () {
         rutas.animate({
             "width": "150px",
             "height": "40px",
-            "margin": "30px 850px",
+            "margin": "10px",
+            "margin-left": "68%",
             "border-radius": "5%",
             "text-align": "center",
             "background-color": "rgb(29,181,24)"
@@ -120,6 +122,6 @@ $(document).ready(function () {
         h2.css({"color": "white", "text-align": "center"});
 
         var h3 = $("h3");
-        h3.css({"color": "black", "text-align": "right"})
+        h3.css({"color": "white", "text-align": "right"})
     });
 });

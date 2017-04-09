@@ -4,11 +4,12 @@ function rutas() {
     var prioridad = $("#Prioridad").val();
     event.preventDefault();
     var ip = "192.168.1.27";
+    var local = "127.0.0.1";
     var port = "5000";
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "http://" + ip + ":" + port + "/api/get-route",
+        "url": "http://" + local + ":" + port + "/api/get-route",
         "method": "POST",
         "headers": {
             "authorization": "Basic " + btoa(sessionStorage.getItem("Token")),

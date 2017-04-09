@@ -29,6 +29,7 @@
                 var username = $("#user").val();
                 var password = $("#password").val();
                 var ip = "192.168.1.27";
+                var local = "127.0.0.1";
                 var port = "5000";
                 if (username === "" || password === "") {
                     alert("Error: Ingrese su usuario y contraseña.")
@@ -36,7 +37,7 @@
                     $.ajax({
                         "async": true,
                         "crossDomain": true,
-                        "url": "http://" + ip + ":" + port + "/api/login",
+                        "url": "http://" + local + ":" + port + "/api/login",
                         "method": "GET",
                         "headers": {
                             "authorization": "Basic " + btoa(username + ":" + password)
