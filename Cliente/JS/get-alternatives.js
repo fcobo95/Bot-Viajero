@@ -2,12 +2,14 @@ function alternativas() {
     var origen = $("#Origen").val();
     var destino = $("#Destino").val();
     var prioridad = $("#Prioridad").val();
+    var ip = "192.168.1.27";
+    var port = "5000";
     event.preventDefault();
 
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": "http://127.0.0.1:5000/api/get-alternatives",
+        "url": "http://" + ip + ":" + port + "/api/get-alternatives",
         "method": "POST",
         "headers": {
             "authorization": "Basic " + btoa(sessionStorage.getItem("Token")),

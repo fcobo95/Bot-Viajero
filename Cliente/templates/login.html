@@ -28,13 +28,15 @@
             $("#submit_button").click(function () {
                 var username = $("#user").val();
                 var password = $("#password").val();
-                if (username === "" || password === ""){
+                var ip = "192.168.1.27";
+                var port = "5000";
+                if (username === "" || password === "") {
                     alert("Error: Ingrese su usuario y contraseña.")
                 } else {
                     $.ajax({
                         "async": true,
                         "crossDomain": true,
-                        "url": "http://127.0.0.1:5000/api/login",
+                        "url": "http://" + ip + ":" + port + "/api/login",
                         "method": "GET",
                         "headers": {
                             "authorization": "Basic " + btoa(username + ":" + password)

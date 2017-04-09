@@ -26,17 +26,19 @@
     <script type="text/javascript">
         $(function () {
             $("#submit_button").click(function () {
-                name = $("#name").val()
-                lastName = $("#lname").val()
-                email = $("#email").val()
-                user = $("#user").val()
-                password = $("#password").val()
+                var name = $("#name").val();
+                var lastName = $("#lname").val();
+                var email = $("#email").val();
+                var user = $("#user").val();
+                var password = $("#password").val();
+                var ip = "192.168.1.27";
+                var port = "5000";
                 if (name && lastName && email && user && password) {
                     var formData = $("#signup").serialize();
                     $.ajax({
                         "async": true,
                         "crossDomain": true,
-                        "url": "http://127.0.0.1:5000/api/create-user",
+                        "url": "http://" + ip + ":" + port + "/api/create-user",
                         "method": "POST",
                         "dataType": "json",
                         "processData": false,
