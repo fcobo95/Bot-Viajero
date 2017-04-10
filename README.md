@@ -6,4 +6,4 @@ User Manual: Documents > "Manual de Usuario.pdf"
 
 Project Design: Documents > "Documento_Diseño"
 
-##Thanks
+## Thanks
