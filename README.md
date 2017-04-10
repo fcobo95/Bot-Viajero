@@ -1,5 +1,9 @@
 # Bot-Viajero
 
-This file with hold the documentation for Bot-Viajero. 
+Para leer el Manual de Usuario y el Documento de diseño, refierase a la siguiente informacion:
 
-WIP(Work-in-progress)
+Manual de Usuario: Documentos > Manual de Usuario.pdf
+
+Documento de diseño: Documentos > Documento_Diseño.pdf
+
+## ¡Gracias!
