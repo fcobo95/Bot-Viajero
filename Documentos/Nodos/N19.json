@@ -32,41 +32,30 @@
   "N11": {
     "Distancia": 3.85,
     "Transporte": {
-      "Tren": {
-        "NombreCompania": "Trenes Volio",
+      "Taxi": {
+        "NombreCompania": "Taxis Veracruz",
+        "PlacaTaxi": "VRC-999",
+        "Conductor": {
+          "Id": "1-3852-3251",
+          "Nombre": "Dolores",
+          "Apellido": "Humbridge"
+        },
+        "PrecioKM": 1,
         "Ruta": {
           "Origen": "N19",
-          "Destino": "N11",
-          "Schedule/Horario": {
-            "Lunes": "4 AM - 10 PM",
-            "Martes": "4 AM - 10 PM",
-            "Miercoles": "4 AM - 10 PM",
-            "Jueves": "4 AM - 10 PM",
-            "Viernes": "4 AM - 10 PM",
-            "Sabado": "8 AM - 5 PM",
-            "Domingo": "8 AM - 5 PM"
-          }
-        },
-        "Tarifa": 4000
+          "Destino": "N11"
+        }
       },
-      "Avion": {
-        "NombreCompania": "Alfa",
-        "ConductorAsignado": "Juana De Vitto",
+      "Bus": {
+        "NombreCompania": "Buses Altopalo",
+        "ConductorAsignado": "Marjorie Teller",
         "Ruta": {
           "Origen": "N19",
           "Destino": "N11"
         },
-        "Cantidad Pasajeros": 500,
-        "Horario": {
-          "Lunes": "2 AM - 12 PM",
-          "Martes": "2 AM - 12 PM",
-          "Miercoles": "2 AM - 12 PM",
-          "Jueves": "2 AM - 12 PM",
-          "Viernes": "2 AM - 12 PM",
-          "Sabado": "2 AM - 12 PM",
-          "Domingo": "2 AM - 12 PM"
-        },
-        "Tarifa": 6000
+        "Capacidad": 80,
+        "AsignacionPlazas": 45,
+        "Tarifa": 255
       }
     }
   },

@@ -2,33 +2,30 @@
   "N4": {
     "Distancia": 3.50,
     "Transporte": {
+      "Taxi": {
+        "NombreCompania": "Coopetaxi",
+        "PlacaTaxi": "CPT-455",
+        "Conductor": {
+          "Id": "8-8989-9898",
+          "Nombre": "Eduacles",
+          "Apellido": "Rojas"
+        },
+        "PrecioKM": 0.80,
+        "Ruta": {
+          "Origen": "N23",
+          "Destino": "N4"
+        }
+      },
       "Bus": {
         "NombreCompania": "Buses Volio",
-        "ConductorAsignado": "David Kant",
+        "ConductorAsignado": "Mauricio Pineda",
         "Ruta": {
           "Origen": "N23",
           "Destino": "N4"
         },
-        "Capacidad": 110,
-        "AsignacionPlazas": 89,
-        "Tarifa": 550
-      },
-      "Tren": {
-        "NombreCompania": "Trenes Volio",
-        "Ruta": {
-          "Origen": "N23",
-          "Destino": "N4",
-          "Schedule/Horario": {
-            "Lunes": "4 AM - 10 PM",
-            "Martes": "4 AM - 10 PM",
-            "Miercoles": "4 AM - 10 PM",
-            "Jueves": "4 AM - 10 PM",
-            "Viernes": "4 AM - 10 PM",
-            "Sabado": "8 AM - 5 PM",
-            "Domingo": "8 AM - 5 PM"
-          }
-        },
-        "Tarifa": 3650
+        "Capacidad": 150,
+        "AsignacionPlazas": 25,
+        "Tarifa": 325
       }
     }
   },
