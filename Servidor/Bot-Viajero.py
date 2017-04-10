@@ -254,15 +254,18 @@ def getAlternatives():
 
 # ESTA FUNCION REVISA EL USUARIO DE LA SESION. SI REALIZA UNA CONEXION DIRECTA CON EL AUTENTICADOR,
 # SE OBTIENE DE AHI; SINO SE REVISA LOS CREDENCIALES DEL HEADER, SE DECODIFICAN, Y SE OBTIENE EL
-# USUARIO.
+# USUARIO. EN CASO DE QUE NO HUBIERAN CREDENCIALES, SE LE ASIGNA LA DIRECCION IP AL USUARIO.
 def definaElUsuario():
     elUsuario = auth.username()
     if elUsuario == "":
         laAutorizacion = request.headers.get('authorization')
-        elCodigo = laAutorizacion[6:]
-        laAutenticacion = base64.b64decode(elCodigo)
-        elToken = laAutenticacion.decode("utf-8")
-        elUsuario = verifiqueToken(elToken)
+        if laAutorizacion is None:
+            elUsuario = request.remote_addr
+        else:
+            elCodigo = laAutorizacion[6:]
+            laAutenticacion = base64.b64decode(elCodigo)
+            elToken = laAutenticacion.decode("utf-8")
+            elUsuario = verifiqueToken(elToken)
     return elUsuario
 
 

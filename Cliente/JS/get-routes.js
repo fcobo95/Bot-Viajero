@@ -15,6 +15,7 @@ function rutas() {
     var ip = "192.168.1.27";
     var local = "127.0.0.1";
     var port = "5000";
+    var token = sessionStorage.getItem("Token");
     event.preventDefault();
 
     /* ******************************************************************
@@ -37,7 +38,7 @@ function rutas() {
         "url": "http://" + local + ":" + port + "/api/get-route",
         "method": "POST",
         "headers": {
-            "authorization": "Basic " + btoa(sessionStorage.getItem("Token")),
+            "authorization": "Basic " + btoa(token),
             "content-type": "application/json"
         },
         "processData": false,
@@ -185,13 +186,20 @@ function rutas() {
 
     /* ******************************************************************
      *
+     * SI NO HUBIERA NINGUN TOKEN GUARDADO EN EL SESSION STORAGE,
+     * SE MUESTRA UN ERROR Y SE REDIRIGE A LA PAGINA DE LOGIN; SINO
      * SE CARGAN LOS SETTINGS ANTERIORES Y SE ENVIA EL REQUEST AJAX.
      *
      * ***************************************************************** */
 
-    $.ajax(settings).done(function (response) {
-        console.log(response)
-    });
+    if (token == null) {
+        alert("Error: Debe iniciar sesión primero.")
+        window.location.href = 'login.html'
+    } else {
+        $.ajax(settings).done(function (response) {
+            console.log(response)
+        });
+    }
 }
 
 function logout() {
