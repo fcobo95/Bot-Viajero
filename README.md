@@ -6,4 +6,4 @@ Manual de Usuario: Documentos > Manual de Usuario.pdf
 
 Documento de diseño: Documentos > Documento_Diseño.pdf
 
-## Thanks
+## ¡Gracias!
