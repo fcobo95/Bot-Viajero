@@ -1,9 +1,9 @@
 # Bot-Viajero
 
-For User Manual and Project Design:
+Para leer el Manual de Usuario y el Documento de diseño, refierase a la siguiente informacion:
 
-User Manual: Documents > "Manual de Usuario.pdf"
+Manual de Usuario: Documentos > Manual de Usuario.pdf
 
-Project Design: Documents > "Documento_Diseño"
+Documento de diseño: Documentos > Documento_Diseño.pdf
 
 ## Thanks
