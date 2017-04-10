@@ -1,5 +1,9 @@
 # Bot-Viajero
 
-This file with hold the documentation for Bot-Viajero. 
+For User Manual and Project Design:
 
-WIP(Work-in-progress)
+User Manual: Documents > "Manual de Usuario.pdf"
+
+Project Design: Documents > "Documento_Diseño"
+
+###Thanks
